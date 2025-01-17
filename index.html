@@ -1,150 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaînes TV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #202029;
-            color: white;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-        .banner {
-            background-color: #363640;
-            padding: 20px;
-            text-align: center;
-        }
-        .banner h1 {
-            margin: 0;
-            color: white;
-        }
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin: 10px;
-            padding: 10px;
-            background-color: #363640;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .search-bar input {
-            width: 90%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-            background-color: #2d2d3a;
-            color: white;
-        }
-        .search-bar input::placeholder {
-            color: #aaa;
-        }
-        .list {
-            padding: 10px;
-        }
-        .blog-card {
-            background-color: #363640;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: transform 0.2s;
-            will-change: transform;
-            max-width: 100%; /* Ensure it does not exceed screen width */
-            box-sizing: border-box; /* Include padding and borders in width */
-        }
-        .blog-card:hover {
-            transform: scale(1.02);
-        }
-        .blog-card .photo {
-            width: 80px;
-            height: 80px;
-            background-size: cover;
-            background-position: center;
-            flex-shrink: 0;
-        }
-        .blog-card .description {
-            margin-left: 10px;
-            padding: 10px;
-            flex-grow: 1;
-        }
-        .blog-card .title {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .drawer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #2d2d3a;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-in-out;
-            padding: 20px;
-            color: white;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-        .drawer.active {
-            transform: translateY(0);
-        }
-        .drawer h2 {
-            margin-top: 0;
-        }
-        .server-link {
-            color: #1e90ff;
-            text-decoration: none;
-            margin: 5px 0;
-            display: block;
-            padding: 10px;
-            background-color: #3a3a4a;
-            border-radius: 5px;
-            text-align: center;
-            overflow-wrap: break-word;
-        }
-        .server-link:hover {
-            background-color: #505060;
-        }
-        .drawer-close {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #ff4444;
-            cursor: pointer;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chaînes TV</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #202029;
+			color: white;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+			/* Prevent horizontal scrolling */
+		}
+
+		.banner {
+			background-color: #363640;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.banner h1 {
+			margin: 0;
+			color: white;
+		}
+	  .search{height:100%;
+    width:100%;
+    display:block;
+    background:#363640
+    }
+    .search-bar{display:grid;place-items:center;box-shadow:0 3px 7px -1px
+	  rgba(0,0,0,0.1);background:#363640;font-family:Roboto;height:60px;margin:10px 30px}
+
+    input{border:none;color:#fff;padding-left:15px;padding-right:15px;font-size:15px;font-weight:800}
+    input:focus{outline:none}
+    ::placeholder{color:#D3D3D3;font-size:15px;font-weight:600}
+    .search{height:100%;width:100%;display:block;background:#363640}
+
+		.list {
+			padding: 10px;
+		}
+
+		.blog-card {
+			background-color: #363640;
+			margin: 10px 0;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 5px;
+			overflow: hidden;
+			transition: transform 0.2s;
+			will-change: transform;
+			max-width: 100%;
+			/* Ensure it does not exceed screen width */
+			box-sizing: border-box;
+			/* Include padding and borders in width */
+		}
+
+		.blog-card:hover {
+			transform: scale(1.02);
+		}
+
+		.blog-card .photo {
+			width: 80px;
+			height: 80px;
+			background-size: cover;
+			background-position: center;
+			flex-shrink: 0;
+		}
+
+		.blog-card .description {
+			margin-left: 10px;
+			padding: 10px;
+			flex-grow: 1;
+		}
+
+		.blog-card .title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.drawer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: #2d2d3a;
+			box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			transform: translateY(100%);
+			transition: transform 0.3s ease-in-out;
+			padding: 20px;
+			color: white;
+			z-index: 1000;
+			box-sizing: border-box;
+		}
+
+		.drawer.active {
+			transform: translateY(0);
+		}
+
+		.drawer h2 {
+			margin-top: 0;
+		}
+
+		.server-link {
+			color: #1e90ff;
+			text-decoration: none;
+			margin: 5px 0;
+			display: block;
+			padding: 10px;
+			background-color: #3a3a4a;
+			border-radius: 5px;
+			text-align: center;
+			overflow-wrap: break-word;
+		}
+
+		.server-link:hover {
+			background-color: #505060;
+		}
+
+		.drawer-close {
+			display: block;
+			text-align: center;
+			margin-top: 20px;
+			color: #ff4444;
+			cursor: pointer;
+		}
+
+	</style>
 </head>
+
 <body>
-    <div class="banner">
-        <h1>Chaînes TV</h1>
-    </div>
+	<div class="banner">
+		<h1>Chaînes TV</h1>
+	</div>
 
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Rechercher une chaîne...">
-    </div>
+	<div class="search-bar">
+		<input id="search" class="search"  onkeyup="filter()" placeholder="Rechercher" name="search"type="text" >
+	  </div>
 
-    <div class="list" id="channel-list">
-        <!-- Les chaînes et leurs serveurs seront injectés ici -->
-    </div>
+		<div class="list" id="channel-list">
+			<!-- Les chaînes et leurs serveurs seront injectés ici -->
+		</div>
 
-    <div class="drawer" id="drawer">
-        <h2 id="drawer-title">Serveurs</h2>
-        <div id="server-links"></div>
-        <div class="drawer-close" id="drawer-close">Fermer</div>
-    </div>
+		<div class="drawer" id="drawer">
+			<h2 id="drawer-title">Serveurs</h2>
+			<div id="server-links"></div>
+			<div class="drawer-close" id="drawer-close">Fermer</div>
+		</div>
 
-    <script>
-        const channelList = document.getElementById('channel-list');
+		<script>
+			const channelList = document.getElementById('channel-list');
         const drawer = document.getElementById('drawer');
         const drawerTitle = document.getElementById('drawer-title');
         const serverLinks = document.getElementById('server-links');
@@ -217,6 +227,7 @@
         drawerClose.addEventListener('click', () => {
             drawer.classList.remove('active');
         });
-    </script>
+		</script>
 </body>
+
 </html>
