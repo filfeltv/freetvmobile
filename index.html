@@ -11,6 +11,7 @@
             color: white;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .banner {
             background-color: #363640;
@@ -33,6 +34,7 @@
             border-radius: 5px;
             overflow: hidden;
             transition: transform 0.2s;
+            will-change: transform;
         }
         .blog-card:hover {
             transform: scale(1.02);
@@ -114,62 +116,54 @@
     </div>
 
     <script>
+        const channels = [
+            {"name": "TF1", "logo": "https://www.1min30.com/wp-content/uploads/2018/02/TF1-logo-1.jpg", "servers": {"Server 1": "https://example.com/server1", "Server 2": "https://example.com/server2"}},
+            {"name": "France 2", "logo": "https://www.symanews.com/wp-content/uploads/2020/02/france-2-logo.png", "servers": {"Server A": "https://example.com/server3"}},
+            {"name": "M6", "logo": "https://dirigeants-entreprise.com/images/t5937-800-800-50.jpg", "servers": {"Main Server": "https://example.com/server4", "Backup Server": "https://example.com/server5"}}
+        ];
+
         const channelList = document.getElementById('channel-list');
         const drawer = document.getElementById('drawer');
         const drawerTitle = document.getElementById('drawer-title');
         const serverLinks = document.getElementById('server-links');
         const drawerClose = document.getElementById('drawer-close');
 
-        // Charger les données depuis le fichier JSON
-        fetch('./channels.json')
-            .then(response => response.json())
-            .then(data => {
-                // Conversion de l'objet JSON en tableau
-                const channels = Object.entries(data).map(([name, details]) => ({
-                    name: name,
-                    logo: details.image || 'https://via.placeholder.com/80', // Image par défaut si vide
-                    servers: details.servers
-                }));
+        channels.forEach(channel => {
+            const card = document.createElement('div');
+            card.classList.add('blog-card');
 
-                // Générer les cartes de chaînes
-                channels.forEach(channel => {
-                    const card = document.createElement('div');
-                    card.classList.add('blog-card');
+            const photo = document.createElement('div');
+            photo.classList.add('photo');
+            photo.style.backgroundImage = `url(${channel.logo})`;
 
-                    const photo = document.createElement('div');
-                    photo.classList.add('photo');
-                    photo.style.backgroundImage = `url(${channel.logo})`;
+            const description = document.createElement('div');
+            description.classList.add('description');
 
-                    const description = document.createElement('div');
-                    description.classList.add('description');
+            const title = document.createElement('p');
+            title.classList.add('title');
+            title.textContent = channel.name;
 
-                    const title = document.createElement('p');
-                    title.classList.add('title');
-                    title.textContent = channel.name;
+            description.appendChild(title);
+            card.appendChild(photo);
+            card.appendChild(description);
+            channelList.appendChild(card);
 
-                    description.appendChild(title);
-                    card.appendChild(photo);
-                    card.appendChild(description);
-                    channelList.appendChild(card);
+            card.addEventListener('click', () => {
+                drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+                serverLinks.innerHTML = '';
 
-                    card.addEventListener('click', () => {
-                        drawerTitle.textContent = `Serveurs pour ${channel.name}`;
-                        serverLinks.innerHTML = '';
+                for (const [serverName, serverLink] of Object.entries(channel.servers)) {
+                    const link = document.createElement('a');
+                    link.classList.add('server-link');
+                    link.href = serverLink;
+                    link.textContent = serverName;
+                    link.target = '_blank';
+                    serverLinks.appendChild(link);
+                }
 
-                        for (const [serverName, serverLink] of Object.entries(channel.servers)) {
-                            const link = document.createElement('a');
-                            link.classList.add('server-link');
-                            link.href = serverLink;
-                            link.textContent = serverName;
-                            link.target = '_blank';
-                            serverLinks.appendChild(link);
-                        }
-
-                        drawer.classList.add('active');
-                    });
-                });
-            })
-            .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+                drawer.classList.add('active');
+            });
+        });
 
         drawerClose.addEventListener('click', () => {
             drawer.classList.remove('active');
