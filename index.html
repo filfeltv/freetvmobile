@@ -121,7 +121,7 @@
         const drawerClose = document.getElementById('drawer-close');
 
         // Charger les données depuis le fichier JSON
-        fetch('./channels.json')
+        fetch('/channels.json')
             .then(response => response.json())
             .then(channels => {
                 channels.forEach(channel => {
