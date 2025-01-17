@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FREETVMOBILE</title>
+    <title>Chaînes TV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -100,7 +100,7 @@
 </head>
 <body>
     <div class="banner">
-        <h1>TV</h1>
+        <h1>Chaînes TV</h1>
     </div>
 
     <div class="list" id="channel-list">
@@ -121,9 +121,17 @@
         const drawerClose = document.getElementById('drawer-close');
 
         // Charger les données depuis le fichier JSON
-        fetch('channels.json')
+        fetch('./channels.json')
             .then(response => response.json())
-            .then(channels => {
+            .then(data => {
+                // Conversion de l'objet JSON en tableau
+                const channels = Object.entries(data).map(([name, details]) => ({
+                    name: name,
+                    logo: details.image || 'https://via.placeholder.com/80', // Image par défaut si vide
+                    servers: details.servers
+                }));
+
+                // Générer les cartes de chaînes
                 channels.forEach(channel => {
                     const card = document.createElement('div');
                     card.classList.add('blog-card');
