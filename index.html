@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaînes TV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #202029;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background-color: #363640;
+            padding: 20px;
+            text-align: center;
+        }
+        .banner h1 {
+            margin: 0;
+            color: white;
+        }
+        .list {
+            padding: 10px;
+        }
+        .blog-card {
+            background-color: #363640;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .blog-card:hover {
+            transform: scale(1.02);
+        }
+        .blog-card .photo {
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        .blog-card .description {
+            margin-left: 10px;
+            padding: 10px;
+            flex-grow: 1;
+        }
+        .blog-card .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .drawer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2d2d3a;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 20px;
+            color: white;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .drawer.active {
+            transform: translateY(0);
+        }
+        .drawer h2 {
+            margin-top: 0;
+        }
+        .server-link {
+            color: #1e90ff;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block;
+            padding: 10px;
+            background-color: #3a3a4a;
+            border-radius: 5px;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+        .server-link:hover {
+            background-color: #505060;
+        }
+        .drawer-close {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #ff4444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Chaînes TV</h1>
+    </div>
+
+    <div class="list" id="channel-list">
+        <!-- Les chaînes et leurs serveurs seront injectés ici -->
+    </div>
+
+    <div class="drawer" id="drawer">
+        <h2 id="drawer-title">Serveurs</h2>
+        <div id="server-links"></div>
+        <div class="drawer-close" id="drawer-close">Fermer</div>
+    </div>
+
+    <script>
+        const channelList = document.getElementById('channel-list');
+        const drawer = document.getElementById('drawer');
+        const drawerTitle = document.getElementById('drawer-title');
+        const serverLinks = document.getElementById('server-links');
+        const drawerClose = document.getElementById('drawer-close');
+
+        // Charger les données depuis le fichier JSON
+        fetch('./channels.json')
+            .then(response => response.json())
+            .then(channels => {
+                channels.forEach(channel => {
+                    const card = document.createElement('div');
+                    card.classList.add('blog-card');
+
+                    const photo = document.createElement('div');
+                    photo.classList.add('photo');
+                    photo.style.backgroundImage = `url(${channel.logo})`;
+
+                    const description = document.createElement('div');
+                    description.classList.add('description');
+
+                    const title = document.createElement('p');
+                    title.classList.add('title');
+                    title.textContent = channel.name;
+
+                    description.appendChild(title);
+                    card.appendChild(photo);
+                    card.appendChild(description);
+                    channelList.appendChild(card);
+
+                    card.addEventListener('click', () => {
+                        drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+                        serverLinks.innerHTML = '';
+
+                        for (const [serverName, serverLink] of Object.entries(channel.servers)) {
+                            const link = document.createElement('a');
+                            link.classList.add('server-link');
+                            link.href = serverLink;
+                            link.textContent = serverName;
+                            link.target = '_blank';
+                            serverLinks.appendChild(link);
+                        }
+
+                        drawer.classList.add('active');
+                    });
+                });
+            })
+            .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+
+        drawerClose.addEventListener('click', () => {
+            drawer.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
