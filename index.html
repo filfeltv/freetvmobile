@@ -206,7 +206,7 @@
       const drawerClose = document.getElementById('drawer-close');
       const searchInput = document.getElementById('search');
       // Charger les données depuis le fichier JSON
-      fetch('./channels.json').then(response => response.json()).then(data => {
+      fetch('channels.json').then(response => response.json()).then(data => {
         // Conversion de l'objet JSON en tableau
         const channels = Object.entries(data).map(([name, details]) => ({
           name: name,
