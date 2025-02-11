@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>FreeTvMobile</title>
     <style>
       body {
@@ -11,12 +11,40 @@
         color: white;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
-        /* Prevent horizontal scrolling */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
       }
       html {
         scroll-behavior: smooth;
       }
+
+      /* ----------- NOUVEAU STYLE DU HEADER ----------- */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 60px;
+        background-color: #363640;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .back-button {
+        position: absolute;
+        left: 20px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .back-button:hover {
+        opacity: 0.7;
+      }
+      /* --------------------------------------------- */
+
       .banner {
         background-color: #363640;
         padding: 20px;
@@ -26,6 +54,7 @@
         margin: 0;
         color: white;
       }
+
       .info-banner {
         background-color: #ffcc00;
         color: black;
@@ -38,6 +67,7 @@
         color: blue;
         text-decoration: underline;
       }
+
       .search {
         height: 100%;
         width: 100%;
@@ -69,6 +99,7 @@
         font-size: 15px;
         font-weight: 600;
       }
+
       .list {
         padding: 10px;
       }
@@ -82,10 +113,8 @@
         overflow: hidden;
         transition: transform 0.2s;
         will-change: transform;
-        max-width: 100%;
-        /* Ensure it does not exceed screen width */
-        box-sizing: border-box;
-        /* Include padding and borders in width */
+        max-width: 100%; /* Ensure it does not exceed screen width */
+        box-sizing: border-box; /* Include padding and borders in width */
       }
       .blog-card:hover {
         transform: scale(1.01);
@@ -93,7 +122,7 @@
       .blog-card .photo {
         width: 80px;
         height: 80px;
-        background-size: 100% 100%; /* Remplit complètement le cadre sans espace vide */
+        background-size: 100% 100%; /* Remplit complètement le cadre */
         background-repeat: no-repeat;
         background-position: center;
         flex-shrink: 0;
@@ -107,6 +136,7 @@
         font-size: 18px;
         font-weight: bold;
       }
+
       .drawer {
         position: fixed;
         bottom: 0;
@@ -150,6 +180,7 @@
         color: #ff4444;
         cursor: pointer;
       }
+
       #myBtn {
         display: none;
         position: fixed;
@@ -170,25 +201,41 @@
     </style>
   </head>
   <body>
+    <!-- Nouveau header stylé -->
     <div class="header">
       <span class="back-button" onclick="history.back();">&#8592;</span>
-      Matchs du Jour
+      <h1>Matchs du Jour</h1>
     </div>
+
     <div class="info-banner">
-      To watch the channels, download the NI Player application <strong>NIPlayer</strong>. <a href="https://niplayer.top/" target="_blank">Download it here</a>.
+      To watch the channels, download the NI Player application
+      <strong>NIPlayer</strong>. 
+      <a href="https://niplayer.top/" target="_blank">Download it here</a>.
     </div>
+
     <div class="search-bar">
-      <input id="search" class="search" onkeyup="filter()" placeholder="Rechercher" name="search" type="text">
+      <input
+        id="search"
+        class="search"
+        onkeyup="filter()"
+        placeholder="Rechercher"
+        name="search"
+        type="text"
+      />
     </div>
+
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
     <div class="list" id="channel-list">
       <!-- Les chaînes et leurs serveurs seront injectés ici -->
     </div>
+
     <div class="drawer" id="drawer">
       <h2 id="drawer-title">Serveurs</h2>
       <div id="server-links"></div>
       <div class="drawer-close" id="drawer-close">Fermer</div>
     </div>
+
     <script>
       const channelList = document.getElementById('channel-list');
       const drawer = document.getElementById('drawer');
@@ -196,67 +243,95 @@
       const serverLinks = document.getElementById('server-links');
       const drawerClose = document.getElementById('drawer-close');
       const searchInput = document.getElementById('search');
-      
-      fetch('events.json').then(response => response.json()).then(data => {
-        const channels = Object.entries(data).map(([name, details]) => ({
-          name: name,
-          logo: details.image || 'https://via.placeholder.com/80',
-          servers: details.servers
-        }));
 
-        function renderChannels(filteredChannels) {
-          channelList.innerHTML = '';
-          filteredChannels.forEach(channel => {
-            const card = document.createElement('div');
-            card.classList.add('blog-card');
-            const photo = document.createElement('div');
-            photo.classList.add('photo');
-            photo.style.backgroundImage = `url(${channel.logo})`;
-            const description = document.createElement('div');
-            description.classList.add('description');
-            const title = document.createElement('p');
-            title.classList.add('title');
-            title.textContent = channel.name;
-            description.appendChild(title);
-            card.appendChild(photo);
-            card.appendChild(description);
-            channelList.appendChild(card);
-            card.addEventListener('click', () => {
-              drawerTitle.textContent = `Serveurs pour ${channel.name}`;
-              serverLinks.innerHTML = '';
-              for (const [serverName, serverLink] of Object.entries(channel.servers)) {
-                const link = document.createElement('a');
-                link.classList.add('server-link');
-                link.href = serverLink;
-                link.textContent = serverName;
-                link.target = '_blank';
-                serverLinks.appendChild(link);
-              }
-              drawer.classList.add('active');
+      // Récupération des chaînes
+      fetch('events.json')
+        .then(response => response.json())
+        .then(data => {
+          const channels = Object.entries(data).map(([name, details]) => ({
+            name: name,
+            logo: details.image || 'https://via.placeholder.com/80',
+            servers: details.servers
+          }));
+
+          function renderChannels(filteredChannels) {
+            channelList.innerHTML = '';
+            filteredChannels.forEach(channel => {
+              const card = document.createElement('div');
+              card.classList.add('blog-card');
+
+              const photo = document.createElement('div');
+              photo.classList.add('photo');
+              photo.style.backgroundImage = `url(${channel.logo})`;
+
+              const description = document.createElement('div');
+              description.classList.add('description');
+
+              const title = document.createElement('p');
+              title.classList.add('title');
+              title.textContent = channel.name;
+
+              description.appendChild(title);
+              card.appendChild(photo);
+              card.appendChild(description);
+              channelList.appendChild(card);
+
+              card.addEventListener('click', () => {
+                drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+                serverLinks.innerHTML = '';
+                for (const [serverName, serverLink] of Object.entries(
+                  channel.servers
+                )) {
+                  const link = document.createElement('a');
+                  link.classList.add('server-link');
+                  link.href = serverLink;
+                  link.textContent = serverName;
+                  link.target = '_blank';
+                  serverLinks.appendChild(link);
+                }
+                drawer.classList.add('active');
+              });
             });
+          }
+
+          renderChannels(channels);
+
+          // Filtrage
+          searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            const filteredChannels = channels.filter(channel =>
+              channel.name.toLowerCase().includes(query)
+            );
+            renderChannels(filteredChannels);
           });
-        }
-        renderChannels(channels);
-        searchInput.addEventListener('input', () => {
-          const query = searchInput.value.toLowerCase();
-          const filteredChannels = channels.filter(channel => channel.name.toLowerCase().includes(query));
-          renderChannels(filteredChannels);
-        });
-      }).catch(error => console.error('Erreur lors du chargement des chaînes:', error));
-      
+        })
+        .catch(error =>
+          console.error('Erreur lors du chargement des chaînes:', error)
+        );
+
+      // Fermeture du drawer
       drawerClose.addEventListener('click', () => {
         drawer.classList.remove('active');
       });
 
+      // Bouton retour en haut
       var mybutton = document.getElementById("myBtn");
       function scrollFunction() {
-        500 < document.body.scrollTop || 500 < document.documentElement.scrollTop ? mybutton.style.display = "block" : mybutton.style.display = "none"
+        if (
+          document.body.scrollTop > 500 ||
+          document.documentElement.scrollTop > 500
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
       }
       function topFunction() {
-        document.body.scrollTop = 0, document.documentElement.scrollTop = 0
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
       window.onscroll = function() {
-        scrollFunction()
+        scrollFunction();
       };
     </script>
   </body>
