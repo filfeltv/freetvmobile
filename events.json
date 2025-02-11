@@ -1,0 +1,651 @@
+{
+  "TF1": {
+    "image": "https://i.ibb.co/5kTLLMC/TF1-logo-1.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=IkdPEHEEXOqlmCLJUk5957gnShbn6Tf3WNwKiELKxxhbUQ9hURjs1F53DEBXdu8Mot2f3hFxsqpR0Ij-eSY61m3uk-lEykOY2asj0i5PNHzN2kewtoT__O-UCu9MSRr91BjDfDDZHjVoDAove6iRfW2aPDSiQJViqyS_pCDULj_1F4Xftt0saeI_lIJGhtSbqb225gf9oA==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=jj8-KeJno7yRtfvzrtt4xtoYeHcfQOgYVRf4pBE8TuugMr9Db1Dh4LqJGnm1sKVoa1hoLFYEbgRUQ_nJm1Lz5_3rp7eBauBf4H9a-JPMqCMxk1pHaO1iZFQ6FsABpCEMVIcKml3kUiYHvWkgQHPoppTW2W3LPvg4P5djc3XPVYvXASORlNuXGOD9-zAPBvuuO4I=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=S-JK7V7wSgqTqA7Ow8k2QXtq84WL3HOYeOeymTWLmJ_BvHf3Npff3FYeE-7HeHwjCR5CmB4SHKNThYaoimAdLTQ-rcYKMJomDs7_3MyWmvFkTBm7oqwTLqLq_9eBBYeMTFHlPTGAgjmo0wE6PCo3s1kxGIrbqO6hDnPTEEy0Acimom9Z8JSl40K2BEinyMsd",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=IHUAWJ3vNjl-_OFnJbBsLdn1s7u5fj0QCyyUsJUKhX6_1gKIgNr3ffhpQWpg193LJvVomjUtAr87pNcYJ8S2jL4PkqgeQ6zdak2wPnNsgikEEnfvAh_pq5uGxGKFXbBVUmdyafmxGVC-kFC5W2pXWfpS-UWfgPJHIlDgiCK9p0Oa_eWng9XbKceMCy8Ayp5_"
+    }
+  },
+  "TF1 Series": {
+    "image": "https://i.ibb.co/CzWK6rW/tv-logo-tf1-series-films.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=7NAJSgitTVzbKm-g2wo2cN2KUTFDZcR0UHDY1Y3QkzZkidt7Pzy7bCZKiDDU7iZDZq945G6sUIQOfhkqG2AhOkpDsNWbS7ISlfWOHYofE1VQUHK0CnPGwK1OwNOZtLjMUUPWSYmGiz-N5wsvRMmH8IZBWUq-wQrkfNmWBzdUv_4ttPh0lU_witEoOhYj1aTwgu_JGVS7mcYc"
+    }
+  },
+  "TFX": {
+    "image": "https://i.ibb.co/Z2zDGWJ/5ca11ad929dca415bab0.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=IQDZAVaO1fjK5KHZXw4yHuC4670sqqSEtQ3DGHqhjeTRHFmFipN27_R62WFlCMepM_9UXQvti758IWYpolBc6jmFEiRX_q_OuH9Ax_1VkOt8F8jOlVo7GHpIssWhx4i-i10VC-K7sk77VXYWEM2ifmfcefl-oXcWuvr7sDeLo00wgX5QvenbcROfx4KvmjXHoHrfGYD9RxxXI8790ZSmGSA14xOJacm1C7z25aFJpNhnsKqd5Q6YDPP83FtJ7mRS-w==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=0S7V8MBKWeEj_yYt5lIyKVGk6oyjTNDlCe075br1E5sLUt2kWSZy6kJqot_x8_fzNrK0KOLvaxfgVNvirL0Pud7hVigKzSDnvXYh92jAOPffvFKgde1gr0h9sNOORaZ-RJ0cZrqFZWJTPOROd1HX2QpYT9HTAolI9-RuuUZ-ovmCrP4aU8JCXCHExoE43wmnexBdtOd_jQ==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=Mogtu5mOErHV-aMgDZtsEXqKRSHYUIgaecns0UqUEtfMZ2lnf3Vqbimoeuu3YWePYTVlYxwVjg3QDR_3AsnYORAjXOATpI8VLPBo-ZMf9djZnfw5LbKTcvU4lwoV5HREGllN_ZQxgOPtugPdgHXu5AE4IaefBYtIWcoEaN5J5b8jY0t5HJd0kOOm0eyE3oSwYKs="
+    }
+  },
+  "TMC": {
+    "image": "https://i.ibb.co/gTGh22J/tmccouleur-0.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=Co7-0PxZ8x-0Nu1ZlolEsABYNmq5CORmp71MavY5TE_3dHjEqLapkNMPONdY1gMVMUqTx5_GAomQMfNQkC5JZS-FHk8NaOBVkdpAmt2fi3n4GraEyLBXOY35pRIqDo_oPtQr4sTKIvVzWLbtUUeGEblc_tFg5BC38-5BFZohc6Vo5DoA5qBkav3xVKSv8kV0aLgS5cKp9Q==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=mCGguQjF6upRPY_KNDzhK4kTvegAhJylwXkXB6rEFoHPwdOAs4-l7hzvdY4u3hIa_c6mpGuuZK5BntduF4TM1kx5nTnhHtGIqIv3PjDuK7vdaXdUN5BBUKOb4Cs5pqZvzo-VSUMOLj8jTDHAFuq3c9e2K9dQbsOe-iia30SDNn2AOXJRMdon193bc1SdkV8n"
+    }
+  },
+  "Lci": {
+    "image": "https://i.ibb.co/gR4pyVL/Logo-LCI-2017.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=rxYngJTZpyXY83eNPOL-QsID1P-jNCquLQRvUOfZfXkOzsmM0iRd12BR_z4YfcDAWn26CJOxxQwkLsLaFncVRLCv1VgH9tACH9MsM9V72lvuK2t0xFF-f1pJSZSWS2uBHU0BRT3uqxUH1a0EetGcn_ATPEwrYfPcfi9NveAacRTJXKlyfFNQqxJCFJawpBFJAc15tqNVRxzuRqTTKss=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=VLtzn6s1RGC-ZRMEQDgNBptRQD9iiN_Zsw-c62WSEZMIzV99lLUSAUt324UvvulD45w_8tHmAHiJ3A9ONRmv8s30I5BCquU7XyiLzS7qSS3HmtTWWJg7HRL2P-O5e4FSw4hm60WCEtrwWGIqPkitnJ8QqzV1-EFz2RmES1ZpwViGcwJwBhOQMVqIzu96KXJyqq4XUtjDRQ=="
+    }
+  },
+  "France 2": {
+    "image": "https://i.ibb.co/fGyF943/france-2-logo.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=6JWmQgz1iLI1zB6_2xN_Pkn04-RATB2_S9irZcVREMJTYAc7-5ye1C1u75D_xsNq1CdqeGtMcqI0priZAzN-DvpVzE01GVu0jAFJaKSyJtQM9Q4ot0fQDViE0IJ0JQHQcqN5TWyOI_Ng_zy4mwBPt8TSd_dYigfL7ej1Le8qJsXYJg9RK-ra3fRiQ64j3L9GoHnsvd3QKgmHQgdiFdNEpCDI49Vq0vP9Zq0m5Lniw4hqpTKxloWxGOBxopVLMNG44A==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=4Vv28HdwaZS8yi75YCToyJnC8jHXB61XxwXBwdmOYglu5Ygg12iEwxl1ntKOsKW4muzr9gV-oCN6IpW_xI8jWiioDlw6eM0THzfNTKSRUuNEmprD5T3Y5_f6853OTEVKV8ZyBcRqYT8F5QfToDWgosGagAP2nR336OYnSPXMWwYUMhhO20fUoznIFQcetH-d_XA=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=ZRDhEfncaToIP9nrsqcljHlxw1W57R-2KjCxmoxlBQgtNEvxuxkRKmzSFEfMzualr3XG3LK4mkKpyPc6bFGDsOatrS9OqelAu0zlNrZspGY3mag56uuFrhg5SkCK8NN6Jp3X56UCt5OTLCuiMRIoRf_oBn4r-wYObZXT86tItAC2xPGKXKlCRDOGia5lX8FZ",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=F51yQPhEZSKefnd75XuD5mT7mJ6aeBIXl8WEeNs3_O1JCtBRxFXpmHhCA70zTKKWHcA8uWExu-n0Jk6n6sLZSGybNdOdHoPFlE8skm4WEiMAhQmI0sRRflZXn6SuiPGhZjMdugdmBKdFYYFDRH6sM9bNwOD_L6RoSDQLLm5PO6bSct1DK8Wu12_kJ4ni0StqYv3bvm0nxlbE3C4YvCG28AK5haM=",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=V36s3rFWZajnOq0of8trfdO7_meJTXyua9IX7e7ZldkAe4yTXiILu5xoPLF6pUTfx41JCrHTD0OJBj68m9kEzHcGCysg-xvD-8tVqDxqC4J6yJcZm6_MWCkPjG8RXGq31nZX6dGseOrN0rcdhk8aQCpUM55Ehpx5OM21zNYXTai9ruDNQfuQJOnA1ZnF9rBaVxTrheE5ZG2l2htk",
+      "Server 6": "niplayer://niplayer.com/shareintent?info=eLMckJu6KmYN8rMQPXsZMOiyIGnE7DD10NK7apmZG5t5bCqnjCtVG1TqEK1F3CStbvGGkufqJ9RBjeS0230NG4hd4_eu2Hw-ktTFXKAyc9GJdjl_-r80xlmwlrhLuQXuCbm2V9aRbNaiz-fE8xhciw6W2hQuEPBedP4wmOxNPyx-KOrFF-Irj-ajqz3nMNKeQoe0pJgbtTuIdRmWsQ=="
+    }
+  },
+  "France 3": {
+    "image": "https://i.ibb.co/KWX3y6k/france-3-telestar-fr.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=4Xz2dbA28oK2GZtR8LlZdDOldv2kLj48J-T1BUNkcQuVQhOP_zDH-yxN3evzbiMef2HI-m1GcMNtwdrESwRGvWDp5_qBnyloZGqdOb8ziUpMw8DjaJdcKZ3qlvadaicu8KYrKHb9Qp5y1ULYA9ZpCQFJEyBRRYpIgVwXO7uIB7R6nrxRxNQyzvICGjwSxsITNAA=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=dSN3vesqFC40xhmKJ23IS_yL5txeiHD_I9BD5DHxQhK3WXikvkAXbCH1PGmv4sDIv6LFP1ouCtaWjh0LeXsvuAfrUx8Z4l_A0vckQ4ZSAu0IRcRoUm2U8_ZTt5pmmX9-qj8snDXtWR5k0w3Z7uX-1TdO6rK1-GM5CglMfdm9opOOChP2f5dnWk8wZ7jpre9SythMEfYfv2hLEwzfN824GoMQL24hhbikIEMVZNJp4TVR3KkAR7U6YRm4tlTWc2rRyA==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=0BA4y1uq_E2SQEAV-TZfNS-BEmjsBKh18EsKGU66yo9BnvWEmzxTXO45FvCCKhTKSdono2EiORgitEEJWiNJyBNphapdbIYO4rri5xYVQgIV1wPnC8rrk8HKcU-5tB-t4dNOUi7v59xBkoGNU9jECV6Xr8UQqAGPay6gCuLVN5RHEaTo9VaGhOutuSYuIqtZben1gW6Aw0s4na7LPQTwXLqeI6YyDfntFWP1Oa7a31XD",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=VAGa1NUjSCpF_VRw8vOhcdlqC0PH4IyXQcMmGWx6TmRZ-hb7bRESIe6OgRKIdaTaNcdA7TrLvi3v0I2ekhY7WL_2FIz4fm4UkjTnV9QcM60jKbzv0XB3FNZdgtfJgboPglatGmfuynVMgjM4nI1FnJEQpuhO_-HB6A8NE81yB9p6TaoMqNKSmsPzO8978H_XtEdkpWZveXnZrhCHmBfxuobkqjY=",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=yRNjOqlAh8-5WHjrY7bfOVFPq-KYxbk832Y5LJZirMfK0OdelL6kh9cxMMYRNs5lfPh4q-9ifWOmym1vRp5h-5aLk3ntvx7hxuGjhO3Vz2nk_MT_Ft8vyKbrVnIkbBOPB_N1mu5NGfdJwf2LTAryY_IV7FdBZXETIEJp6B-ulEYqK2x-c80J5Gyj8ye9vvvu8oflm3trF64kdlXh",
+      "Server 6": "niplayer://niplayer.com/shareintent?info=vlEmeYKUSe3xBU0lePX8PJxfOizuNVMyn-JliKTy8zYZ4naKAjoTufhuphIUpGfSil7NesOjbkH2z89-3WQM9iQK6e5gi-3Z_SD42OE5jO-Ykl-lLZO4g9NHNQVEp8boZeP6c0eHhkhVG1cVUQMEsKOJrkizxkDIC_MW9Bmot67YRuD6dQu0jXT6RrJWs2GtmmYflbfchvcbrn7SoQ=="
+    }
+  },
+  "France 4": {
+    "image": "https://i.ibb.co/Wkys6Ks/f4b7de92-php2isf7g-png.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=HzHPnkakrifV09vy-9AGHHJ_LqPT4TLjpgeUcHyxX60Bp5TdXEVaCmFvxiKmnGUqGqNeenG5Lqyn6gRMBdr1xitwu4FYzcJEDDqEaqhOW2rWWr15x-11NPuyN6_1wApUpFIw1Ec2TYLfv-9aZEfztHXnkf5HwTsjxrIwxdHTQysjHBZ8O3ItQnk3Zpixs5fMYbU=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=MA3VJdWqzGH5bksLz0NFqSM7-PducLjEQerZKeV5ZjQfA_gdzTWCTHEdNgFCrA1WAjYvdviwegNebcG-TkFc0wJjtxWWam16vyjOG5aFveJuAaC1TRtDiX6A0Iyu_vpW2CuX1BGvL0EfuAfiRnobYeBZRwf76fwiZaHE7HlxaQfSbQINg3yIiwYMjY6oavcAgAoWMbVAl_xBlQQUIl-tW4dMX1PF4LfZ-JUKqks612qUbFeAHrjzbi_q8Ym9gPk=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=66-GKnkk6EjkH9rVyGFBXmep2AoT1ynAUmJu0AjJsW07p8ZvopAcAq26L4aGZYYVfmGpqZ9TfDIGlWeClD32GsWjhGNaJCpwfK13lIDtPh1LOKsxEYHvRNHDbmBX4uEQ_89WEVET5tq9TO8XE5g0B2uIG5Co4zRba_nsMy940Vn8eUbVqwYkgSrbVUmZLQWu7gd-aVgEz3ZX-gZdTcpw5I0Wy4SU7Se1zTPLuwOAgiXA",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=MG_S9lNAZdxRsTB8WpUHhaj5Iv6z1KBAJGGmmRy3BoR0ssrK6aIRqgij3eO7jUvLS4Itx6PLi76_JOj2INiGVRTgsqWQtNTki02l8-dM4JLSQGGuyhZjR0bNjyc8xfrg3XhZGZYzsFLzWRn7MzWqiCmO7ivToE2VRG7DE6_i3nY4AIcXRn3qF1LLeu01VkKth-_mbIEuaeh1gZBcPsav9kapQpo=",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=J9sVKt8JAH3HQedAyXSde0ac8ylr0BhXiU1M6zEnOZc72AZ1CRdiubuhozzoRK0RLGf6EL4M9RHGV8fE0WHZh4Gfc-VCRYctQZrLur4mnHOc4hSeSWlfapKXvGZPWZ8w2qaoxaSQB0-Kn8n7o952JXZ6EHXiYNQ0a78ZXwYNyVj4gnyv4o9g0AAzoNVAONqwvNziOxDR9jdae5Gn",
+      "Server 6": "niplayer://niplayer.com/shareintent?info=_FjbybXCnUwmm_eu8kVNtp0eOipWMY4QHNHQOTaaOZ_0xECRk4s_RLzuZKeTWcus3oHtXuzBSvqs-tqq73FI2TKa8thD55lc6eJYATM6Vc0FA_RkYW0OsEFAQoebIbzQkJEEqEdyhCVrQD_HPq27Sow0RKDsGSD-wfyAYZK1g4imn9ZMZl9Ur2_1ORya1LB3J9wRGrDhPixojDlVxQ=="
+    }
+  },
+  "France 5": {
+    "image": "https://i.ibb.co/NYw4MWW/logo-France-5.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=qKLAYNN3mDyASohHqpKxC7oWJSXZyR8Q_aESDaOdMfWMDgTxqlQl6b78RyE2MBkPSu-MHyUEl4tbO_3QdlmQDSy16vsamjJ8aCKFDzNCAtV09p_I1-YYdCrkpLfWo1wk6jgcfOyL99NKziCAe683_aAbELE3HVdFXPHdvRg_dmY7mkr31vNqUW5-nNdgk9Bbqxs=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=tU1U51AtOcfZzuLzDkAlmbK26cVCOJZZrz6t5nNzGXNpkRImG-LZy74RQZWZ6qGMN1jVkL_DltEZ87YstaFpTjQ1y98Yo5qehcMNPs1zkcHOoLKJZd4NqFpirDmltKT0vDoCDdFK3eMn4JEzl8wmwawaXn2hnDdHq5V3a783SgvmaaH82twpY9o7_STDc8HAbBEFaqxGUglA4Hh7n9GG1qupnsl3ISobt47wxeFXS-EKdfQoQDJXYeekoT-qcoo-7afroQ2WNwk7btbBq7HdpGqJAz6maLgVoYK0x5mCEKWpHSDhB7LOvK0D7MGkEjkkc35wIjrImjfcnxni4V2sd9GHH-LPJ_vQfGC1gxAdkEhBfn2JVEZum0cOjCDeBVEqrFsIu1uHH0Pay27YlUncFlrgFP9U_5hcgoyMP3F20QnbqIZ-zFHFpiIXQbwXJg6QMZsvYPs=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=08c3Ml-FHV3HOx-i8w4fMDwNI0EzV7BzM4U4kvmAK4BeUPY-W2voGPQDtdCofqO_AbBE7cF2WFC4vhrUA5buPrE5H4El2tEx6yznClHDsPcfagbG1Sl8nVcXxBO04no_wfHCs2AZTZYndSfaOQmCMfgK0ejaxFwXQkScsf6aTh60Lrqh2fgpIQEPyUwf86UNViYxje0KXQhxAHCIMJN1cr8pEgCHMOYk6-vY8fyB33QH",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=q5knJvkFwbVSiDdiNvd5g6mz__PeyVmLGUNBBSN2ktZnVsgD3_YeSoQyCC1i-SaCY4aof7Tz9w28F3jKz0w6Qm6n7CZvM9KPxjmle3b2ZTMH6uac_Q0iIUegT-l0n4rARumZA7xQqNAOiTNVd8d2Q_rkDWOhkX8KFwcYYJMBz7d61i0dzyB7Z-1J7Crp3p9ZKf1ApyDysO6X9BGTluQahLCR77o=",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=VMyIKmB80pbAP0YKnkdCQOdiYEQB3BZX2AjdCVU3KwQBO2bmdzA6vJ3cCbx50PfycjsbLgDG6Ax7QwI0E3zsyhPE1kkzmel3FUS0ODz2BC5oLmwm4SF6w_qi0jWzMPV3SQdOlN3pBfAMz_qv2R31kg9ITAUkbl4Y8ek5SkBG1en6b0c8iEqUiIZ0XFTsBo9YHDCQIc9xLqIeAav7",
+      "Server 6": "niplayer://niplayer.com/shareintent?info=maOaxS3VW49vddgt56qndqseCaYJ-ngQZEj5zPOER0GdLv0h7QClkA9jW1xPbUCybNDT7dzXcF6Us1DqsFz-tvx0XRsN8QjFJ6WENOCqZdKN3YGxCrvV_0Ryf7bvgMquEbg2rkRcAj_6ii_kJHKQqmk-SDcufLzuGwYmo9mhHfGFJGEypNsrXoC7qwVJIZyCJScGMrqYC5gkkkyoOg=="
+    }
+  },
+  "France Info": {
+    "image": "https://i.ibb.co/cDpTq9P/1200x768-logo-chaine-france-info.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=fDLxTRUJ5OX3h7jD9V4cjgkXk10RvNwE0lWlb-7UQ8PtqJPJ04E2pyFvBK4UqjojBs8k36uWe2vf28GJsEFKvU_EdbwRIUPvqtfyrd4d7mz_E67zeJZzKdlC9gRhcD3j_d8lQ1kC8e7LI6H3svmVJK9hiMLzqFMqC8KZhnwfZba0BAmVsuc8DFytl_Qa9kS7T3foOgydroXOVTUk74_iliRGP-DM3mE=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=MoyPa9aKIrhzN0WOZmYEKz926glYrnezRAleCgvfFtgx88zU4iJJQiVRW2JxlO30hkCPE6P_5ZQDLSLAecXgCcW6RUmcS_37LK7iLHwUim8oWTgLJYCQl3OgnbQbbrkZorKhztpQuswBn_UeqD98E8claNdg4lY63_ezlv8ouWTKTLDTA5hocp9Y5vxfcgFVXGu-z7O1eEybTZPskpc=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=r9oj5lbsmlhsyaLXhncyaktR4SeORHdOJYfyAJy3K_k57skVGzlG2bp_DrGSOc6whgW97iryf7skEaxOGBTJe-U0zqOlvt7CCc0vI43tx23rzZzUHMnrCml5dMr5vUZP3L5GWkXIMNRdQQub0MVfLTS0XAN8gVUF0D7XZINp-XSwMG-8jaSwFF5ELMmJv7UqsbSeAg=="
+    }
+  },
+  "France Tv Series": {
+    "image": "https://i.ibb.co/cx4sbwn/francetvseries-22-11-2023h-jingle.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=_rJc3UsB2zgkV0sHlD8NDq2OxoVawSwSEaUnjqIp4IAe6uf8vz5wvCidf-c7_umA9bDDXS-BUHIrB0BThPfv297W-C5cjOdLhcqxIm_LAQaFX_g4mpMQxVa4bUeFS0Wq3vbcRTlboglW-BPU0eZjwIfhaB59oEnvmzRG3AO5Yhvl88VlqdR9JZo5pCHPKk-jvp82-kUNDJ8R7Xw=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=XmYs89mTBiq3rzmim5JNU2xlq32w1YPp-PCmCUCQGiLM6_KIwocZCZX7z43_3b9oeQXnGly4Xziepl-6yMjRVzvGBJLXE9k5Fg-irUn-e9XE5dvxyvyrxyKVEjeqPPNowSBOgdtOunfFDSunLOGQoH8pI2lxWtsL6CtHKhr5fN9jjBqTy74MiXO1o1wnSq2sjLnwBw==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=K_H7FH94kWEwEiNGAQve4C7_ce8Vc5W5IQjnNg2CkuraAQz6go0hvLpp6_9eWXPoS2YIEr62q7mshiy7ovIfEe89Ngns349f6pHpT7F36EJ98YrfGB9G-Tkkt9bocFtVL35IjyppkB8rkSuFAoeja-oMXl2zG19vrU-G-B0GzjCYm9KtkCWHCu-5TWBgLd8vhGMmcJ7Q2xDWxZUA2ISbZo0="
+    }
+  },
+  "C8": {
+    "image": "https://i.ibb.co/CsyvLnj/5aeacb5d44c47.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=Gs-IHZjaiCrfltqbNmSI5SzuA6s_EkxGgUCEJmdNA6YTf8AONZ_o3yggIdQd4gr1GqPN5PLx9J2M9W8ljtQu7iwBNRfJOjp9Sw_jQP6_cWz-mgytDipibYMr0wFxOGx6gbTaTV7aBB953FkKVJXtzWLOcvEL0aTfig==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=Hpgm3kMo0SfsNM8ljLWNaGdMJ_M7NcawhmFgKObrSLuN4_cFKY0rGBjAz-QfpVVlpxGM7QublGs3mkjL7p47IMQHXtVhMpsduOePrURId7RqnSFUNNDiTXriML6t1lN6MwdA_3x1frqHvuY82R4TUIVgAhcIRGUpTy3gTfu4ggHUQQi4_eQtc5rsrP3ozu-UcZDlWJI3q6A=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=KKs571olP0A1TUlIkHJYivdn-ZtsBETYE0Vao8Iz9Z21NGbWttcE1ER47yMwN2vKmxwqhtzt5jyP42QAinQvrweCRhQK8hl50g_U3PdCg5KjAWNpkGROpWL0ZG-Bko9CZom6rjQPi8wlf3AI8F8G6MHxhSuXKrQeYAkOVm8EMym7z7RG32nTYQA0GeFmJ2M72THM3qpqzY0=",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=03F6sLGVlcFTV191TQsalEmDd6WBfCMnYmsOH-fbvFr7Ca7uI1KwH3-dIMSESWnUnuuwhmE7EgI_jL9LWjmshzZRwhqpk6KJwc6-IDl4MdJMX_5-MChOXp_otEWWHRLHCcxGfie_0kVshhruYXuP0KkFipkk1fqEUbwyhLI4Nv7hLn7Xl5SAlT-uHChDUEYJyA7IHTM=",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=OVfRLOiskD3SQmPBCM6nkP2-jkahW_d2BuScY6g0B4bs_9AmDbRVbvTD_cEjQQok3rsji_VNt02dTbtK2zG1gzBEhByYEqhEYn2yXfPkuJi6QlT4sMNK7suHg9oUjVFRwFFMzg92yjLNwiGfvEfyEg0YXW34vs6-sMs8ylb5CbIGNvHd"
+    }
+  },
+  "Cnews": {
+    "image": "https://i.ibb.co/RytNKGy/mini-magick20250104-40230-fq8dtf.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=AcnLSw672RTwGAOhgdfpCUEGDNjRQ8Nb_3nHaAJ32qCTmCA_M6M0IEYaEhZEpRQFLOm8lG7pG_-KNbuSrcGnlKbcjA-25Aed6zWml3GBFhSJGof7dl9WcoToNOyo0nPXuNFmWLL6tEozfjpIdDBGYiXn9C-MP6tH2Q==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=ueWEDIh3_b3JD-Wr_59S8XaA90RE4cj2jhqBStcYxTt1-PLgPaQjP1nX4Kuw4gQld2DHzqtJbD74anmeUmRWpdX118IcE9LcFftdkxQisly9FbXgyEnmyJrZmCuFKfYXOI7jCgOiuUZPiTOlqPWSJAE8Z0kMgXZxKSXjQsdYCc7vp36jDCrogGfhpBMMMVJezRjc9X7b3uHYsU8VLUAvApnvNdQCMK4lF1txfLoI3YpO4kOqHA==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=22OKf5SRlM6qq411UAc-p0mK10BeGUe7eEVyM6CDsufPlVahqP95iejRlnx2WdDHtrU9EjsWmLJue390dt48cKyBqDjfvbHcSOZSZ-JkHg23YQRsYCNRAmHxN0PKkQv3afLjOsurYDxOG8iLd9VOa6QexG0P8OkwDCtE7Oex9swRL9ktL67fHtbdKWB0-4KKu78g-EYCymQ=",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=gqTTS3LPQnFfHSiC7SXLVK_PfnY4mxWTAz_bolqt0XBP1UqAqKqHq6bwabSoFvKKToG9CLAj-E3Q6THf_kegz-JISDJn48nwHWkUFgkQT8LTeuqlb7ljPt2VWCSdHUSWv6waBz5i6nMrORztN9yt1o3qKPjAPCH9qgmooyiQbIbS8A3vpVX9x3MfxpVbLGBmPp1wffZSxA==",
+      "Server 5": "niplayer://niplayer.com/shareintent?info=dEm1Ch5tElX4XPXukaaHaR-MupVBJQlEhJOJWAdXK7LdMcnVY4QWeoJjZjXDPCelRfun8kogN2mYKmpPdRAeAebqbfIsfZw-cYs1VBMmlhza03WxEP1J7Z-jIYfqyMFrt8I6YqQ1qnXemkc3md9TB4z2kXtD8i9DsPtDLN9Q36drKPZJpPVEdl7crQc8MSxf5EUQ3XVMBgxwJOEAP43mnh-aBkD4kWezvneJrA=="
+    }
+  },
+  "Cstar": {
+    "image": "https://i.ibb.co/JyVYrXk/cstar.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=6olCtY33-xIyH7wgYGrG_O-i0AjsmQvbqjs-c854k_lIevweeZ7kO_VYirD4Qc7iftltioFSPV3QIHIh9u4ojL_eD6paGpLypWrHmM1xagv-BOiH0uNyMleYgTJy-5LjVKuq7PlAtoamw4zy9SgeMIcIwzud1EPk-g==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=u5o4nkroEQA_s9LiXPJnlBTYkk0rkrbD8lgKpxtc1BiO5v6pcFtpq-1_a18tUeQvDYVAOxX8tSJGMyaZHzG5FHVX9eU8UrAvkPg0OGTzLZsxdEPxXHsOxfzWL886sUXUYNp0r1ut29Fdxcy_XCy3GrXnlir5PKX0XRaVADsBq5sP8JDZID-yLMAW2FQd-rUMIAEohr2uoQ0w53UFITQ_MIQYGJxdgIbigg==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=5I-ndY_xVs5dk1NBX-55XMJWtembZrouDkwecvPcRh-gQcJgxcl4wmIthNXnxILSQuwUbrBbLghv0TUNpIC6O8Ynz1X7v9hGTjYT8idl2VXp5C7udWMhk-drlBT3rI8vby2cJOBPcz_P3kDMhCGqlznHbhss_QkQt5pqbeUoYJfvkq6MiAAHLf94fjPNs6HP03Wz5mVGQkc="
+    }
+  },
+  "BFM TV": {
+    "image": "https://i.ibb.co/Y3tk8Vy/Logo-BFM-TV-2019.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=lAX9fijxXCLNpgjJdQuFHV5lyiRWirPmMRXxXSp6zQ0vue0VRM32LVrO30IfWf08dfeDJUfEmBtRoZXGDv30nByHJxegQ6h2lMaMyHGG_3sCED8hK27eGgakQFgOGpAko06KpfBtacQ7VrNS6NwQ-TPPnonyEbpHzASECIQkTUk_KUSLkzbzIOw69n_2UR4UaGHLmtY=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=CbbNnmpVW6uPeMHP6RxZGDj5hSNA68OYgCgAY5uUtltxpJezrMdNCO6COQgb0REcHOzkMc77vAZPvL1-Y7qV2zUyle1hj1kfF-p1yWp0HQRJpkj4Y0_TCIUjJVPztugLmN7u9GXo_JHTH_PntRRgwwQV_Du_CBiqfC4mR4ffIIDwhbQAbNpV",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=qB_4Xdjw8MXB9aq3m5IJGwLtU0jl02nOltN99I8sWr4twf_9fgLrxMSRzE-hTZjubePRd-c_Ce6aK92GXlwuuCquCtoxtKLg-iFNJP7qEWlkkkhZcMG02ZXmS5lw_qmNpBYXjC72OHr_qUiKopDBmiYs-CSL_weojZZW12abZRM71m4A809-HFcNi0PdoN5V4wCscl3eKTlxuEiJ-wKJHu-9t4y2pSQYyhcU771Orpu3Cx_ao96pDoA=",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=UIXSuSQWmQ7uX_eA5_urVigev2MGxQ9kNgyU8xsHonmlv_cnMKxVro-mSiRb6PWrDRMqcc0FWIgf2v5PGBCHRo_i0UhwgJzeYsvv6Fh0uCUY0umNz-F6mjcw0xTIFXGB_5G22qex37_CJM8mFkX15S4Z81DEvzfQu7aYp90ATHFGZw6m0SJwJ7n-"
+    }
+  },
+  "BFM2": {
+    "image": "https://i.ibb.co/P1G2X4p/imgcarrebfm2.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=-sPBYQ-Q7Sz92tBurkmNa1G4uo2Ppd1X7rVtVypgv-2Iens4CTBU9h8ZPOppOUgVjlI-ZhtJCYQwbvNFhb0alqpIHBzfNuC70N2OytPv4PtN_hwA4op4mCzXVZwpV_05Nm6p-Li59QyhblTSe9bTdQfGkHHw6pqAgd0IEvjpBSwG8UUotOhW5sza2oFHmtjM8hG7",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=0K6t7fO2vc9ag4WLqyUBzoOATCmCqymZemfaHV3s1SBjiazXnCV3-NYtX8sMVBmX4wWwvJM9lzfyfeo06CRKmC3zTpr5oq8HLL00He4Xo9ILScnS0htPDRouFO7SH4Xg8miA1ia8j_VeoKhWcATU9r54uLCxeuXJlg8j3LXa9vjM55osmr2212CwBhkyAkC4mTJMfIi2ATIOlvdSQDhv1yKZVfug4-5Ul5qGNW91mAsxdOdjdk9xaw=="
+    }
+  },
+  "BFM Paris": {
+    "image": "https://i.ibb.co/DpwSptW/BFM-Paris-logo.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=nuYHLawfQ4xYaS4FCTMPCkN11gfRAApLC9-aeKffk9zzuST0dNppIQieY7aT8Nf2Js6luhaX5WAx90mRSMt3ATlOVivm0JsPohOVyCHOaoHGEFLlYfg50HhlS8DQuYAmLncWDL5kqBwHpn3DhfQehWelSW47gVxWezLSDGXNp3CDYr7_Kqg4zC0N0TtnV3bIRG6s9wtu2Zs="
+    }
+  },
+  "BFM Grand Reportage": {
+    "image": "https://i.ibb.co/Bfv17Yb/imgcarre1000-BFMGrandsreportages.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=USi8MiLAJ1uYRdWQw8zxulFEcrL4iAz9GK6SciH-ucvpGyM5mwMVykNYjUcATAujOshoLJo4tE115GbuUnfEA-4rpBXIMj3B7t6IoyKAB49xtjl2qXVaTmyXL0r2X-ZjbEyoFW_4NcirRhmVPq497srP85MbbsMbWNJMW5sA95b6M9Pyk10n--XrClumFBwou2ZJ120PpSyRsc6GFnljzzvtaA=="
+    }
+  },
+  "6ter": {
+    "image": "https://i.ibb.co/chzXRjN/DQ1-Trk-EXk-AEFLJz.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=rEkBY0NQ19raHh0wXoN1jkuhFhPxWRr1Th6BmhL3Ln8xI3XevKjUFzZxmyCb_3BEd1kL80etxlmLQyS6nf1tBcpRcVoSYR8gYgUSeDqMNWhTON_3rZCOeZAr-AMZALFP3FFNPc8h-MxvjFjyRc41MCE1Y79gDdOcSGV8gT3z8M6sGGIr6OeA1hn7JoqWdLqM1WKRhPNppVJVjbQPsJVbO5HsKVuuW8Xu1Pwns6hOpNMV",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=GeoZNMlgwRta7lbs1i4tUG-tQn5P2Czrruj074G6MbyAp0kBotBdfuYaOhWu4iJjFu-pqAFsx4HkV-Jo2HAJGrQUcm_UMwwd49bedytHAA22FhJPGE7NAcBD6urIN4aZs4NJHPxLr2m3qBQUAIKju0yDqNISZavNGMLP6B9noz-sbfDd_Rb8A0LQ9h7TjlVF",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=wHD9_MuXYKo1V0owjubtv6Z7gtyuopGv6HFtzQBzE4PFTMXQ2IJkpgFNQzRT8xqGKVwyBV7wFgyzQVz4cDm8Exo8IwDFDGLU2lEogdFBdkATfOm11gSgI4Ur8GhPMMlI3slC0bBAV8943aMZQsjYEBTvY1XDQQsfU41ePrNtx64fAGstZPDER4w-uImAGmh9GJnzTU9jUxmAYBdU79bDbocQ0_tTc_QMRljl906n7s1k9gFi-IB8emh68uM2-eNg2A=="
+    }
+  },
+  "M6": {
+    "image": "https://i.ibb.co/Y02tTYZ/t5937-800-800-50.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=zJdVB9_jkhKY3mZgJ6KU9Il6nhfwHM48Vm7exdPE3eI7KhOU-QJ-6HrQbwPiQaiF_1QyBPd2Zo3qTUVKLaR-QOPgrEKH8Qc67RSlyxVHBeo0W9_8kWK4JUKY80fWynlLrqtA1kPRc6-oi6Nma2Kb3YtT0yTUFiZBqTNdsSJe4jP-W7FaX7sgibVP2NLXEB2QmTj90_bzC94G9SbsxukIU-uDP_gEAl04333QHZQJ4elBn2yrjsJ_sr0GKw9gtFHFgv6dOS73xOidlfLZHqaFggkRcN2qr4zf-gLBoKIiXZHorfplkoHeienkm1hLK71GICOGLf15MHp09t-eMtruQvu5UPwvm4vxfijhyPxi7JNOA4FJmsdBHdLvDHcz6WyU90PidWyWgik2e4J8_n03dBI=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=1UgNJ7-ouooLH_WgS0hhaMofMgFsJnqAT6pe18PtY5iiW25Js2s8uObCLv7GFt55K7d1kSRn4xFynK6_BjWqTbaCmjWsxWqxdr2rJvGXL2YfoezI5fpmLoDHh-6otst-HRBd4mMsDxE7es2dDZQBgyeBMKXQg_kd0TfNZPbKhMP-Aq1KysO2iaTZ-93Bw54MrYImnwXY8_O7zTh4yE4A8ENHrftATNGYCBmCaielvGvjmo29meolzndFrZI84H-dGw==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=z1wPnCIBT628W_PubCU0nUB5EpCrmcfr5WwaMFo3bqR3tuSLT7LBXv27HC9fRTQjUaIcNdFGKTljv7MWP8ITEatQtjfuljlelDIG8pqFErVGKRUX2qVtrrNrR3-U3MyOMTQE50KR_DtS_BIZWF0JfINu3e9rLjiHCHLXmt415B7y39nn9ChLpb6uZGXWUcm8"
+    }
+  },
+  "W9": {
+    "image": "https://i.ibb.co/88NS95h/D8hg-UN1-XYAU8-EQX.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=0bcjDIhOPIZnWLhYUimsGncOR5DZ9-2yEqGwxetfSrdiahshSx3qaEnJiqDYqxF5zhy35ttFzrFVcWEwtnKdXsPGBb4me2JscMt8adJfMBfTjLAMTXxp1Oqrxa81OWL0zyJBhdDfu17iENtHrwRPtPdLGVrGAP78L61nUhQrhp-a-Z6Y",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=4_g0ABXT_Z--MOdv3zTPQQSW82LyOzpkQxJYZikga3OW1Q2KYdr86RAT0YLqqfJf40ysV7Nmw9F8nKT6RiV0abycmD05n_0TRHVU0ljYTi688h-w28Rw1r7Q2rfhG9Ci46qcl5XH0WPuiBTlzM31ADEeJvdQwfeuDX7IDk2hPBDi35hV035hAMRPtbX02KmVB4i9OLhcTiEiR3OZw2w6t-WmiSvOlWJohw4Fz-ovptM0lN7WpQIW8JBdETURDsXD",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=nE70Oq9NEWfCmfXbdHpkqP8irimx52570dC_hsxWJDXUvfJtoytGhNP3--khPkNQBn1eHjSMtG70aIcn6QaEuvjFgSo0MGGiYQ0JDyl1nIvI6bmsAKOS2txUGXuTeEr4jV4Vpoh9FDlbHFqg2QrMqnPMRY2DBG0PPqfmuQlibPdPGCtGfTX4VhYKnTp2Jw2-pBjQFlVRr2KaemhYKz3F6qaz7_FuHwwJYAZH24Be3iewK6BI1f6z"
+    }
+  },
+  "Nrj12": {
+    "image": "https://i.ibb.co/QY8QtsH/nrj12nouveau-png.webp",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=p3vi1Tju1DGopLizLpd4MgP9J2WmvRUPVa0_a6O0D5WjdUMHLYy-fLPuyBEE7zE0t3Ip0GevG3uvA9HKW-t5i7P5yBgoElvinpnLWg446o6Vv5YrjO1GXolDidHN0txsKM9vwwlCD6bSW-gPYbuY-svmbkVap1TJCHLsqFPvMuWsmw==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=Q7qmN7CtJxFKIO0_gg3pMNl1P6Nsuzpc75qaV8nqdQrDwXq9RT4M4GD25riB6BTXEyIpMZig58BJbIIRY4cDVwKEEupH1udUGLqTw9C7tdJdXN1YKXjzWZnSTWjzXg7pcOMVPce4n_0sIg7ELCzKVnk-911a-OuLVl2ZZoKewnsMOLewZgOjkksx64e3-HswME9AH3KFb6GvcVEIa3NKhElX6pmP-ToIHzkOUMIfGmnZWRM3MJ6V1-BYjE9edDtw",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=aRpglBfua3mEEA5E13ybwLYQeSSkFjchT6nsJALx0TpyG8t2MbMclPYSEcWds9QaeLAVRR-InSJEeXpcs4VU9CArN9FSQgJ5kz2FspBCmtboVUmlhtTEMJr_HhsgYxn8wfiPDq-BILhe5LMghCh-MTWmX5dqUnuD98b4L1cl0L03iHuXSgDKZ-NK58HUB707Cgqi7z3SF1C2D_5tLU8=",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=9u9PImmC5zwaIca-x4metjtFw8ZNKZV2yHLKzgluwA7IccWcgLwqb8Dirq9yYYnhfmfyFb1xGsFJ8SRFKEfoFHxAnedRLzSX9bVFifbUdD1JOkvTUGVPaFJCk-skdRi1tIYkYKPxLF3fhtuEYvfCbcoCZiiG9SvJHMpPi2rZpD-vYfumW6H32M6Z"
+    }
+  },
+  "Chérie25": {
+    "image": "https://i.ibb.co/JyNGqY2/1200px-Ch-rie-25-logo-2015-svg.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=ZhyPRgE3LiQ-8xPOvI1AGgtLi69fdVcPjkAmjGvq-5OoZJsZnKrcCJOfGh-CO98nZG4Y_cyDGHZFkyryYu13qrU41710Dk1RRDrUONKD7u57o2z0MtZ3gWirxVWSMlaZ5bDdR63qnOtAG6ZVyGbsBhY241eJq3vrV_RlZnClt1KQeg==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=RuMKurtxXLg3uByvmm5aiSHn8l_cX79IKC65eRqyIQJDyRS2fZjBjKus9GrgOhCgO3L0mqTQI1FeKNWVS3MC5G-RSqSbm-1EkeqZYUyjyS_OEzb5KRcSdwwByVj_TNBwmCRUnWm2Z2m-rejEcksiw_6pOwnLVXuVVJOuvXmfI0QzcJISeY7Vcjxh2umRtIDup9wIjVyi3Eo4sLVegA-fHRtf0t5i1RfTGGHfNZtrfnaIJZ8MAc256tXyVDVUIORkMo_N7_M2uxJB",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=8aWZW2KyTdDBeHiTZyeE6JXzYurRfgf_vn6oOdH9nFkwV03_tcdmzTf0dEbsI315fYpTZyvoNR7RmLr-m8qBIBKFda6j0ue2IHKAREAuZQIOKtmRz4DOMGjzuCjlYBA3xFyEfO3OcU5-aPAhnNRpc7yqj4pQ3-afb86yjPCs5jQYaZwVa54_qKPV"
+    }
+  },
+  "Arte": {
+    "image": "https://i.ibb.co/XygMkQW/arte-share-2.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=PEc5BZo8YuNQ6s2S-d8efI6CyXAH-80EWvR7T4fzJei9AmEL3dZWOlqMu7Pkr-UZgHRGhLU8v1j6SBiNwulgpyhV8WwhdTjFgWAUgliPtAMp3iOY4SLo7AGXznMRl7O6_O1u63QrlLNCyqp-uAE4k5tInkptPS15klCZ1-y8Kk2lNty3dufa3pMp9KTq8Y3qLMe2gYZUsIZRsTWPLmEUAmOu17endnKj4qLX4TJIUFtTIZjehZKc9R1n9gQIYdH8dg==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=yk3Hw_Z6vpZp0E6K-JQCL8E6XYzogQ7DJTFZuK75SM5QQYjhf_i0Ugo6eqxc93WIsKqGUxT9yFIUjNdDBc7QrNWH-YOZpyHRUH1AwKFmDQGvK5ZoWtCZLB4tTtqc8kr8btTvICly51NurtJQa8NuLrCiRLpOlHyVSJp4X0rBx-qtonfUTwPPr3DDYV3uuAna",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=pxS7A3_VoZ5Dn6-qHskSbKR7Q6hiiFnVgqSW6lrX3WUQ8nfqGYjg2pc8Rm21AH_An-Iq1uasbb1XMbySepqteifVPnNThSHTq2lzaBE-2NEgB4nctPZ0EkIkrn4Osg-Upk-9Go_8PEHuArTY7BHrqBtbZya8R8Zjgh0EJKz7JLw15YjyPYU8Kauxn5BABygZ",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=pXOtqqoyEYzuoWOAHuPx-31lwXAH961Z_IUS4VXQMQfb5vSMIyEoMuYVOL2bDIRr5gxmR-9XKN2rSTra_sLPl0qG-de2E3_xo3LwswoPgAGtA9xOXmMM_8AqLVztBJ0HP8az-tdApvmVfiVE7jhVR9uQth0Y3VwpRtu1CzowB5DdSI05HlJUa-3vLpRbjPrX7hSi3ZdDr4wEC2BfxU_BotB6WAq4w1ZfzOZCb8WmtVGt"
+    }
+  },
+  "Action": {
+    "image": "https://i.ibb.co/wW7THm2/thumbnail.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=kLe-IUQfhncdo3R6CsVYn2RBjm2aiyoGHjiTOMFxWOYOp_yBQY4PUzygwADhADSpDbKkesN1B4X_PqMdn7qfTAdlkw6caWGg8RguHCzCTj1RvNnXrOxSLQuLWst1qIkoYO2LkY8Fnm4TZrTAjjmTlkJAz5ve4B4pNtmwxArr4g2E2txPzND3PMsXB0P0oqFKE9VAtSwzZIncuaGCeNUlA91ev8Aj72MHlnaK6HXh_b_Fzie7RNs9xowhPNGfPXcO1ehxsusXBp1t1I3tC90-yBdwWhMPyFI="
+    }
+  },
+  "Animaux Tv": {
+    "image": "https://i.ibb.co/GTHMg9m/unnamed.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=482D7X7ijau8GakY69g1WDRgYyxY6xhVRxtoc3Ao8xwqBEDfKLEx_WEMj7PGATsUN2CrHEUCB_xpoej_ZUxg1Ha4NO7TRayE8PlXTYn44okfzLcAO4xaPf5uiiXX8jH-zO6iLba9QoKinDy4ZzqZwkXD8E08IVaPQyEgzYEo5fa3viWCO0BdvqDx0QkOf9zi90t-7sE2BmxdGlCBM0qxHopuJYFwjCJSxwi9Ec053xDj0j8Rn9cT657tO3TVotTJgg==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=4zJZqXeuD4Ij0qD2zlojdD4fIMJJ6bY9yPSGF5p_KlhpuYrtmoJPkliiJTHoaHSofE-gtRK4V6Bo90-BO47wtwH5_MvoxOGnaH4K9aR53SFQUN_4udA9hJCHQBWBi4EHfy-suRFyjc9Dd8ecXkY-b3GX2UbDTreX1EcKt2hXMWWdVmzVwPHCu4kSv6W2nWi_Zzc_"
+    }
+  },
+  "Bein Sport 1": {
+    "image": "https://i.postimg.cc/gjsLgqWR/BEIN-SPORT-1.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=lZHDphnUnbs3tVOFp5rW9fAjl1B4yD3drcXhVIeY5LWsss-eQLb91rhkF4d7WZlMRTBqpa-4Qn6ZR0t5pbBrXci-lVAqEz90taH6xv1Auu8ojywaZXJyq0WDyQyxjiYons8zFhvk4j2ElkRdUAaqVBTflBRzT62rhnhNSVSQ-n2U2noCY-NZ-6W3yVBFp6VNpnEjkO341TJPsQJIURoHLK-e4qIBarKxktyZzt7GlprcXNARmwTw7yIv5_oH8N-ctEa7m2uOmQEOYUujapdHiGlYrwX3U1dnfQysmeTsGbavETkgDQowdgpmEwtaKgzOrusohUTqtqpxIvjJD1tcKLLneqs9fIxL5J328Gxgcr8AgWoLtp9W1KkHuFHCtE7YGB3_FT39PmnZD8MiENolHc1idkxfynlVytCcB3V9-qZsSX1ThL5kjN3wgB1vVbm4",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=b0sFMaAR0qZZkYF3-4FRumqPsMQ7XeVBNEU89uUtP9fY-TM45bbGru-HP-91J8MjGDNtB6jc3xpVd4f5R0oDzUQFWcICPItILlTJd4NC7z5Ro2IxRu0KQ2fTxSfwrTClCohn3wFS7d0Y9PodKK_D9PMXps9VWCh3M9RuTnCvsMgfQnFolWgEnoB-9U3yVT_pcfzBMmGjOak-V4VVH1BrhiZOe-wXMGG6jNy4pnsDucojc7iS0jSoiRW3FJJUNhuS0A==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=6hF7qt__csJOTHlrdkL3zUHFPljfwyBdaEX6sc3bBt8Jrfi87aRYlVela37_p9cx6ryHPqagnqzYOWT_g3V5SlJGDLtYB6uOTrcAi3Inl0X_5tl6Tbz0z4TCPciJ9kRvtCD85DZVGovWuhwX8PfxKQgkAamKGz4Zo20NbddGcwTvlI461koVVFDkn1y-Owni"
+    }
+  },
+  "Bein Sport 2": {
+    "image": "https://i.postimg.cc/Pr68Z4Kn/BEIN-SPORT-3.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=MHLZ2w-EUauz9qGE3WHAYIDhfMxljPMYGzugI2Wjc-iiBoJmAxXLWB6H9cdHJa5jEhNdnU3dhS6ZDy7sZC1-Uh0jOXV_-fmM78GnvxOuGxahMkmpHMJjb7mlz1ne-W1EkEvPcFOAW0NJ9kcysuIhrXUl-rJjBWCFnMAlOjpoVvSl1H6CrU-5zATWR9CGXTTjWND6OFUK15O8H_EW2kBTq8VL9PFl7aU7geNQajxbMxkHRjk3fNrjGb95mPgtkR4B1So4yxIoFIFRJt_TTJduM1_NNKySuFFf36BdphF8rvYTCBDaHlz83qGt8NLNlItXKyh_-ZpwXkBbEtxmQKz_qhTwxHcwpxy0Nh38CzH_bRF5nOmh_QryFMRm4xSceCxI_0c02baTeL7-L3DnTqM01X2fZr1W64w10eTSjS0-Idh_eOv8-N0oDVgp6btIQBae",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=sVGMfy6p2FZTpC2XH6FqgEXkYbCQeTwEkuB-IsOY_6gz493FvfPkRYIG62JJwTzdJ8TubVWXs8hFc-_fNamt1RAMSeXD53agWmLz7XcsMNzl21wk6x9TdfRBeL3T_w-mc2hbxOzPVeHFPk7uIQTQjE-6gBZYupA_wkqDA_uF8q9zfL11jgJqQOaS-8etylBccof9_1E71sJnl0vmo_qm_9zhYeqsczpTiEqz_r4jAWZLfLFZD7jo8PV7_zj8rWrPtA==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=J6iYq-25YVaWGOpro23gVAgxOJcmALRRzN-bVZZY41kF1DyAQhzbvWw41Lbw2MKnTXykz6P-6X_jq12KZhUFm1XqfenLIVL3TQ0HJTs4j2WFQ5IQnxeiLeioCZeMiJInuibp1nmXNAp6Vs3Na53j6lO29HbBIwfA6npjbOLfP3KMUf29vonGSdHSTX80Hrux"
+    }
+  },
+  "Bein Sport 3": {
+    "image": "https://i.postimg.cc/SsW-MMb1g/BEIN-SPORT-2.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=tHRafoMrOIe_2e1KdiM-T2sOTyWMzfNt27LswpJYmXqb28tskKssNH1R6oTgbWPucvCOo5Chc3uDlWcvaNe6ilR8qMtOLkrW1OuSjagXY7JJvy_kA1FV87_avj_m6OWxYxYgiHaLeNTvoeB6u5MotFsesotc6ie2GhBGFI3yt5dAsRmc3K7BFFolY99Xx6uKCvautwpflaLkRKy78BVUSsduduM6ps1tRHdLpsOJPd2A_sWyR_DkDWeHzyLlFIGEizgCXTiPai_ShlWznwJ8D9HjlFqJW17FHUGX_MT0oxm127WE4DkjQYgVUMC-aPKJpiD8vhDp4C7glskSmIGijPmBrCZMSw-vzsVloKq_oN1b7QEt_wMxBLeEhWaJVcYa-0VXDxnaeDrUH3b0QAM6EAziDHQeZc-HbHNmwuR3z0QUmwMnmNiNzq3r44W1VgG2",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=gsH4KhW9TUAweUhb16plN5uFn1qU37nQsCf1YBUm29pQOTGuAWqIfM4OPKr76ZpgylwC8YVjhzFSK97UXttJP2B9BeSy0on1MxIwtuifrnRh5Ob6UJbqm02TC56w1XhWKdXdB7cC3Fzl6pjIUjNiQzJBfBs8qt8u0qB2n_EIGIHDR-pIBS2p6rYB6nV3ey7nzSx49aFnyQ0JJHrlETl5tI0UVhGfGBagoBTWCib-J1KzUg6QX4NzFl01xAE1pl_iog==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=_j0y0uMwM0zpIa3cEmgjI41u4pUx9luxsfikg8Gn43h97tUVn-eNZE2QfOa7wUYA8jZm5o_GU1dpIDRv0Cp6x5fX3iJ6jXFIstOlm9FuqufcQ8ZGGWcZrwUsNoWwy5xQLZe5DBW7cqzVoGz0PkHdkeuhpTK5gBFfLCgTuB1bkFN30tQX72anFJKaTeImjpCR"
+    }
+  },
+  "Bein Sport 4": {
+    "image": "https://i.postimg.cc/FsFL7qyx/BEIN-SPORT-MAX-4.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=-ZMbZv9er1HHwH5jrktITJqJw4C3gZzBFVbbtXolXxbZLFA52U-nvGcKVoVacZR08dxT2KGd-LvFT9oH-D9dAkEvueEDUUtAjqzxsYOVLvOvADM8pG4sKM8gWva_cY7zDQ_huLR51odaDNtwOcywe2Vv8PGHDNosRurcUYpMrqu7_QAcx0DI7ZQTGSJLM4vL94FoQd16SU4jCxIG0SYHQ3VMzEDrnPYSe0_ByOF6dVqiMmDJLMd-yGj8PctDHNv48xmMKD9RsPcLWxPp68lBizBLaKizOZ5OhJmnu0vUNIlMeko3DnFm4P82mRFSBZgzq4q9gIwoiImFZmNKTEcJ__bRacX9GOmn-6REnVekyg9yedcxCTJFlYo3yWyj2fTiuBK7Tmu_6oiXjNY9bLhMaKSFEsPYtXOomQsZgp_onetuH1Rp5hN6dYDurPAnZ0GD",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=PPdsW2GATh-9lgWIv9gtHTjuaRvk2-Km1YohM1S17mrNfsX03_EM9mmIxuVqdm87eOawCXppVnJdlafOHLrnuciVwap7OT5sZew_vklRfoNBzD2tnqTeGi4naDuwRj2ZF2XPiG9ffosVNPo6AYjj3d-p-DP1t1qvXUEYnDInJj0Qn59zwKVj1uMA5H2OBdxYnUha2TRqldMJWVIlmBBAjEOXeuoNMgHrDF_S-uB8F_B1gTr-wGPeEZq8t3RI_Tjgog==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=sCGcosN1EwjyQZXypsIc5-lPw70wfn9IHE3m8YxD2RrJbjZwsgpM5uXFh4sGHicX75381URh2KV-yXUp1PjrZjGwKJak_4CldYyypGc_yf7Xqx5uL571qlFWhIqmaFaErk5HNaO9GKoiyjx7S_tAhI0cx5qShjUu1a5Qid2yIbxB7PBNBqqiZqU8YkY0_L_T"
+    }
+  },
+  "Bein Sport 5": {
+    "image": "https://i.postimg.cc/FsFL7qyx/BEIN-SPORT-MAX-5.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=Y6JaE_5ESSgftoiq1R-sHLy7C_j6i-1-bifRZ3M2W9HWLfDre_XS7pnMCdgHsnBVAK5lkkvv1LOB8STDIWgqWjZxT2BACftNjmgBig81jWIw89dG3DkkhcWRQE1x2WaHE7DIFlryCDfkrE9LkMa1UcMBhvGkrgw1Bm89MxgVM1vmxfNOto9CktGbhBAQIhFdFNYTZh79Woo0unYXT5DbP-vSHMvb6DAuyMudU5T377zHuneBBoiieq4bY2fHBTdmOTimu-DQzlA_z2b6ONamj5afJfXs2xZp6pw7jamUy_JWe234IxkSwVYIscNB1Bp-q7YR_xVtI-c0cWoBeXsz89MaJwZYBOtQQORxdFllN0qPBbUkU3-mNhWzNzhc1Ga30to9jcN6v2gJ-4J8CU-irjy7EJzMhXy0Ekv93DR3aHd0uSLq16TiyppXq2jDkWD3",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=JrQmHb6KMuIBgMlpy8UnEQqGXgC4C_a070Jp7cAUx-pE4hKMqdTc4SkSDYIguiVLzQYl-222zy-J1I78-_sBqHQXpl01w4x19HGqmM6U-DwvmYbesn10NLxdSHVg9zaYSCAukUVyhoUVicLn7KMSzYwJWnDuhq6oJy5FQSnGLx9AcDglYdMPecDH8iHrNmHieEb-hwo-AsB9n0hJTRr_neV_PjkTCU2U_JSLqrLoZvC5u7sIYCgGftpa6c53ZFiKRQ==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=_0m_4vLUDhluKQDw3HHtJHhZG9fbkVc2nI0l35V3Jk8rlgDwHaZsRewUoTkEJuCKqdNj8YoBvpQPNVhz3F3oT4Am_HuPdgM6u1rTBFJ4PnF4d4SCv_RMSGyGsK74FA63YaH__UtyUqNJEZJa_EB0O7XpbS-_DMVR3Y6Mg3vX5_ZyyX6XSROr064gCmrMlGQB"
+    }
+  },
+  "BFM Business": {
+    "image": "https://i.ibb.co/Qpkt1Ds/imgcarrebfmbusinessnew.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=odvfA24GdASjs3oH_mfeCkJu8Z8APIJyKN-5-wOa9vfT-3YJMjs-mWBdAg4yknrzPSVKpP5nfXgQdYiQ_eeg62IooHOQMlfyyOb7bexRi3ldh33AOwF_pOodaJTsqlD9Csl_-afM_2xlMmXfpzL9SJNhRhYPugnEvvFtuQYBJ9IJ1Hdzj2dbOMjzDvVUlAK8guxYxlUJpa6RHO4=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=40lRYnotPd8JaRZ4svpsYnhOnUaFtOwCgvCghtjigADv-IGFqBUkpv8Vf3ucqVmyuVfZF4Jz9Xlm1zQnijmIdIlRKZkjy5UzFTaBmq_RUUiTjpgYK3k3Bl9GFfUK4KOyzi6gqIuS4XXdN0EPdiP6CRCvjaDdkBQqFmW9WJChriF5XMgx-WgG1a4PquBWWSIwQgY5QJ_tNV_v037_hoeEGlUvXJT_DO2SNejvgU-jBs1EhlroW8tclaI="
+    }
+  },
+  "Boing": {
+    "image": "https://i.ibb.co/V3r6cZJ/aa5c8743043001-57e923bd999bd-original.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=tQTZ4l5HGMsK301MW_kqhZ_m4BbL8Y3x2vYIJZIIP7wvLj5PR7jpkh4TgTaN9sCcFTQFtZJL_UowSopxyK_JeJluitrEJwmrWipnDj9pxTBbrDmT1u22YFPcxpzvNPVbhfFp58qFTLb5m191v2uVuG-FS9nAP-US99ab5lDxd9iP35gYHhIEBescbCWuoaYkvpzGlvXiSyuEfHnWqwJ3ZqaoYIBJksa-94xU_RlmNFWMNx4hA0w4hFMTjO0V0LPzfA=="
+    }
+  },
+  "Boomerang": {
+    "image": "https://i.ibb.co/PtKshX2/182-1826682-ykle-boomerang-cartoon-network-logo-sorgusuna-uygun-boomerang.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=dQ-mrmkmdTyd0YLvlrHDzKK26L6W4ONpQ08h3H6CyNyGjQCeRdq__au8_LSsCV6B418EGCcoHNVmtF4eKs7XTrqCd7CtzL9YSKrAs5m4KXOerLeUgjpyyb3Ax-HwdBGrooTa8IaSLVvjPmsc2E2dhMKff3Aag-ECoC0dqkixBVfrHtcnqBWqDtllSRLVkaCujwzHSvfaR5q84PQoNEpaap4665O0gFiEt1DJQKdtjanAYahzfvEH1RtZwsAqS_Zq"
+    }
+  },
+  "Canal+": {
+    "image": "https://i.ibb.co/0mTryHT/HUT5-KO4-Y4-VFX3-BZYGZ5-XS6-CCFU.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=TBJxvTvLLe8QaPoVPBI3H85v2v3p-DKPHEgb5nEKuaPaG2uv4g3gMAIDkvelwshuVONAztztpKqmMddntB8d_Sq48ypewqqmx8Na8H_f2Kv2hqizdZcbvBNjbzb890UtdHAckPdZUO8VE1caGtBqBXW4SEHh78tF1TKSudLhnllSVThwv0ES00iysY95GibQKF5qCXiIhTWgemldQKIQuNu3m-0YLeb_lkOQ5TGecTFIVIM4Ejl4kDHOeBw_YNyl6xOrF1IdBlTkFVdFi1l1-hZmtz8dRo_Rj677MFfvVy6WyO9CVSyyHY2u2UeesqYLadupLfj34pbLahsUJz1g-U1xeDYDsZAjXpMsklra-Hfb1VvugA_4mzISD39KDhwgIz7EFmfv0bs10S3P0P_A0x-Kh1ptrTuuM09M6heRXd2poEUcBdhNoZ3-3jwLm1o=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=ThnYRd5W4165cte4EsX-biLQehPo7ilNPW7y71riKv4fSxhn3bJdO5tSi0IvKt9OUH0f_2I3ym476REjiGjQF9WU2XIJ7NKfoEgFjat98rd1Icdzo-GeiP_kGE02CR1xowXjdHxn45eWo_0dxmUKOliEiSGu2Iftq3rSO5K3S4lgT5wdzcWrZzBKHYmW4pj3sZkvujHDhHg6P19PTctGFnm7VVCIyPCzCCoQ4ajk2w1yMUeaImZp",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=O42Qvgfl89zPC-7IVn06-KusoRwoDuxESPSNxS1DV-REUxE9CUz0jC1uKp1ERojiWCZYOJ_RnQ2m6HtZ12uPlOXAa-uw7EVebonPsvaFlTkEadvwNk12rARibKZgqXp4v9YsWMktbXpM9vCpx2QfY3KNSWBjnguwI9q_aoM1kZvwqDKUNA3d0Tjf6h38nYJwej-t-r8Vec1oStmuCvb_aF1MjVXPoBoHTRdZCVveVYv5EPKiGShW8aDf9ikaOCwh5g==",
+      "Server 4": "niplayer://niplayer.com/shareintent?info=dxAQa6a4FoiQ114opHAp61OjhDFEPl2sVj3BS5fxtF1YS7f5H43lC_xRfS2ymy0tZ5EV4xSfjB6OL3svYNKnl7LFYlD5tYw044LPFRngF7izUh-wUQJPVSyz3dLek10--fQi7tdiRX1QxZt7m5yHk9B7UzWZn3WTUc8i0LL6v_XiQwONAeDnlUNJ7eg96dkn4gsUiHVRmPGv7QH_v9eyNLEaj7JQN33aJlhDIq9HZIDcHim_x2uemh_xvGuDYg=="
+    }
+  },
+  "Canal+ Cinéma": {
+    "image": "https://i.ibb.co/hVSkfXf/canalplus-1432632667.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=ZX5k7qoywM_O1acwbA0IqkKwEvloYFOcNZXyZvnyvcewr--3FRpTawJssOpmcPDSjYsTzvoFe4qTWs5Ae5N61t6PQ3e6CoYlfipu5nfGrRfs2cNz5VLkAxMcukNL0HRKkq3oLJbiE4dt30yGBxfpb-zH9ky56Fr4oeKKpqPEN7s27-qLoHM9NoQ_cZibW5vBeNgxAsFyYvvD4d8VxBhph3P4hZ7lnui4c8zKMlZjB5Ut4Ml5Ke4erLvAOUsXlZ80"
+    }
+  },
+  "Canal+ Décalé": {
+    "image": "https://i.ibb.co/hBbdZWp/abab4da52cc3a6a832593733d751f4c6bcaeb0d4.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=8omcvbs7xgIiD5wNmnr9hS-ssLly2rzTUYL7DRi-FWYtTNmfKat14-Srs6NaDZQ-k9jaIyU0hgzIwHX_Q1WGMcCaaRPRSB_3W2Q9rSX9cUK9Z6gdv5G1SAoDThlDFJnB48Tg16AWamyFiCcF0UBXk46RCMmOtDPemD94FmpMh3bszqhIjmBBISxMf988COaoiCqCoCjXQV1r8QXRz79XQb_C6K--92lpVuz9ysdkaEept5EahyffrnV6ceGzzyd4Bg=="
+    }
+  },
+  "Canal+ Docs": {
+    "image": "https://i.ibb.co/SVwvKrS/59489615-43705209.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=JOklvv6nDQzZm3u21psNlGV528JRGSIWhRBjiWsac8_ZvQ1kXLwjf2kdticEb7w1DCG2eOeeow3T2EFcSXtkfcT2Wc7IoPnblq8gi9QSc40PV9LHEtSxvdQSN_Caw6kJISYZFvaKlx5TRtmPARYMPwz4h0PvTKBBe4KJ3XGviSFXELXJun8NFzU0naLDrlejktovJwj8KdGJrAPtCEvyF4mB1sXPDkirpO7zaWO62WN0HThsFvw5H6m-AMXxmvwVPw=="
+    }
+  },
+  "Canal+ Family": {
+    "image": "https://i.ibb.co/cD3Pxz3/Canal-Family.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=zVK7QutEYd11byKeSDnpYGWvZJI9TUjoVLevS6nlWrHvLww0wLl4WlAK3a5P4lVa_fFA4UJrHnB6epz0P5A1ttPI1JhUo_Q2ehm1vU0gk6RMUPG3ph8jNC5pnKXPtodfvaYunGbXSYWf7uzz8gKQ0xnNuj7i8dJja_WRlUzgnR_IkjFeznLQj9T_Uobb7aUw",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=D7xgTsNYVv-5juD1tWMrvz57PfAe20s36rzrIEZ1oBqJEPEeCVFX7pjc6QDg3YbAuocVUxrUUU0NjCFks4uxmMk-NzQ23alOHg-McDB5P1TMbn-g3HHVHs3g5PYD4RaBcviRYzkprAzQwoa7U5-EdmMfvLqfB3b1AEhWrITkxFud4irBzRpceo4FSPzdQz43TnbAX1o2Q47N9YRJ30MI5C_1l5091_PEzIV_wVoRIBNqdSEqwZp5WSWHYkDvWtBo4w=="
+    }
+  },
+  "Canal+ Foot": {
+    "image": "https://i.ibb.co/DGBd9pX/canal-foot.webp",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=QfC9mJMZe2fXXzOJPIBLSNs5bmHa9ZYd9zaR0bGFoOBfWIgqGeyeRKJWwlYEFJMdDY8aV6IBC5LyiYDRzOvkXSLsrYhngxheSslUA0rHkj8r3N82sBdZlXFmw4WdTyIPkUAQH3DUvZJRT9uGc-MvwjlN58JmUvxWlapKn4n-KY-CB6rnkzBiCItuWHVfuhrl-wh4aaSrYZnngdazcGgzSDo1oqY1wadn4Ry_QRHjnepyNdeCvkLenKcasiHTXN74BYVeOb7PeU-4RAg4Cn81thF3-VPmyuhJRGyvafpm7WujkLUBsxXbVOvJVWvUQnF7-mzwA2VFqTI0QKAaRW1z3D_0tl4O-ukX6uM0ZkgsDTSdY0tzuW2dB4xjorN8A-JpA8D5yri4b24UK-qukqwNADKvQZ-M3Bz50IHXn4oT6-LvE084TkBYxGWx46x7e38spgU=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=HQMXCiOAzpz_aNsunQY1ds4RByYK1YNpp2wqpi6exn0DR5QL5m3P6nsSYxw3Vdy6w5jt-inaZTc497dbzkELHuqadXwvM23iKyoKpSJ4sCq4KSjaYamKOhU4ZM7i9jZqTxQbzd5vafRFe0nhill-sCTUQ46AXoTtoNKuP-gXENbbqWLJN4PhpXtyoziteySuhQWc5iAiDKpdAOUuAhiJa6z23r4UTG_BYBFSmQTyMlDN4gq_ETK4WWImesicnnTFzA=="
+    }
+  },
+  "Canal+ Grand Écran": {
+    "image": "https://i.ibb.co/CH8TdbH/canal-grand-ecran.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=azEycmbAGaomTrhsD8iu77gsX_Waf37x8YruqqQ4s9z2tOElSeIVX8gPhakDplrpm8Wve3YCB18HKbuEOP-O3CGlzE4-6Vvp7ok31FjjAsFXfNvFHxzmWeYVUIVhLT6448XFJygwFBc9d140eMcS0Z-O2CbJ4Rl4fnpbrgXoPNp5-34kbtQXUd4OnE9q6uRJ7mn2YdxgwzQB1ZgLXqfBrhk9A4T7UEsuDWhx_HE_EMiCj-kgC1kLV9EQ7YsDqqKFmA==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=FwDLGav1ecdkSVZXT_UwnIJgXqtjjSWzJASxbvH0n9ugDEI5GCEpx8i-1FXG1cSq5Or4BhFU73hCSx3kBhQXOBAUwFF9mOs0XApE-rOMANF38qJGokaATfAal53EH0HpTzxpx3UP7Y038Fd264ff6AZ28feTW4PNae9410_y9_DPU7q80M0qX-hYHkQjegHfhMzBotJBj_MA4b1F44S8Nqs8yCh_Lr39u95b_qipC9ZX7yyck0onVuEB0CsduvNCrEJ0NBHVQ9vH"
+    }
+  },
+  "Canal+ Séries": {
+    "image": "https://i.ibb.co/c2pHjbS/raw-fit-smart-Crop-height-795-width-1060-hash-e6ee3e28fc17a5a88841fba978b49b2a87b5e3d1.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=UPPqeuCDqCsmpbCnZtoOXxXXtriKU-3RP8btIwK--nPvxTIEO2evdIH8Boz4Y33doAcoadrgfkZ7FWZCSJVaj4b9EdP7Ql4IQadwc6w4D87QlBQWlXLSTzhXZPMj7UYqWWPSrEwpB7Uxt39dnpM-0Jb41JKCRRbh9_oAZ2_8IbkHDBMtY6LYDOji-Cknp16wSGdLG5-XUkf2aI2NQz66yhxrrRbqKYZGxO9A78AaORbmNsKMCIPHsBywpEkYr_TKTw==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=CVk8k-usLQVmpvbFpD1JhSPOn4TG9B99hNcqwzgmXI_C4wNI6MYDWUMTc4dMlmrl8Ke2csiup4TMQizr4yIn5csrfguJj18oD4n52NzyQ6VQ0JHVVIvw6PZTmxIPWnwevXsvjDsG3sdVD3u8YiFwXn9nC7qVm7bVNqolV3BqArYvN2RiRPoqmQcrCI44ZON_"
+    }
+  },
+  "Canal+ Sport": {
+    "image": "https://i.ibb.co/DYjqgNb/881ccf4c15aa34a29e3874cb6b26725b57d32f3e.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=yzss4MQ-FsBn2QXcfGtesCotqb6sHbJ8eLEBlqSm6CpQkVhyMTOa9GAL8UXGuCbPJMiUuWflQoe9c6diRpAmR2Dz39cjTiRG__3EU-gsapQOtuSLNKR0AqvgWiNwQP_Ue6BR7fI-hTtqrc2OZrifZl8krMtdFUujzcmSAqufGE6cC7pX8ZDmBUYp6sGi5g0g14Bc9ss2PHuSo7az7FGosAh6QRnLvybYRGiTzEMRBWi0TAP46-E5Mk8Kf3ionX_d-uEQm1cgYqZM4IEghuH6nFRwOriG6zH0TUuw__-ZCmolwDBtPrtu2LOns1XxRpYvnJvssh04-CcI2R47LTQLXOQ7YxlhGWJlMh1mhnrjMJ27RgQUmmKr5oV_lE-p3jowtL6sHBwdskz5xsoG2b7F40xSPw47nXEgR0rupXWG3tk5b8UU9MtnWrB8bocOWgZt",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=1jQM29seVhRRFlc4NN00VtO4ZWzbcSkGyh9BgJExEj1O_y_OVBNS8PFs-29-vP8UBvk1YjlwOVajtQyHKmkL6YYwt5Asj6jpLWEvFQ9jW5APjRLLWe5YjTRGGitTkwDj_JGXvzKBA8DF3ItKuT37gC40DObaVu6Qs6UQPvs_xCVMhDW0w90pTj2KaZMsg1VK",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=_YFkpEUtGa59qQbAGYKSQ63tNJQN8X761r5Ng7EDUCggHNZsW1octmLlJNW-4O47Fvvz_kAf1iIFVT038O_-vWUlT20wKc7hWG1iVxgM-3BIeqx4VlYjqFubu2FWou0Pk4bMUbzC4Ay5JasXYtLdN7S2u7yUo7emFLa-1X_kRbvY52oAVmTYUsx__dl5Refl196aTXPnKwDHCPEOetEeuOd0eaRUPuiQTYrXfERckCSGnYmKrmQdFEHd_CswGlWOuQ=="
+    }
+  },
+  "Canal+ Sport 360": {
+    "image": "https://i.ibb.co/DYjqgNb/881ccf4c15aa34a29e3874cb6b26725b57d32f3e.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=q9txoGUJCXP7EdFUzLCf9OLRLtaP2VpazVzK9DQxP9jc6lTa1dsCb7tokyhn4HOAJCH-ctDmsHmok3qa5MNM9lYs1t7dzWQLREPzUgfzcVV9AgpuaB0FrUlacPO-JZuZlrzYe1ZvxJsAdncXLceREnO8PqIasX87scuES6hwjocQJWEGIJ8Ta87I2yqTxo8E9oHYRdIauOCZbjHU7FkXatj_uSW5kw3aauApTbDnnIFV5DzhmTBu_VTbEfwYJJW8Ng9Hj-vogyJ_aHP7E0eXSdfZ92Kwh_2LtMZx-nali6VgqeoO8kZzQbN9v9ybJsGhQOaliKij2eev3jA5i4CoYjCRQcrsVr9NBQ_JNPV6I5FiDyn6cWAvwitzzNesqNBFUHKXu7yT93RKyfOgaiV9edRwda3gkeQ823RH5wvx3INNVxgvLpgisauPN8dQv4Bn",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=2oxVzkHw1GFSrTJSCC_kRctUspbQyHGJPufV9g0iorNEhYJnbCjh2WxOeUDjV-rO82G8E-N983vA2aijJQxMpcLtmazwgpIytLDhSfapFGzVJWrgSYI4VH1NSTxcJbtde4koULU7yWnTtTe9q37e7G3pGJn9u5hM5pnc7-7DyzM7hIn6TLdApQgSZF3M9oON",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=gGmvtEPsHb1vcLYZzL8spTCMEqEzuKJVwomAnox3QBuo818q7fLPngAm3icZcUn7BKaJzp7wWLnXv6jSKLBs3D0E7Lff1-v7ipui6OLYjMy5g9VPwQFKPdAOZM-gKoABQwKmttseH3Wz0UuSv6FMJzLC7i8sEt_we1BowThHwo3UaWHzKXsgjyBSlF8KssoC4Ecaf46RCRAXFTbCRR6kbRei7_WO06xPgewno8ys_WTQFXtlDFVQnOD-GNSAlk0GVO_KAKTiqTLE"
+    }
+  },
+  "Infosport+": {
+    "image": "https://i.ibb.co/4PggVC0/IS.webp",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=0htcL1e2w95YD8yHQySvlnf_vQoIHLDMOA2Rkib2DwmXji27Au0uPzFBPAU-RdTdq1MVoRsc-QTgKOHveF154sv3aBUIWJ-za7tlM4z6cbwD57GdryoLypwAUU1oHFzsJ2LASFmZ7ReKI6DGOm8MwLq-qDpzq0wWtZxtd007iPQu0GFp2aEX8ZjMUCFOdhbr5Ow9gaSej1CkrjJEncR0h45PP46Fea8nO_6Tl-IpjRT8yzp3g3-mj1YZLFQ_n_cI",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=oiMHMUNHJUhiU6egUdWSqE_PefNOVO-VrfDC7PMN0DS3cMvm6pfYpl5Fiy4YoH_-IPXY5wWu-YVXSds81BsHFkR_1fq2owifXfbadbCnp11j0rt9FNN6I5GhAJKSlDOr88rBDoFDy344WRP5FoLmVaZk2tMzNHnQWKehDjWRX6xWovX2ESHHMZRUvUXrd25S"
+    }
+  },
+  "Rmc Sport 1": {
+    "image": "https://i.ibb.co/8D987f1/RMC-Sport-1.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=te6AeVzdoFXyqJnVnOJ69BcF6xR_ihKPRFLC0C5q2jvsDl3AGwAqFN4dALGnpBbuPFBE3GQr6_CBdyk0g4wlMMzDMoydwywHlf_iaA4tLqUh8Slv27XvRMfwo_DiAR7oltGEdMB58C6y1iGNo3P8TnmI5BWcNWKNZPsH7EhRbD97tPecarH9Z9TW8GbHYFIMiKsWeYxYY06BiWVtKayus4K9Vbl1OO5jFq94N3KxzP4bOd5THuuPwk6xZdk7yL3xPM8O5FPaCPGOw-yRsLa0UD-aBA_8Ur2unuxuMq40GvVFD8qWNsbk-QfQU7aTRvyIa-942uhzRZURA207z5YYyoIQ1F1c2crFisKWSmywh7vgoSdE-j9EhApy_hnf9gD7ZApiYIfTM3ZHDoN97Hdo45Z676wwgCRUwcJxhiqRkXuoTUAvOdi-AsmzB0gsRMG7",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=dxm5m678pJeK6WePNDpQBHMZ9TQHgQuA14zj_zsXlhEBlh2WD-V7zzGU9668YcZCKNYUQ82y0I7uL3rpK0ZCyvttWtZM0R_JIz5_WKy45dXWEIdxmnvnFjPmQo9QbBNqC0nk9afiNbEtJQKIV9OzK59zQOa0dCRTzpXb5rxyD2MCOQox0ihZp1e3kH9pJnygF6xl4lLPpf9ovmDpX9I7mrPOC0z9EbV7Zut9qjPrsA3bDgIJUAuP1ix2fvcTNcv79w==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=-v_g9q_dsTLVE-K6CRM6XhCAg2p_WIAumcPeVgdvDMBw3H-mO837o114-XCnIfcdM5wB1-62qpH9Tax5N1KW6Pa_XPZ9DyE1RkRNV8WqxavLnbpYqC3GUK082f_E0TvRjM3GzjwiJtmCQAqwlNvCegqeKt_eHHMS-tZOacxnmi8HGu9CEW3zL7HKQ5T2_2Qo"
+    }
+  },
+  "Rmc Sport 2": {
+    "image": "https://i.ibb.co/vD2BrVS/rmc-sport-2.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=QVdPipk-5aeEScD4xUm4uhhuZCd3WLWZcnUAokWxlPw86m2y3YiPa_ChFyug1NWtzWMyQbJTvi5rvABB2tFn8zN3Tnl0x6by7GpV7QVJXNR24O-rQyvTUG5nog1ufABCKdFzqH_fH-G2F460ik4ryTq62gxtwAAcT18RFlAxqMFL2oH-yby3w8No7TYApFqe6GDbNy5FmqNrqvm0k8FeqlCifWBBpHxRwhqogHXc6n6WkT_ddB-mGYatvPvcSP9AGemsmVaXwVazBlo8ZdbxxGDHDJEB8k0GrMEsjTf1puSitcBDfyZCLg-HR30Z-GPfcswx8lUwASSbYfNlcd38fd24P8ciJic-MW55YY9Mw1qDKJSEp7x8EBHkz26M2Da5sOyMO8pmT5pujlQmum0Wx_Ptni872an3DPV4MTJW8YT5fvc5cuA_b-A2JvKhrViD",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=ElVZja5iP2_hIfwGdZkIDPLTQeMm2okzNp1gnzEtspv1As_UHKrxOjGZ3P2BVWg_JrIKoa5YEjGCRBL-XidBuKficJeGMSwjN78RCzxEEYiP5flABmNY2JVvlROqunEsjuPxghZHE9vFqEgi99pVEiMhWAAKUrBVAnW66e_YjIN_KuK_naq3fIdBrURkHDH_IX-5XLeQBgsG60DNLAFBwpC9W1Mq05LuqQ_EKesVwrfXzrvcXBwyyiFkn2q0jNTq",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=BAsEWt4qimaee9tHhJCMCvGNcTqkNPc4dOLKnXP5-fx_xX1VnYH0g8ErCL5Zg9bZXoJm8bXnNPkTt1VzqVB_EDnmQvSksvEYJyUahFlErFex5Pyailp-pOZiyFKimU0N_RpNoswGECD6SDTHGv1TKA-siasHwrTRpBinI7M4JvtJ2gFaCnK_RJdvQnB6HTch"
+    }
+  },
+  "Rmc Sport 3": {
+    "image": "https://i.ibb.co/vD2BrVS/rmc-sport-2.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=SkeP9m9xLs_cYu1vxetpWuDAPpuF7bSgjGkptcNUnT07y0lHkVjCeBRWh3-fCgS9tDFfHRSwVv3N01dXAz8u-7_exwdG60YwqQYQ14QZJqCS3XarJHDbLsIa_oIs4oDh0hp7mxaqKrVSU0SMS-Qx84ChRKlYHrQIgcUb5VYn8tm2VPg8Se-8UeIoBbW9aeS21hlDwGFCV3Iz4ShIYxRyVJs3KZPokdQ61O047sUi4pYfLriTT81xJ_BlXsS_bnHb5g==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=uWQnGKinf6wjjnIHNV349oC9js_F680YNTTYD--_fHpZ0FpLMTRCayzTkqT9h-veRUeXaaCp7W-YynUQr6CGjivZr6j0bLzumW_g06VgC06QDhwvY8PXOL6bYhAVeFaLrD6bZ7UqV6cllqvKxLF3EXQKBl5UTVkvTwLMgnuias7Ojg-wPDFghIQP0Nr5zxw-"
+    }
+  },
+  "Rmc Sport 4": {
+    "image": "https://i.ibb.co/H7JyMfk/rmc-sport-4.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=HZMwmHLyOHDiC3kN2D3hUOs55Zn1XvH_siTtdNP1elmVqT7QoRlk0y3udDqUHXNbl7TD17KQqlHntmrwRz8xjSBm02rjQqUCU2CgSq9wa32AbtiHgBRjQmh5JQRAGKrQS-_XB5b1XcL3uRhKol7ozvOT2hyTvTNDWls0acH22WtHA4K3DMxz_BFpn5iCuoKxDg2bcQnXmom6UuW1L4rcGrp6UeqZRAnYhv9eUrCMAB6_PKGY4DjX02wj7G47VLZKJQ==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=Wj4NQ2Ee6AtLhSLHTXsbNi5MDZIMm0B0jSZoae7pfzxfWE85fF5YGgKC35ta-tUQJcdl33vXSiSbgX23PXSQA9E4SSqoKTWfEbU-Bt6Ctv-6PTAqOjP3MRn3owlCi0v6MqP_TLEPD66kR05gsNPqEDB7q8PAxQwmssl3vZnq2CEUP8oDFGv_UDQsl-rz0pXM"
+    }
+  },
+  "Dazn 1": {
+    "image": "https://i.ibb.co/vVYrCGq/image.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=iNZCOcMxRixvQ1QqfjuzQkQ6K-x5Lvi67xuD429tq-9eivqnlOEubvCPI4OxbE0tqOndPSR-mkKUTilZOPwMdCJtJ3iiXPgsWeP5u4RF8pkdxaVy2d0rO-ZPwjiJgFVL0khdWhB-x6Dj9tP1T6-kUwdEkQhiVcnFQQ283i1fip-RAg9xHUvLCb_szBKJtzhjISWlZxfTOSONNkmJUmlHiPlRD9dzNpXzJwwxXx-plQdmPHL0AlcxRqNxFU2HWM_5bA=="
+    }
+  },
+  "Dazn 2": {
+    "image": "https://i.ibb.co/y64kKxK/image.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=iHvw9jyOU8QKml4gvQq9LjyoCoV1HgDzDn3xIcbIOdlx7g1RqklawgdYXiuz_OTmv-MlKZ8gNfMdShkRf6bOzv6T8WSMfJosS4lyY6MhCu0Ffa81qH-r6UirPyoyPL67xtnPmTB4BMOQtqg3xpHb6S18iLgy2VjiSZbZzL5mAJgBc_uNxLPI9LDn09Q67KtTAiPrNh0iVAn3tlK569D-vF3ErjRXidybijoxszNF4INxJa8u2QTH0GeM10igb-X4xg==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=GhEBYqEd4rtd5fOfnCliGCQhv30AH8NHnWdhqz5gfhultSZedm3se9dr_z50QrIezBv8n3zGZsH7sAC4MeL8Z2TbzeJwiiPCQuNlM3dinfqMheDPVRopxekZeT3fEmEKRUPl5rBWPs5DBHb2LaGuSMCXmCi_zKEXx8R0x0LxYEBMdr3AhfG76kxHbyUbUMzzyrktacjkDlst-aL6ZkuRZhazOb4z-OKmd6siKTkB4J0mEB1xs-nnH_0po96mSJyvng=="
+    }
+  },
+  "Dazn 3": {
+    "image": "https://i.ibb.co/0hggHML/image.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=YOjV4Q-evmZK9WLc25lheI382SNZ-s8S_S5DzeD5rk21ZGvgQdoDoxUO0P6JzgcimYmWAbqNKvDcm7r1VfhkVXxnR1jAoEtjZtpTArdVgzQtzmQxAx1xS0RUxnfXSe9t-HJzYlzqUhb90ipXyCQsoUnF8AkY8bp9z3qO1dz9L9HNNsfgvQeo09BQizyGfKLD2ItJ9DaNVE8P7f65Gc1GAZN5gvwoSmKAp07s0OO53H30VxMT3vxBYQHl2lKM0qlrzg=="
+    }
+  },
+  "Dazn 4": {
+    "image": "https://i.ibb.co/0s0CcYF/image.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=p45BNpe2n_RZL-2n3UOyk-HirvWimOlc2nMR8hJLFd0Ac2ZbR8KQBu9626hNmfnDgmyLhHTg4VM8KOonceoiyo2RgEE5uqxMobcUc0W0ePSfS6UghXTFo-Ixd524iyxkl3cjPw4allaYSiBn6q8U6qvLM55E1jnlj1iUv-OvvQLsMR-B0o39lq4zE4WpFAAP9gS2HVXakYEfDFM06vCQJdxirmjwZlM2cGhl86_AMzMHsL7kERW-eYCzx-5-Pjo="
+    }
+  },
+  "Dazn 5": {
+    "image": "https://i.ibb.co/cts1Gp0/image.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=qY3rIvDJN8YwwAYurlA77fIEEm04gUs-qaO22gCVXonNTsVjF2tlFTRorFioI461g6-5gSOrQskh6wKma52ow-U__JGvlQGtEvqw_yPsdXdUN4mFnpMYmlnAnRGuZGVANAv2wapGFov0yS6C0qJiYMMqJ8yZj-8Swaj_OLIX0KfHQdH8v5AmA2dF41z53Z_plRAaVm8voc9MYmazkjfAil8Yz2cVma3u_CyS58VkoZ8LWop4QEpgdru_FZLysu8ibQ=="
+    }
+  },
+  "Equidia": {
+    "image": "https://i.ibb.co/rvZY7c9/9shfg48-200x200-jpg.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=tZbNJaE5kKg84QP5vIztHbe3Xm7FroeSXbKXNaclKp-WPk7O8F5VttNEtjuBoNpNzAaxfk4wfC8ZeRGZsMd6DjEIzCDegLV-iRadXMRsxLeIrOk9ZPhsbvbIudVm82uaihodbIffcqfEpDMq4KRcpcAADo0unDkqFFvsCBp5NATps97oAUx7r7om2W9Wa6WN9yfoTOgm6oFXaJhtFPR-f4Q=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=_r2zgaIR1sfsryL1-b4MLGYuMV4pjUXzD7OGcoNquGfJY_ljkYxWDmrrqqA0mGErKUVExiGT0DWhRHy7q1Kd5WMLmQhvB6IXffgZZA_G1Dj9JOwL-RSU5T0Qj1ZqJb7a_-oiQBbcUjFSrd-RP2zZZKgSf3q5jBPSCNCjANM3XHvfWoX1qnv5qaoqwp5iZYfzutSk0x5NOTzd7q-efg=="
+    }
+  },
+  "Eurosport 1": {
+    "image": "https://i.ibb.co/d7dQ5vc/170704ac36df1ba2376f7980f146f9b8.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=X65uYX5DipySg5bfIHC7Mdf1JG3d09NzGrkPOmUd82Np8KEdLuzrvsQ-zbADJI0luwtsmzZM29c9TypFYQ0ygIOiBnDzuM51sd3hhXy-q95IwgA1evz2ljmoJKscuQioYnk9vzTs76VH3xWZO_ErQewQEGRIE-Ev0q8iZRbiA-VT9EekxCKkeAUJD4IlNSbo0wugq_cFMJHpgz4ddEsUWZ-XxGNGX2YpEGxTg6fP823gdWE9UyVpiX-2yb5ObwuIaw==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=DNL20YUAi85aKmJKU3OclkM-BM0Z277H3CcTLpCmTOnnVEg0w6hex3S6F9WNwO9vmgV-ZO4wm8pANsNW3rvUrrEQjB-kNgjk147u5ZOZkCt3ioRMWs4oHqYuXuPdxcMrHhkg2UmlepUuz8L0HXvhsBhP42hbmDU1gP3S_3CL8w9PTNvME64cN_hXjXo763Hw"
+    }
+  },
+  "Eurosport 2": {
+    "image": "https://i.ibb.co/tD8z53J/eurosport-2.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=GVjIaAFPPGsowi5yMRbC8rOKcU0Dugk5ZblSbufsELclympbMQen1FHgUg7FAO0NxR5-svgc0W2OmY2I0a0p0CvBYdj-snJoNpnDGjnIkTZrIs00unJNJZnwWipT0iuKkK_fBOzZpv7qzPCGE-M6gHPLy-Q_5-gLGbQEo2I7z30XfPXcZuXOZZ_V-PDS5jXW_z23DxTOnB0ZWIhK7dhXjn7XUrHZg4tvzlcvXpKSiegkXDzWUCp4eP0iAmXjTWzdaEUQhQ6vNPCn",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=C6irQTDovwEbj9x851IoT4XLx5QmKqvYs0_h2yYJa5xBUsYnDD4w5g_cEmAnfcE1WgLpAfTWtLqqFUyHIUPEvj-ku0SVCKfwiqD_Q5bBnp64iUZrkQ2eLoqyKLrY2NOYqwU9akakBn5ZYONoIJtVNtXB7r_mPckiXkmNo8oGNvbEKkHCm1ck-KoM0vE4HucM4WBSEeoBEKEGshBMvuhd9MWn02LfN1JTrLJ69NtHXQJB_o6wAatbHMjjMrD4wxuHRg==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=91klCI7M173daKvQy8RZPgxIG1QuY6fQGJZnyTl2c1RjP4RhNXNoosGfoDw22xDpI1fR0_G1GuSe7vTHitdXM6qbzJt72_jglaEyumA_tmvy0qilwvNherxT6SOlDLiqoLxaE26Dt1WOI9H9pvJMYNq0qWvHU8N4q985Lio14kdh_0w4_zjfrLfHASSeGTmS"
+    }
+  },
+  "L’équipe 21": {
+    "image": "https://i.ibb.co/JnmMCf4/bon-achat-equipe.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=bJXeHr3cLprwoiXvm6ZzPHHzZVZJEVMWEJFqoRx4CPDlMee1zUFu5pMrErHiAPYGWh_K16HGrtYUbCMbbY51Zext2x8ctTyoBmrfEIVYrh4NkvngWL_NBjafNzMY0zjcyCSCxq8uOPNhlleK-uMm-lJg-s1uiXPnDQ==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=jzIQNbxeJr60Y7--klGyB8fo9plQI77iSz78V7-3-rKDnGdrzOdMCU3rzL8aVsMkPfjMzgDrWyoq9ex0zLLAWJRxAxDVkP7gj8zv28fgxQIliTLwuDi_WoL58udqvOtMoe_jAKFt6FkFBHQo1zyqnGRiE4VoiXjsLTM7L96gC5PPK1IooJMXpVceYn-9UXlmejuQRt439vXIeyqdWBLcBeeGBgjxv45Mf0RejJQ0Rhoukx0=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=3G7UbG6-ThOSWX098InH0d7t4W6RhM1WIcjTj4rHLhIc839WlcB-U2xLb2QBz4NO18Ps-LiwaPVyo1HSD06Jm3Yyy28Cd36UTEeAj5CE2nGZeZC_XRLL4Zd2XoqDvZ3rQmdakhZ20My8ztMXvtnsHJ5H1b5nr2RRW0Be52wpDgZnM29NT58fblswriR5q-PaTYGimB1OTdJjbuBiZs9k8Ek5kiXh5r4="
+    }
+  },
+  "L’équipe Foot": {
+    "image": "https://i.ibb.co/nQSSkSQ/Design-sans-titre.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=JE4kjm2sQ69HZfGCap21I6gH4rH-tKcK26AAks1kyEiPyWnmYQepHHPx-CjEkPsxCEwVdFIX4sme_i21Ti3SQ121c8gInbpMLJ6ySsGkZ0WKxVmqUehKHdhKEUwX0Sp4UFLqI7zpndads_sOS6jYdo76YkpncmbeoRE0pPC1ZkGxCdWqPTHizgXcD6rdp2Jc2RFtWVKqHA2MpTcj8Yp-L1ol3LJumoF_HA==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=H6I9Udev-OE3nFNUF_KKnCOhs_vYsQ7KzCH2tkbrmcUxYOWsCjOBO4jnj-oNQc2JTqerFnp93T2d408GTx3qtBxnX_5qpNWUjmnfyZlP9PCOl4ZooAJ-Xll8tvr3P0_I5B6Rpyk3mfTRSZ1Tp3cO1iwSO5r-bavXotQ0QbyZj0y9ZpIdnl2TvtZXdq2UPMss5YDqMxH57fS9YtR4aQ==",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=Qvo_0iIG4ATNSUTG4VthlISGWwChZfUBhOR1wxBYVz_KGApq9tN4OWYTnfAqzW9uTtcW7NjeyWsXhQP8IC2zsers5HCTWmB8QvWBrvuuFu58tz_O1WRXdYsv663Dsp1ljzV2aKQcUHRk8ye21pfaaDSjDzX2qcWhzQ=="
+    }
+  },
+  "L’équipe Live 1": {
+    "image": "https://i.ibb.co/DkqzpnF/Design-sans-titre-1.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=laWTc0qJHtSD48NaeUlVhHeItxpNiNByBT1Ky0UJXrO6dy1NEaGDRnZ0txrEmB69Tav4EXhYDlm9hx8fT2Q1SbrWBONmqJyih7XB1NCx744srsFKr4FFxOBLK6Ulf6Kz7IilkozDdX2XScyFLvEz2mNEZTb0EmM=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=uhe7CKbZRsNnF5lkzzLtpPVD2jFAYsYtdwqBlf_Rp6CzqTRJ_QT3N6kfocAo3S5s_nOoR4UF-G0zKcY0jeYiBVeitwvmpdgQD9YMVqlB1ye_1UvOHav0uztz3vg4vx5mHkGs4HXelcOKihIRp2wvn2yjvV5WDNNlBVCk1AsPtyPCMq1Gp6-s9DcIlgN7YKpsNUrGA48rzUPJ6Y5GiT5FTHU0sWH0ZpeUV_99NDrkNSkfClgX0o9F7DUJdEbqB9R5YgyF"
+    }
+  },
+  "L’équipe Live 2": {
+    "image": "https://i.ibb.co/9mP42zw/Design-sans-titre-2.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=7qHTxySYBaeIAf7600gOO5cIU00abybIAmmDnHWsgR0esno7qan6sooG-jTuBlS45BCig3uutLovCmsn_MdCvQDxPE7UAdIx-3J-Y-MGRzNHrDS2vRYIOn09wVlnu-s0o_lDi6TCWw-94430rLjL1yaLuUgO4O4=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=lNu9hvcUp_6MbX68LIvM9ZL_Z9D24boHIY4i1iqzAKPGt23zeudklyZ3qlz9PTQOne8sA_9A-kuvXRHGxL3a6xchXw7OEZc6vUR3M2xaAIjAC6GMs-81zblbd-bN-2M3vqL5_Tk6EUi4yBFUJGCRxirgncxOaFTTJPdXNO0A5fJH28AanAMqaib6CDr-zpPB_WXfViXZIAvxCmsNmzN5hcYD-N_3STW0vxNGpj29udvQb2hZR7dPR0C3VoauUf_TeAkz"
+    }
+  },
+  "National Geo": {
+    "image": "https://i.ibb.co/7CtKpJT/images-q-tbn-ANd9-Gc-T9h5dp92-Oek4-BMxw-HGSOLEh-Cgaf-zm3-PFv-J72-D-F7-Q6hpei9-HLbb0gs2f5-AO-ik-NJ8-X.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=NCkn1FEMcP_5hEiuBKKubVLJTcpv93H4YIEudiBPOsf5Kklr8UJtDVAqBQBSvKUt0i_N9V8pyiptae4r2bhRjQyMWeiO9IubQ9FgZxW7_fZZYeBLdrtB0DhucX4gs8o5FE-QV-LnG42edp2WhMSUJ9Bs6QH0kFbXBH3S_o8xkLzBkd0227lFh-bR1KqYKCiSDw5EBZvNQUwLwA1OM2M3WVgL3NJiW6bo3UlG9OxaC3N1i2BkufusHnLG_vUrONJA",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=yPi-_unv3WKcMMBbUuPtcBRKVFWv1bcJf-zbw62LXnh9qhy6_A2eJxs6OUuo1vMTA-NW_mjG_OyICr2WaMYNlg-P2q28JapfHiPAj97FFsNckzDmLsyE71DpeIj069ThKn9D2lZ3IFO9JeAul1r9cxc6ILEagyPVs180VShQB8UzUniAimqmrRpL18sJvyhG"
+    }
+  },
+  "National Geo Wild": {
+    "image": "https://i.ibb.co/mSv62mk/6c9ec01d4a9a69672540d0dc29551f22.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=GKIqHAi5kRjaS_msE_XwONR8NuMGiMzOwEHE-w35QNx_nUM6b7gJRgTNOFVtCo73VAD2ePpy-FsrbzYSUwG5E6dRD_4L6pnuiIBoOF_Rp1gq9AnWF2c3ISR4bQ0KIp27VLLZhMeRWa-zs3qDtfKvBNVHd-LGNX7rrg3etToqjPq8gRXHBb-sh6stOJjt8pQzFiALUrCpfmRqJ3K6VQtmn_liYDGo0NX1xE-PyAvz2M61yWoy3dIV_5pNNRgPn3Vv",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=_wuwfXO3NNl2yDsZ89sTnZAz0i-Q_HNF8O5-f9KxRA_HoDf00UlLJq7nWQrz_jGO3-ZF4hnWQlRUtWBKODvc0Zqt1Uz_sZexn8oszkhurAXEOspyMmiPmY_Lmn9P0Uv6891BytDGRiOqBDV_vofoTShDuq-jakW5H67dPdiEcL28J50tsG4iXCAVELIMIvKJ"
+    }
+  },
+  "Teva": {
+    "image": "https://i.ibb.co/HHZqVXR/T-va-logo-2021-svg.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=ZKLunb4PSypq8hv3AyWT04mnBCD_daVYSauEwcKhmZk_LSy1N8Ih23oixBoiHXonG97CDXdIfwnS5Vn-s-DQnKOvOjMPJ87bV3UOzSRABYjPODXslaoijvJ4pOcqiZ5BydqKEbHBqSCwTFUXTHIQMtRN_NYQ9LGWHp8pGBhVd3MilnEE5tGLcOPhLsdULk4fQVxjbZaGwP5smkh_v7tzHsYmCp4AxoTjJbfhKeuwvaHUQCAtIDePFRDAtZTHfiO-QA==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=wtswsuP5KOeQbynv5Mspc0TjoXLN0Wlb4TNvnNKLyqIlffVoQ6miRbQhaJpOZ8WoogAOlPodCogtquL_niTZuyEa_gGbRnIyqzgH2X4i_7NmOWzwWv2_aN5h4_8buIRBC3xnaNkrOaUAiwbqhFJMBJoDS_Vl2foQjiFRMNk7XD6_xVvafgRsrWsxvY5v5QQq4JMplPxZ4X3uQE53A7gX9ylrsX9uOugJm6EgFMdz4pZH"
+    }
+  },
+  "Chasse & Pêche": {
+    "image": "https://i.ibb.co/Ldz7Zm7/CHASSE-ET-PECHE-HD-2015.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=ZjpGzBBatXuKmEopRSkg8H-jwM1ZKjMA3ZZL-h8F6yfE4VSuk7RVMZBQVucTG9aS6MxYuQ78ncMxCUQ-PYpj8nkBBNoNakdWNs6weGHq9cRJcopx7HRhnfn9p4D4jAW3Y5BfnfeOJ1VlMqls1ZrMJpeICyvVnWe2uzDaZ7kF2Wv6xj5L2Kt6vYqL3Emp3aq2dUU5qViM3jBLAmgThpyJ2TFG0DAZw26xVgEjjMItUXmV-xrniUSvBOGjp363IwDIWA==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=8gYw8TgirRBAM1aTlk9QCr1G9t9uhy7v3BuLX3dgIQ-RHhX1q8oEgvbkLAjY3KBlxu-B3J1RJ3z13Z6U07gnCKR7XbZod3rjErc9HofXN698Yf7Rml0uvDuR4VZNlQTCVIkUakOZoLCZE8gSMh4SmgqBins7bOKdDHfkZk5nvtYEDhuqV4_KXK9ooIADx2uX"
+    }
+  },
+  "Ocs": {
+    "image": "https://i.ibb.co/FbpYB8d/logo-ocs.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=MWs4dLW3SroyZf9vv4uu5rTNF2cIjEbl5GZ7BI1YUdTbXdDNnx9bswwXiVquSTNlNCYtanww16_2Mwa1cqeIHzzcHVsKQrwCMZH0Q-v32PlkEh7gboMXVy27CyC9ghrJgWN3ihQivgHp9zOuQRDg0RuGckRrJvAl-Aqg9rhftG8QrMXNFRXUav54pLR8EdJv9mpPOvdcJLFRHCpHOr68Md-3-HQUB7w4hZ9r3B7ZWHUsMVwiYXw-EZnb6WCPkFZTzg==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=s22vnts_mlX4QqLtnnOyfuhfctAeVJSBB0AnV2ShuK8QSthnwek3Om96439kTmXGOpoTUkE9UdcwVXI7OUZ4gGOFmidxY2CiRDDR-Ga2DEdnA0ixzU2PE-5gOz2j5VQkkG5EE2sGh48AK0-jTLitkPzW907a8Yzrmcix8HWQg1knbwqWO1GR3YdAIn24LwPDl1pWU54AvsNF9M1qQKBrA0r_ghiZi-Zay6nOS_jUJrnm6ZuMhuwEmuuFUd2hLn4="
+    }
+  },
+  "RTL9": {
+    "image": "https://origin.media1.str.abweb.com/thumbs/iptv/DEF-rtl9-34.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=jppKtjqT-2L1hbbqJLtyeMAjZ_nf87V0pHv8Lh1d9Chl9Q-OFDWFqzoJ_vJOMeBzB8LWrtzLB_lwVqBM74k-cYE-HfWbV_GUPeGV9XG-62HaBZiag8wAZjQaeWfLtZZJfhQoZWMIE-sxoHWCS03JhmbIbWXjLinNJojo56yvrJpgO20Hr4wNeHytKAESWzm3ibWtOYxkD1oaYQHnGQrIMDIwYljBDXEFlGJdGBNXhhCl5qDMZjKvWTHEaBQ1eOaK",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=zBFDiZXDpZhZVlACc8f0QKbJ2c65PThdzeWJZIB175wgniZW6tR4T4Yw4GPl-vQ5YficFd-YfJo2g4wmtrRmDX5utYk3YpA7DPD6cVmQpZXAadMyfBuXpKCeofYmM_b-Ossiu8NQ1IMk4d99TxWs-UOgU7h9XQdfrQwapu7q18QU1p5ST1hyl1773hkYymrq"
+    }
+  },
+  "Rmc Alerte Secours": {
+    "image": "https://i.ibb.co/Q8tNMY4/imgcarre1000-RMCMystere.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=1HodaSnT8B1c_1M9Sg6_jwX147NP2xYEBmu_1bn32AiC_Nuq-UmrC6BiHv3XoyPIgOgDpfqt2PnOoGUwHTBYrvWgVAm0ZpXIvKK85ncBBb4udzkjJ6QG23o6ij4hASwbJ0b-38pWTBgPYLFfxU7N0TXjpWOsiQf7B0peh4ufg-xXs91Qplx1IS6y8nJSEm58VgAegKPGtW-tQg6Fx9MIPJAJtZvfFvXzjZommjYxvk3Q_bwST8LNjg=="
+    }
+  },
+  "Rmc Découverte": {
+    "image": "https://i.ibb.co/LZHGbc2/e10104ab-5f9b-4a69-86d5-b24be78efe26.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=UxTra8d1mTEW6D_d3zY-iI8DtuerC0r6G8Zo1jHc6QORFb9O4o5vqljTVQkke16b7zV02vIV1ax5yvOtRxCGxTbwS4v9NMvndO6uxFAxOGZXfpCioLq5sr1ixeN3a3xTRd5ZMvT4iiO-Ur39JL2VHJghNMqsvNNkFKhj0YUQOGIN-1wMQRv5wkCYyRcdlEbLRnGxUhFv9fFAJTsk-pUZzvn0BJv923pEMGP41jIP0mk_NdAAoS1y3Fo=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=vsIHxkTiOi-WPFVwRZ8dFNjJk06ykEDr6dqoTSVFL4ph6ohw3Dc8sL_6AAx-QMA7Qz3hQ3b8CNJ_HprlCYFiYYPpva4pK5LJNGiCuHiVB4DoFCRXMS3SS40REhnWO0oyFFjXfayTc8M1bHTiOFUVxz1vTpLPsxlhyY2H5UwVPtAHty3yWvVap99eNVwrJGrHMnaf4k1lsFN9-A=="
+    }
+  },
+  "Rmc Mecanic": {
+    "image": "https://i.ibb.co/yFv77gk/images.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=zvVdan0NUtNnwepM_YebYPZcCtT0TdpdAg2hgq3jCcq94aag8bhUiHJoxtXmGdBf80yMDBQaZra1C0t8s-Up9DI4tGfoP6rg1mQjXyaJhsfe8L9NsEa46MS85JHwVUkxt0nCJRg3sYyBvRJ5obLSxCRaklTRtmOrVISxuwyGZbIbjBlUO-TJZyrxH6BuyAHav48uQwMmV4EpNQGCvHmPPo185Jsj8Zrpuw-k7nUMuYaBVCQaMUei3xE="
+    }
+  },
+  "Rmc Mystère": {
+    "image": "https://i.ibb.co/Q8tNMY4/imgcarre1000-RMCMystere.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=42QZjtLYo79pUOEKG3-s4rXL3Qto7D9RmxP_Piey8qPtrK9pYWU92V8trXlzpYQXIXUBJju5ufAVLlbN42Yz5Go-KTJx3v93bI5_-axNwrmZ9-I7VvdhYFrj7Sd-7y9downkGjSLOpyNCEH3sBDIprZ-CFidxXYchILUStqLCJ8ctKLaqfCNbhfEkSaGUCxyo6KqfbVXw_QeZH7Q2KV4xORl1daKAqDXnJn1qgjG6FI1ni-IdtNRMeE="
+    }
+  },
+  "Rmc Story": {
+    "image": "https://i.ibb.co/pLKrHLc/imgcarrermcstory.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=UXh4uLbRlus05CgGA2K6YyXRDAxvJXBhx41nZN-g9GywTZIo323zh8Jbs_wCoUjZQnuor5hqgyh6tgdi4-0aLNWR6oPe5z_NweqDSon_pta-aJ3uQKGRPKe6y1NBXuz-zp2hGzjPFHUKaCUQ3xy1O1a6ZMMvpFLvBJcLu-ZygTR4TcUAtfs12kBc8BEvslXWa_FhVPoj_DwqNGTCVIxeaMvx_IPuhKRXtVCwQvYlAD1LeHlaceQC_Vg=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=oIxJhTqqYXPgFkvF1obCNYU6X4GVMLb_-vlyTBFO6_RQ4O6EOGd8pgotc-sJ4GOK9lGgJ0e-sAZXHRPqOcVJFdf_IHtBaRnNIKsW4toyY5EgKV9EGLnegxbqWNNQqbfGabSFGX4lFySPYi6cwyhHtV7o3X8fWuRAJZJ3Ex-grV0vJQZx6coKMW0UcrMH6wl3"
+    }
+  },
+  "Rmc Talk Sport": {
+    "image": "https://i.ibb.co/r3qs5FX/imgcarrermc.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=12FGVMEeU4vfZxx_mYpVO1nRVv3ymXVjQ3DxQbDo7X1G0SWwTd1zMIszyz1-pD2iISgxxXxPOePfdYL-ueigZKfDt2ClFwBe_TwOi2gb8RPdV0AzG3Xv52gnBD8yO10YH4c4rVhmRmGw_wIhDYnvi1RYc3He5yOnWQyezpAUZFI2_olCLy1tzgdv0IJBhsvAPvjyig_bZsIIhVKty1tV2jg_q_Oa4E8bCm4NbUw7FUF04oaJHA21zNw="
+    }
+  },
+  "Rmc Wow": {
+    "image": "https://i.ibb.co/GfwZmpn/channels4-profile.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=hZBRlje7t87vZ6cBKsU4J1YVa-uOE1K3rvuvAPJMdR7e86SwEdDGT3v6CEOB9RAC-2w7r1uAPYEC_W3M_ZeIpUs213aA1CsAJvpE91BlQTuefagBmsZXLVpZVF6RKydkTlNShPgKdDMe-QuISGZxSB5GOuvm0OY8FsQRB4op_GMj3AQwn7Z8qNtm4o4y8Kcze3wmjLkTY7ptMk77pbk-1r0uMmsBf7iYd2_VnWLsKnCYowoArOmqOnU="
+    }
+  },
+  "Science & Vie": {
+    "image": "https://i.ibb.co/MBFrHMZ/DEF-science-et-vie-34.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=_apNoeQWO7-Aob9h0hnP6m7Cu7vum2v0Z1iJsGNnTb2LW8SAYp0zBhiw6H44wLXZS0plYjxm8o_hPUsTL14pPD4cSnpo7obA7YPm9bkdGGV0-DyDkR0elL7QGZ4qmMlz0vJHrnVYrhATPcwqcbioARr43OunD1BqSwbtKlYpjvu78fh4WTPrZ8wAzuzOm7LIIGEvYrZgEC4iERgeJrGFYY6kpyC3xA3Jp5RB7B5QM15MWBDNtJg6Z6ZSr7rUaU1w",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=k7QEe8gdBvpiugVjc-jRij1DFpt8ShyjLFZsek5Zx11nIEV5UFM5qjNLvvIOlU-hrAsB8iw1w5FGbKIreuLbZFGH-8hQhFRTun7H3yzuXy0ECPG5hhKUBiwk6oIE4r-xbCaHZiTzlIqvEmNOSDpWGGxzMlkzb9pp695itGOYC_prN89fBbAHqU5FnfHPgqwxqV3sLbr30cCHMhdnu0f7_oP7GT0ii0L9XkzccNqBbz8l"
+    }
+  },
+  "Tech&co": {
+    "image": "https://i.ibb.co/zXQ5WN9/imgcarre-TECHCO.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=yxsjETcwyuSki0JBrdHzP-CNUsfPWA1VlNKTCK8TPg-mMtlkKo0x12UOVlT6Onz0Pq0a9r1ZciCAg9nKBkbrqXM9y54zY6j5HJ9kua9OJNOdRZVFTLSADZAlRUFIz4i2kJhUC3j2x5-xjJFO7XrWB7lzqFulEyv6FDQsCKJbF5GkIzJFN919esTnJLrjMU88j9xIkbxL2Mlz_fkphGCnwZboB8psiJiHL5ruArAhksfvCzPyMkf0hqO5TSC8Nny3"
+    }
+  },
+  "Gameone": {
+    "image": "https://i.ibb.co/VHXYCQY/gameone-22-10-24h-jingle-nouvelhabillage-md.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=TSKJFhq5PGfsS9EQLzy22ysKYV93uAyQrnh4kzyfV1Hp1W5z-PLl8YpczThuti0swTkjdlzuMbt2TvnodPxCEFgSH7aZQBz6G92ZerJkr1L8dIhatuEVgggF4vqiLMO9K6Wg3vCwfClq88KQiXWf-TFaATxSCjjtLLF2d9PBmxk6Rs8x1qsDv3e_OAG13A==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=LBPbVbuTp7Ar5ZVLqECCQzYPoHgNB9h5W-N4e_UDW1thf7viO7ZmIHdQ7e_2FptjUZfCgc7g0cLJxhXJSOxoJCH7EggUTOfcFxgEptiioCgLsKaatrPd6oIn1QU5QvGIDtuvyyVlqOnkfxAUkkdSYZFqoHoo1ag4ewtEfqDZDhQ1GEzUF-VR-ChRAWfuJEae",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=_0YZkJwcACbryoUVjL9tz7qWatTyEvHvq0DJZmS6B-grzdUPMpgS0c9aCEbc7NcKI2sbMaN4_UpEgQO5zfJ0wcDCCbBhg6mngGpS535Ji5fQN83qI8gq_T1ovVPE0H0SSNihWHGvsmbi64D8NqDpjMA6wPS6thK_0jUx2SFfIMcVLbIM5OMrsdHMNJtVl54xDIW7C3HK7ral-f3ZOEyqx9Zc1T9ePgdrLDBmErF7oTlXuWXnLSXVCEu5H0tKYBvK8A=="
+    }
+  },
+  "Gulli": {
+    "image": "https://i.ibb.co/9sJR8K9/c6dc5b0e5254cb60e27f54573ddf1d7104ae7b05452f0838ec1f643f51734328-200.webp",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=IB8zX6qnvSe4ueEmiVZvGwbGJLLQsx0oiMu4KifY0r29G8b0WpFnBlK1YnDF2A7EcAuqCtqn6v2dCFO9K3ZalXSonYcxh3p5Q-Av898CzGmYheJAY1V3Nx1MVjUz2Ag1sa3WcLRdG-3YUz_Br0QdpzVchXqmZ0M-h5k51pd31Lzm2v9avaztHzhu9QV6m-ElEErJx6DOP_upq9GcY5hwx4SONSAErN1FXPab0q07CJ4hiUVhrcl5N5-rG-wMSWLgdKvB848t8wjexRU=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=E9SdUeShEUv07X65uu5Wttkc6O-k0K4tu0Jxu0wyd8p3PZloEnEBrruuR4EBqz1sirNlv0TRY_6orFiYy54MeCLI_hwXwqfVm_uahfIuMQiJ6X4L_jfDQwhVKBkAX9W1FVC1i0AsCBubAHsbsK7jjZiRz41_0J8D7155sfWUGvmx-5sdK0KvVwYgFVTBttMudsaFLXHo-U8YyAPasNhaus4DQUEWoJhESKmnK2pGuB0=",
+      "Server 3": "niplayer://niplayer.com/shareintent?info=bQptvrDmh7kwMj2SalO_UnXA3fAa2Ecm6VCCKwkgGfpOLkpYO2Gf083W_u5DwPMqo8SxW13LAK_F9xmV3C20pCTceCA37WnouHKMOqnvlgmNB_Ht1uO1V1LJ7e705W1LNXiFUU9cu0-2RUzwOy-sjry_XJWa6oFkmvi1LINomaNyLVB07Mo9KfaJ"
+    }
+  },
+  "Mangas": {
+    "image": "https://w0rld.tv/wp-content/uploads/2020/09/mangas_tv-mangame_show.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=6VQb4NuTptkrGe7BU3tCqrWYNHeLzH5pFl3eDxA_r3VTLBJW_M5Q1A2X08EphkrL4TlJJFrE_6MXNDuDY28nrofdh9h2jDjpoFL4pPT0L9DJh2QtRl56AOhsydK9usMtGspfPQARugiwcfe5_rpPRpOq_PBa3inVw89PRP-nfIPtGp-gaeUYtOR2yN_nu3WHa31NHWFJsyBR9yBLHA-0_hVa6cI-9VFJRpAVhNwYD6c9HJaSMtjtmW12BZZQq_qtiQ==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=-4BfmsSBp5Pd3mpnnI4GACE4l-mIacedzNbzDlA4SnzabuLKorkFuwQvorP_Y15dTYylUB-2V-BmIccZwO_lPvceyz2jMii_7_qd-7Zcqk1sSlKHmk5O1fcjZ10Ve-YYtqMQzSNXxpEQ6tR17Uop0dTHkTHZts-S6HBm88RJRhBfdNA6Umz8mOFS6855dg-y"
+    }
+  },
+  "Canal+ Kids": {
+    "image": "https://i.ibb.co/MCjhJBX/hq720.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=mGxGVSbV5ZKBcQWcGWU9ttlcMPseoKL4RGbpNv97ROAGhJGcBGcE0c4PaTaPDHpbpAW0bVNFA-t6tIa_uUbvMPfigzN_axYE3SqQMCyd0w9he7LotUacd6fN8sxr7Zy0j-Eth7Rh0wZWUn5Zee5XE02LF2HBNUTdCwfGJh2BcTq4L9qYLuSWnbxoa2c14v3o3R54xLl4Mw8t-wtW9iRJrR8Gvo6WEKPTD_4qPXzYCOjvm8VyijUR8MeuhUhH-bGHGw==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=WJCvjiHC25MiqJmA_BbSbQbNuEVGvgUOfo0P75sVLQIC5dVDZVrLzOMWi5ojuL2fcVUzC9KBz6CfJuxCk9mZjcY44y5GWguXwRSnkLFYoP99TB8jzL3JTF-57HlGGUx3xM0IxxMBISGd8gHvC4KvwWW3H5NcOk1XDlNPDuyzBO1UU4PBowNH5_NGBO1qamwKpNE51FtKHoUv2ZGd2mGeFzXEhtOqbS3i9Zze6aIJt0MN"
+    }
+  },
+  "Canal J": {
+    "image": "https://i.ibb.co/7zbCmWT/Canal-J-logo-2015.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=txlmeV_EguVJxn-KdrgvpV8jxmHMNgDf9752lZDLVzX5fAD2O6RGNZefkeeKHtG8wEJGWBgvp7aZnK4tE-UC9-WLgtaTSnSbGouSO7sa5WDCqB6_UiUe2-jIWhX-W7u9xkJ1J-CvjhCeaZEqSmDYe5B1uP9ji2E0v8yrY1sJ2pNJIkl9F42h9IvvppM=",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=0B8denlQiXXSDMNCP6ygpXw1yBFZqsjXOjuylC0YTnOUn8pqyKwIgpLCOjQ4DZZpIADxRPIP_RHARLCzKGJsKBTh1EjnMBjHeMevIjmMylhxYVJYS5NT-ikhVG8ZgSy1p-yoRnBLh5Y4Kx4FQov2fVQ41KjRwHNu0ao-E03bSs6AjDmT_61FsZ27JqpqjMaDnLyOX-eZ0l7VrGq7GgNJnv4Qwba6Q66iTV4-P45ulKB2zdlIF45k3BFE23vYcLK3"
+    }
+  },
+  "J-one": {
+    "image": "https://i.ibb.co/MBKcj59/9015.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=QewqGJOz6_EV1FH5B2Y2uB6ZX2Rd-9we-koJ9YIkZCjPD7c0n5kCMRFnboBucdbCxbUiBOaIS5FnJ_RekHGE8ywdieYwgD_sP19H1-ZsgfszevL8ANiGDbvPLsYVeMC9w-J5Ac7KI2-ctc7bNaFHJ_Qzi1vbF_UiBFzPDoPs55WbNPEebSlZOLUGBVrzytTg5w1aPh4BFBIl5EZ-cCGAGeOpVtOdricbbzUbZXh1Z4vOpNc5UkSCZnp8E-Cuanev",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=Bd7MRVhewh3inM05O0VQNKh1vW5phnwTMGCfPP-XI13NzOfcVv1_spSCTz3_UBnP4mErg0kJZTGxENQ9Aj_6KijjzwpFeCabQbCPOGwkmnQvBnM5A4MWXixPHQejxExHQ_Ce0WP6yjxqv95HhWJpG2CnbYWyDyqz3lrZZGsrOB-GLd1OFQYAlzCt2O91WiXx"
+    }
+  },
+  "Japanimetv": {
+    "image": "https://i.ibb.co/SsmqtXs/422616593-779889480850326-2495258571086990014-n.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=a24qiC2zNisMYHSxdpxPPGzaB4MBxIabWTOK7WTkXYE3U-w23MM_wKKKXxZTiTyqtcsRXfc2KRssAHnfKMG4jkc4OpgkZCcw_ZGskjW1vG0rJIubaRzJnSuhOvCBRQtavzWn3kC2BIzuUQUvNajd"
+    }
+  },
+  "Nickelodeon Jr": {
+    "image": "https://i.ibb.co/hFcP21m/CYC-YELLOW-LOGO-ROUNDED-04.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=NsBObZ5rK3JAzDCaHE27e8QyIPK2hVzDMxRxKj_fS80sWX94xI_DgrplTOmH4yA1TQKb7jkx2LSscVyvUBfdNaH6DmmlrCAuZ4tma7mV7ntaCwrgkAG7ftKW-aXdPMkrM-pu1HscQLuetb3cyzMSpzNK-XfsywgDOKj_1Qlj9r_l6z2PNGmYN9uB5uF79sZXRhBUF3ZEdjGTrlTGNwrt4crlx0Qru_VmgFZYKIXF2gUTQLL6E_btJ4d3wubOMAXq6g==",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=AjMOA0UC2GkU4Z9GUCP3LpNRgCry8RxrdHH66cueEYjgW9CCLAhf4wyyvsKQQ_XUnL94yGbf-yEziH9MqtMUnsTj_3dJ-G-lIV58oVdQ4uwrPjN7IwNTcHE4wWZb9o6GxvTDCzE-JbMUHjhsvn6YTHKY12FSgV8wzh5A-w3cPyNUjsIGlyjUdcQBZ5GGtZn0"
+    }
+  },
+  "Toonami": {
+    "image": "https://i.ibb.co/KV88QSp/41600115-34916015.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=MRzKoAB8dP997kvdWMy3pMqSTF4-0-VIuGXph9SopPHxI8HY9pC_ZgiEMW3pz7HlmRMjyOzrSVaHrZRwfGoJq4wu6225eZalVNFx2CSGtYfUviwMAdwgWDFzaLyZ9VYjHHMu5MdHslU8Un7RV1ADgnWYwKHY4Ims-niCi_Ql-HJvUupRvDEj-XCVMR-nekqXhuq9jtHCtCaQAiPBPXJrGo36hswLHZms2-E7npD9kmmXV2ja3AUqrK-FZ0ZnCA5B",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=yNCEGCz1pCF-KM5_11oxeWa1t9iXC6INPsGZSCbuIEFwbB-9yhNaFEdu7iOYR4ID-Tm9SxBL3w9tGxHfTK_65qryss36tz0fFJm2wiecJAqb9OFamNWIC-TVg92DFoSHR2Jkbp0ps2xMetegkVjWfA50XuWeiEHJQiqikk4FNX5yFYZJsGlPHLA2gUlKjyps"
+    }
+  },
+  "Piwi+": {
+    "image": "https://i.ibb.co/Fwf6SW2/piwi-plus.png",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=n0W96EHzxskxLZXY612kKIlSHBLR1WzMTQZoA9bj0tziH44hxhf-m18S5F3mnqKIhVfcSu2OijxKkrC_dCa2IhI3uue7NCmz1Syxf3Z4PXTsmH2qe_nb8bYAagJ09bIy5-7vpH458dyPps8RsGm_MrlR",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=kX3aruWUGsVCzmND76_lSPhP4NY5QeZg5Z36udlG5Ms6BFZajXh2iSRyIoLHdvMNSF5taK_e17PzUE_018f3r30qwduWL6hz3Pn-ceCssHa-Ni5uGZKgQxR2w0V4uDuB1y6cU5jNDNY0nCv_andK5u6-2iV0J7YcXQzk8o0knaZIXloURXemeHkm4iwJs3KD"
+    }
+  },
+  "Tiji": {
+    "image": "https://i.ibb.co/hdypBjC/Tiji-ID-2012.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=ftSCbUqlXNbT5LhbmuuXz67RdhaOZ0KU39rKgXG0MpsPPLbQ2j-bkGmQBC3FTlTfW_nJhQCzxWa_BFqONvioTxQKth5KK54uQlgVkmwVnAcdmkpHCnfWqvT61DsXsvj5NXx3A-ywIf1PJHSsj7-CVRzK3M5WYWcT1rp0rdo7-oa-4wijMiy6Gbxix8qdvl7H",
+      "Server 2": "niplayer://niplayer.com/shareintent?info=gUw8fO03pHHc_Fv9mmHv52YBdvpuiIOigGRGq7l-Ye4MGDnV0TdA5GYn-kY9XMz49b7JaRywYDQf_Py3DAUklDKoNK8Y1MXieOKp6t_Fj8zveSIR1OAZHhmTPE2bCI4RThqOAMTY7-S27_HQE4oczB4SHKIj_AMLemZJ9CG5vkq0gfsgblkACuJW_QJ2HyVGl1-42gaXP4QDlErH5awGC8CRS920NbIyw8dFmnOEEPMyAlkCfxN7CJYCg-CQLxh6"
+    }
+  },
+  "Télétoon": {
+    "image": "https://i.ibb.co/P6rsCKZ/teletoon.jpg",
+    "servers": {
+      "Server 1": "niplayer://niplayer.com/shareintent?info=QJ1fi3MjVOFGz5S76ZqpUtCgxam4XrY0iEKaPEkwdeyMrIKL9qoSPsyGgvOU-uGxsKMiuH0W-gxz1A_u7oHRvDfcIJDZCDZYToiFqpUO6ffbZsEPqReCEQY1cLpGsSr5Op2sRNSK5It1bBuvYkap8Erb1I-sI7PseRuJTleKVDG7bSxnjkwqfTG9NAJRxYdn448wh2RCIlDQ8-sxsLIfjocuCF0FcAvNsQ-m44nlN5y1eZMVCRmAeWTzEa4MFzWU"
+    }
+  }
+}
