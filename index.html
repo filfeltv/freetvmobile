@@ -26,6 +26,21 @@
         margin: 0;
         color: white;
       }
+      .event-card {
+        background-color: #ffcc00;
+        color: black;
+        padding: 15px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px;
+        border-radius: 5px;
+      }
+      .event-card a {
+        text-decoration: none;
+        color: black;
+        display: block;
+      }
       .info-banner {
         background-color: #ffcc00;
         color: black;
@@ -177,13 +192,10 @@
       <input id="search" class="search" onkeyup="filter()" placeholder="Rechercher" name="search" type="text">
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div class="event-card">
+      <a href="match_du_jour.html">⚽ Match du Jour - Spécial</a>
+    </div>
     <div class="list" id="channel-list">
-      <a href="events.html" class="blog-card">
-        <div class="photo" style="background-image: url('https://via.placeholder.com/80');"></div>
-        <div class="description">
-          <p class="title">Match du Jour - Spécial</p>
-        </div>
-      </a>
       <!-- Les chaînes et leurs serveurs seront injectés ici -->
     </div>
     <div class="drawer" id="drawer">
