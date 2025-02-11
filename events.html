@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeTvMobile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #202029;
+        color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: #363640;
+        padding: 15px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .back-button {
+        font-size: 24px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <span class="back-button" onclick="history.back();">&#8592;</span>
+      Match du Jour
+    </div>
+    <div class="info-banner">
+      To watch the channels, download the NI Player application <strong>NIPlayer</strong>. <a href="https://niplayer.top/" target="_blank">Download it here</a>.
+    </div>
+    <div class="search-bar">
+      <input id="search" class="search" onkeyup="filter()" placeholder="Rechercher" name="search" type="text">
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div class="list" id="channel-list">
+      <!-- Les chaînes et leurs serveurs seront injectés ici -->
+    </div>
+    <div class="drawer" id="drawer">
+      <h2 id="drawer-title">Serveurs</h2>
+      <div id="server-links"></div>
+      <div class="drawer-close" id="drawer-close">Fermer</div>
+    </div>
+    <script>
+      const channelList = document.getElementById('channel-list');
+      const drawer = document.getElementById('drawer');
+      const drawerTitle = document.getElementById('drawer-title');
+      const serverLinks = document.getElementById('server-links');
+      const drawerClose = document.getElementById('drawer-close');
+      const searchInput = document.getElementById('search');
+      
+      fetch('events.json').then(response => response.json()).then(data => {
+        const channels = Object.entries(data).map(([name, details]) => ({
+          name: name,
+          logo: details.image || 'https://via.placeholder.com/80',
+          servers: details.servers
+        }));
+
+        function renderChannels(filteredChannels) {
+          channelList.innerHTML = '';
+          filteredChannels.forEach(channel => {
+            const card = document.createElement('div');
+            card.classList.add('blog-card');
+            const photo = document.createElement('div');
+            photo.classList.add('photo');
+            photo.style.backgroundImage = `url(${channel.logo})`;
+            const description = document.createElement('div');
+            description.classList.add('description');
+            const title = document.createElement('p');
+            title.classList.add('title');
+            title.textContent = channel.name;
+            description.appendChild(title);
+            card.appendChild(photo);
+            card.appendChild(description);
+            channelList.appendChild(card);
+            card.addEventListener('click', () => {
+              drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+              serverLinks.innerHTML = '';
+              for (const [serverName, serverLink] of Object.entries(channel.servers)) {
+                const link = document.createElement('a');
+                link.classList.add('server-link');
+                link.href = serverLink;
+                link.textContent = serverName;
+                link.target = '_blank';
+                serverLinks.appendChild(link);
+              }
+              drawer.classList.add('active');
+            });
+          });
+        }
+        renderChannels(channels);
+        searchInput.addEventListener('input', () => {
+          const query = searchInput.value.toLowerCase();
+          const filteredChannels = channels.filter(channel => channel.name.toLowerCase().includes(query));
+          renderChannels(filteredChannels);
+        });
+      }).catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+      
+      drawerClose.addEventListener('click', () => {
+        drawer.classList.remove('active');
+      });
+
+      var mybutton = document.getElementById("myBtn");
+      function scrollFunction() {
+        500 < document.body.scrollTop || 500 < document.documentElement.scrollTop ? mybutton.style.display = "block" : mybutton.style.display = "none"
+      }
+      function topFunction() {
+        document.body.scrollTop = 0, document.documentElement.scrollTop = 0
+      }
+      window.onscroll = function() {
+        scrollFunction()
+      };
+    </script>
+  </body>
+</html>
