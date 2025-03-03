@@ -239,101 +239,104 @@
 
     <script>
       const channelList = document.getElementById('channel-list');
-      const drawer = document.getElementById('drawer');
-      const drawerTitle = document.getElementById('drawer-title');
-      const serverLinks = document.getElementById('server-links');
-      const drawerClose = document.getElementById('drawer-close');
-      const searchInput = document.getElementById('search');
+const drawer = document.getElementById('drawer');
+const drawerTitle = document.getElementById('drawer-title');
+const serverLinks = document.getElementById('server-links');
+const drawerClose = document.getElementById('drawer-close');
+const searchInput = document.getElementById('search');
 
-      // Récupération des chaînes
-      fetch('events.json')
-        .then(response => response.json())
-        .then(data => {
-          const channels = Object.entries(data).map(([name, details]) => ({
-            name: name,
-            logo: details.image || 'https://via.placeholder.com/80',
-            servers: details.servers
-          }));
+// Récupération des chaînes
+fetch('events.json')
+  .then(response => response.json())
+  .then(data => {
+    const channels = Object.entries(data).map(([name, details]) => ({
+      name: name,
+      logo: details.image || 'https://via.placeholder.com/80',
+      servers: details.servers
+    }));
 
-          function renderChannels(filteredChannels) {
-            channelList.innerHTML = '';
-            filteredChannels.forEach(channel => {
-              const card = document.createElement('div');
-              card.classList.add('blog-card');
+    function renderChannels(filteredChannels) {
+      channelList.innerHTML = '';
+      filteredChannels.forEach(channel => {
+        const card = document.createElement('div');
+        card.classList.add('blog-card');
 
-              const photo = document.createElement('div');
-              photo.classList.add('photo');
-              photo.style.backgroundImage = `url(${channel.logo})`;
+        const photo = document.createElement('div');
+        photo.classList.add('photo');
+        photo.style.backgroundImage = `url(${channel.logo})`;
 
-              const description = document.createElement('div');
-              description.classList.add('description');
+        const description = document.createElement('div');
+        description.classList.add('description');
 
-              const title = document.createElement('p');
-              title.classList.add('title');
-              title.textContent = channel.name;
+        const title = document.createElement('p');
+        title.classList.add('title');
+        title.textContent = channel.name;
 
-              description.appendChild(title);
-              card.appendChild(photo);
-              card.appendChild(description);
-              channelList.appendChild(card);
+        description.appendChild(title);
+        card.appendChild(photo);
+        card.appendChild(description);
+        channelList.appendChild(card);
 
-              card.addEventListener('click', () => {
-                drawerTitle.textContent = `Serveurs pour ${channel.name}`;
-                serverLinks.innerHTML = '';
-                for (const [serverName, serverLink] of Object.entries(
-                  channel.servers
-                )) {
-                  const link = document.createElement('a');
-                  link.classList.add('server-link');
-                  link.href = serverLink;
-                  link.textContent = serverName;
-                  link.target = '_blank';
-                  serverLinks.appendChild(link);
-                }
-                drawer.classList.add('active');
-              });
-            });
+        card.addEventListener('click', () => {
+          drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+          serverLinks.innerHTML = '';
+
+          for (const [serverName, serverLink] of Object.entries(channel.servers)) {
+            const link = document.createElement('a');
+            link.classList.add('server-link');
+            link.href = serverLink;
+            link.textContent = serverName; // Assure que le vrai nom du serveur est utilisé
+            link.target = '_blank';
+            serverLinks.appendChild(link);
           }
 
-          renderChannels(channels);
-
-          // Filtrage
-          searchInput.addEventListener('input', () => {
-            const query = searchInput.value.toLowerCase();
-            const filteredChannels = channels.filter(channel =>
-              channel.name.toLowerCase().includes(query)
-            );
-            renderChannels(filteredChannels);
-          });
-        })
-        .catch(error =>
-          console.error('Erreur lors du chargement des chaînes:', error)
-        );
-
-      // Fermeture du drawer
-      drawerClose.addEventListener('click', () => {
-        drawer.classList.remove('active');
+          drawer.classList.add('active');
+        });
       });
+    }
 
-      // Bouton retour en haut
-      var mybutton = document.getElementById("myBtn");
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 500 ||
-          document.documentElement.scrollTop > 500
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-      window.onscroll = function() {
-        scrollFunction();
-      };
+    renderChannels(channels);
+
+    // Filtrage
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      const filteredChannels = channels.filter(channel =>
+        channel.name.toLowerCase().includes(query)
+      );
+      renderChannels(filteredChannels);
+    });
+  })
+  .catch(error =>
+    console.error('Erreur lors du chargement des chaînes:', error)
+  );
+
+// Fermeture du drawer
+drawerClose.addEventListener('click', () => {
+  drawer.classList.remove('active');
+});
+
+// Bouton retour en haut
+var mybutton = document.getElementById("myBtn");
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {
+  scrollFunction();
+};
     </script>
   </body>
 </html>
