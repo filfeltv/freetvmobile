@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,18 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+
+        *,
+        *:hover {
+            cursor: none !important;
+        }
+
         .search-container {
             width: 80%;
             max-width: 500px;
             margin: 20px auto;
         }
+
         .search-bar {
             width: 100%;
             padding: 15px;
@@ -27,6 +35,7 @@
             background: #222;
             color: white;
         }
+
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -34,6 +43,7 @@
             gap: 20px;
             padding: 20px;
         }
+
         .channel {
             width: 320px;
             min-height: 200px;
@@ -44,6 +54,7 @@
             overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .channel-bg {
             position: absolute;
             top: 0;
@@ -53,6 +64,7 @@
             background-size: cover;
             background-position: center;
         }
+
         .channel::before {
             content: "";
             position: absolute;
@@ -64,6 +76,7 @@
             backdrop-filter: blur(2px);
             z-index: 1;
         }
+
         .channel-name {
             position: relative;
             z-index: 2;
@@ -73,11 +86,14 @@
             margin: 0 auto;
             padding: 15px;
         }
-        .channel:focus, .channel:hover {
+
+        .channel:focus,
+        .channel:hover {
             transform: scale(1.1);
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
             border: 2px solid #00bcd4;
         }
+
         .server-list {
             display: none;
             position: fixed;
@@ -91,6 +107,7 @@
             z-index: 9999;
             min-width: 300px;
         }
+
         .server {
             padding: 15px;
             margin: 10px;
@@ -100,10 +117,13 @@
             font-size: 18px;
             transition: background 0.3s;
         }
-        .server:focus, .server:hover {
+
+        .server:focus,
+        .server:hover {
             background: #00bcd4;
             color: #000;
         }
+
         .close-btn {
             position: absolute;
             top: 5px;
@@ -114,11 +134,13 @@
             cursor: pointer;
             font-size: 24px;
         }
+
         .close-btn:hover {
             color: #ff4444;
         }
     </style>
 </head>
+
 <body>
     <h1>📺 TV Streaming</h1>
     <div class="search-container">
@@ -255,4 +277,5 @@
         loadChannels();
     </script>
 </body>
+
 </html>
