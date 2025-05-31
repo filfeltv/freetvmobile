@@ -1,46 +1,14 @@
 {
-  "Feyenoord - Inter Milan": {
+"Inter Milan VS Paris SG": {
     "image": "https://assets.khelnow.com/news/uploads/2025/03/Feyenoord-Rotterdam-vs-Internazionale.jpg",
     "servers": {
-      "Server 1": "niplayer://niplayer.com/shareintent?info=RytwDwb2if0AKkgID0T6On08jQ09ooIsZllcNn-euORcWPIsccxSE1PoQ7aHktswdiHoLc5W9i6c9Oeot2OAK4dWjXDyo6hefq5RSW_0kHnt_OcK74087TRbOW2Hnz9Hlf7831gs63sHBsJgd-TknVvwxD34Y1Sm6UVoMj1bFSWqJximqTvp3gW1ZxQTwn6IGX27EEUPDerjUBHtYr97MOG09cIhrrwTaZSRghlffe_MtM-5cpz54moL9v3hwXTNNI8=",
+      "Server 1": "niplayer://niplayer.com/shareintent?info=eSUZxTUK6C2jdYIRnvUG3y5jSVJH1LdIJzzY5bEuSa5WbND869GaEKWgL9JZPoVHizZE0S8qVasZm38B7eOwKntFVyAJ1rrZwL1Z5vUetqvhcDW4_CiMtRXbdVhJzu-ySzN2cfQsrj3h2kkxNhPSr7Lf3SGKDNhgqWE6CahOLH1VEEv2-vhpFZosaghK8xf9teGNaav6uxjsaN3Hhlwki0Lqa2beARyXiaH2roxKEY4en_sr2DySXVw4ob5sgyx5BbGwdQUYvMTHiCMypszpMouAcNp_3A==",
       "Server 2 (ios only)": "niplayer://niplayer.com/shareintent?info=sK6Nv9_wqvYrKmZEsqhlaInS1RIF1BnAMpMUytDKEM625A9zplXpOgXj4q4FUeEzQWgBNPL-zlE3FFrhZHgQPFAlyoYRwsoWFwlUs8XR8WkWwoW3mn1blbCUARBAtxMnCQkNcKV5u4dUcZvR_bPGUZM-_n962qsJLsXqR19Qbgn5khVbS0Bv-ULdTDo6jut8WmR5W28qBtirjkpEpUMil68E6urYKHtZN8ZTBXLGPD_NQ_GK1m9GQFIsLo0n8exGMHjYr2s=",
       "Server 3": "niplayer://niplayer.com/shareintent?info=Awhbh1hAlENnt4PubiMMQIb2d0dYkjA-kQ2Se9B4zQWoZ8_W7boAqp2ZYOkIBKFPZDMCz2qxsS3Ef4Dsw52AZuv9XbOv9uRt3j8o0gk7rT3lBqTxiD9xitEt-ViYAB0f3oJCth2AvCbb8_P0pM-I4X1-gRsQ01AUWMEgG9YHArZDYmqm7xq3vdbAcPjqOxpvBmA46WgFN8JzCgA6AlRgoLT5i6lDYHkxYJ8goX1P8yFYCG-Y8np2B64wcYS-SZUsaBBuCfUOwHxANFxCDDac0Hwyi9ZnH-zF",
       "Server 4 (android only)": "niplayer://niplayer.com/shareintent?info=44RPEB-PHomMMC-bVdB1SJ1heGTCXuR-LX2CbGsTypcehXoCUn7IMCTcMT2fERr7mEmvN0YLJnKvqA0Y3fHVbe9G9com9xkrK3xtlE6H2RCPvNkRmhHmSV_eUP8E_wz_mvX-4hMuVC0mJkhIRlY2k0t9LuQ3jJ49rNRS37SgtPLWs-CjX92vBFUvN0XG3OmhTZVwb9S9XYQGNw==",
       "Server 5 (android only)": "niplayer://niplayer.com/shareintent?info=NvPRPeNDTdWQKbtu86Nk3_t5ZqFwiSmK3q4LSOs5yawtqhsVUWSkRQ4HiP2-rYYAuBNg7AVHtc9d0wPk02GR-HJGDR_eTa1EVgeioLj92ypXhcS0fx_tf6wBgyaCqbZy3cyoKpvenH4ZAyTiESH1A7ySEHt5DGAvYH88X3Qgn8GpzwpWFkPm4sm_DGC3Kko2uJg_WW-X-Fmi",
       "Server 6 (android only)": "niplayer://niplayer.com/shareintent?info=CTht2jX5CzbQcgkuSjpFTyEBRgUoLlH7Mb6W-NPKlPEhJSGitfC3EhoEST_wRfPwB_lNirKND2rlXEEk6G7EHixJdTu80JIYDtcl7dth_piqI29BFCZ_dOVgBXle1DorVV-hOqksIb-IYz13DbZAtyjAL1gEIYu2x9H5Fq1db0wxBBXHBsWzrVmRsNEbSI_7vY04PQnbX_k=",
       "test": "niplayer://niplayer.com/shareintent?info=SamV0lfSCDs3rE-G9Fno5yt0tb4fe43R-3H9NnAiBJN1brsJplcxwPghgGC-rlv0E-u7FFqPnDqQzY5-w_JXkiurXQiXB0Ye4g3JVYelK-m7frl3uEy4MtlF2mCxsHzfUYUDJqANYAZmTKLVopYNfkuGB9XQqpZ_TCxNqSwAS9QLq_OZ6XXXSyGlUIuT253Ro8Xn8jI1symVTA-mJdIeQcsyuz0LXp_tm_LlUkCBcAYoX8Pnwlg="
-    }
-  },
-  "Benfica Lisbonne - FC Barcelone": {
-    "image": "https://thumbnails.cbsig.net/CBS_Production_Entertainment_VMS/2025/01/03/2399336515660/UCL_benfica_barcelona_12125_HL_3070135_1920x1080.jpg",
-    "servers": {
-      "Server 1": "niplayer://niplayer.com/shareintent?info=RytwDwb2if0AKkgID0T6On08jQ09ooIsZllcNn-euORcWPIsccxSE1PoQ7aHktswdiHoLc5W9i6c9Oeot2OAK4dWjXDyo6hefq5RSW_0kHnt_OcK74087TRbOW2Hnz9Hlf7831gs63sHBsJgd-TknVvwxD34Y1Sm6UVoMj1bFSWqJximqTvp3gW1ZxQTwn6IGX27EEUPDerjUBHtYr97MOG09cIhrrwTaZSRghlffe_MtM-5cpz54moL9v3hwXTNNI8=",
-      "Server 2 (ios only)": "niplayer://niplayer.com/shareintent?info=sK6Nv9_wqvYrKmZEsqhlaInS1RIF1BnAMpMUytDKEM625A9zplXpOgXj4q4FUeEzQWgBNPL-zlE3FFrhZHgQPFAlyoYRwsoWFwlUs8XR8WkWwoW3mn1blbCUARBAtxMnCQkNcKV5u4dUcZvR_bPGUZM-_n962qsJLsXqR19Qbgn5khVbS0Bv-ULdTDo6jut8WmR5W28qBtirjkpEpUMil68E6urYKHtZN8ZTBXLGPD_NQ_GK1m9GQFIsLo0n8exGMHjYr2s=",
-      "Server 3": "niplayer://niplayer.com/shareintent?info=Awhbh1hAlENnt4PubiMMQIb2d0dYkjA-kQ2Se9B4zQWoZ8_W7boAqp2ZYOkIBKFPZDMCz2qxsS3Ef4Dsw52AZuv9XbOv9uRt3j8o0gk7rT3lBqTxiD9xitEt-ViYAB0f3oJCth2AvCbb8_P0pM-I4X1-gRsQ01AUWMEgG9YHArZDYmqm7xq3vdbAcPjqOxpvBmA46WgFN8JzCgA6AlRgoLT5i6lDYHkxYJ8goX1P8yFYCG-Y8np2B64wcYS-SZUsaBBuCfUOwHxANFxCDDac0Hwyi9ZnH-zF",
-      "Server 4 (android only)": "niplayer://niplayer.com/shareintent?info=44RPEB-PHomMMC-bVdB1SJ1heGTCXuR-LX2CbGsTypcehXoCUn7IMCTcMT2fERr7mEmvN0YLJnKvqA0Y3fHVbe9G9com9xkrK3xtlE6H2RCPvNkRmhHmSV_eUP8E_wz_mvX-4hMuVC0mJkhIRlY2k0t9LuQ3jJ49rNRS37SgtPLWs-CjX92vBFUvN0XG3OmhTZVwb9S9XYQGNw==",
-      "Server 5 (android only)": "niplayer://niplayer.com/shareintent?info=NvPRPeNDTdWQKbtu86Nk3_t5ZqFwiSmK3q4LSOs5yawtqhsVUWSkRQ4HiP2-rYYAuBNg7AVHtc9d0wPk02GR-HJGDR_eTa1EVgeioLj92ypXhcS0fx_tf6wBgyaCqbZy3cyoKpvenH4ZAyTiESH1A7ySEHt5DGAvYH88X3Qgn8GpzwpWFkPm4sm_DGC3Kko2uJg_WW-X-Fmi",
-      "Server 6 (android only)": "niplayer://niplayer.com/shareintent?info=CTht2jX5CzbQcgkuSjpFTyEBRgUoLlH7Mb6W-NPKlPEhJSGitfC3EhoEST_wRfPwB_lNirKND2rlXEEk6G7EHixJdTu80JIYDtcl7dth_piqI29BFCZ_dOVgBXle1DorVV-hOqksIb-IYz13DbZAtyjAL1gEIYu2x9H5Fq1db0wxBBXHBsWzrVmRsNEbSI_7vY04PQnbX_k="
-    }
-  },
-  "Paris - Liverpool": {
-    "image": "https://media.culturepsg.com/image/news/psg_liverpool_tirage_champions_league_210225.jpg",
-    "servers": {
-      "Server 1": "niplayer://niplayer.com/shareintent?info=b_iyJCWEPty_ENq3qLIMt52Sz8ce1lZsbvrmAlpDcMT0yNER-GUsoLDyyaZK2wN-EAkSE0q_ag6qXckXpMa_fdUZ72hwjodwbIAcKXRTM15Poppqitc5Wp381-eXZx9qTqGInS8wm8Tzvl8r4KoMrXh1NdaBfUcP05n1onq_zuMqJyjFKLMbJ3VGIKm9d8juYDoqUNpwsjdW41ELoIiTbHslQsdulbLe7lwA8xmvdvZeoAy5AIobJOxZmY1z",
-      "Server 2": "niplayer://niplayer.com/shareintent?info=eQc_9RvQzFen0prrj13lc7O8CegeRfSB8SeRyCavl1ch3Q9MJhV8Yk0xesnTPveesDunhVCvjQabJHawweGCukbbOpTUrtq3GdnTx1zBQ3ih8rm590zk7Jrx0mtKC0isSWW-MlzRudwNafP9KyMN3uTylHPMZ75giJTS4OuufI8nHvi-fU2MYZLVWukqOepNt5qKk1KEQKDYnXekPQr93zlIdttZHKwfeWXAmgw9yCdriv2xtnxbIsQtPrwZp-WctjcBXUQqzxV6VhgEsHLYJVMyTUckFByzTX6QHsWiIk1pW-qjGmCxxHOSVlHyF_79Q3JR70bK_SYsB9mm6JGQ4YjQzMs7SZ6EKMjAehb-77qI8pJaRMn-TzEswPhKGZJIDqqKhM58Suh7fDegKganGcxhI-5KJk97kVu6xM3Kk0ecxubQeICm8P2q3o9RDnXg-8v5EflTkCCtIPyAzsT8ril34QrY95NSam6bUN8a85V8bsETqcq2buY=",
-      "Server 3 (android only)": "niplayer://niplayer.com/shareintent?info=HWbhFgEeTLraglSH5_44t4_TxscNI-3pEmbTTSPcueHyLanTPjoudm_oxwzXKzRGhf34ob-H8dSlR8-i0MmhiKiY5sCSy9drZWY42RyTSzSESvcYrYkO7Xhm-rYxww7ay2HrJlT4T4Yn30Lz5EEiDna7w-ykou_2R2iByVEla1QsJX9n-vo4FIZ9eXIWiBM4yXZHxCrTJm6a",
-      "Server 4 (android only)": "niplayer://niplayer.com/shareintent?info=p45WnB8VqBPt1LQqQxPE5EYedWrfLsib_rlZI3SGdWCZRe1Z_r1I_UOrakO8Blm5deVMjzbfB3B372_lGd8JAdUXF4BU55p1-DPMMMK1rctJb3A7CVW_k5_8w7T42O_p7QqdBN-2ewPhZ4qpK23xorLsxLW01zNSZT3jhHWBlrZ1wozGnygLAHvtKVUwAlhbB4TUCTHbe4qOKw==",
-      "Server 5 (android only)": "niplayer://niplayer.com/shareintent?info=D0Wn5XjNVlJMAy-Rn_2gDzELWXb7zQfb3em-hZwnhZ8Krd-rmrx4hcPj-8fYMsjXfOHAAaRdRttfRPYMDt3v-doSYQ_Aqb7KOcaW1FwttDrLrNY5d3V1sqziNazS-R_PVnWYcbg4Q5si2Dm8twIuOJNie81gaFXO9ukQww-UGS_Q8sYd_5fYzSJcN4Grc7sKjTwE9d1yxpM="
-    }
-  },
-  "Bayern Munich - Bayer Leverkusen": {
-    "image": "https://thumbnails.cbsig.net/CBS_Production_Entertainment_VMS/2024/11/23/2390624835549/UEFA_UCL_CHAMPIONS_MATCH_THUMB_09_Bayer-Leverkusen-v-Inter_3021839_1920x1080.jpg",
-    "servers": {
-      "Server 1": "niplayer://niplayer.com/shareintent?info=bqz-M_pYqF3dbcpSnoGatT4YWstzt-r4iwLfjaFUXyyQ92fhDsyGqyQHwbk6Oke_E83V-lmR-wJYOAsmenrkoxY01eYGhE0cFC2JMkUqveW-wwPV6Ie3OzrX_mSJNWFCm2Urmh_ZAHTUovrOBdyqgZMl3rE6zfNVuQTL687hj2wJWask0YRYPtf8BRoC0pWXNkVfTN68XwwmhJgGdH7SuORnZhXC2Zdd2SBL8oDJpmt1jQSF7i6wfhCT7sm2ErMIKOf7hCw=",
-      "Server 2 (ios only)": "niplayer://niplayer.com/shareintent?info=v6lmwtA0G6E6yPQxGVaqu40rB0vf1HYiz3jI-fw5jQQVMG3W99bHlCSP3hPjeQtZtOCVnkvcb55GJSeBRR8QBZ-QGQJOvKQNRkfIT-DqZc25HzdrXng_JD1ygsbOgRRiostL6qJS2h6Ook4xHNW0mwC-Nq484U1gtzbnXYBhqkjUoPCSRdY_N27qzwyZCPhhThvrESVdqObg-KmbpuPm8X6Bsi0T4lS1N1UxXixb7UylgXR1sMbrr2Z-AQ==",
-      "Server 3": "niplayer://niplayer.com/shareintent?info=c27ztnr4dvtNQLS4rwkZg3Zbp0OQSuof4OVHE7e31Wuc4-hz72NkCISUPo9IvSMS5neQZ0SrccVFY0dYRdwdwvmhrnKdCdeBVQ5Wh98JNPvPhiwtZ37zl7B_hiIqMNLw9_lGcwGgvfwELpwoK0VGYmv-0GFi2FqigtwjUZkcOiwh7m5rPUxNeKTmLrec4xixr1SjjH4WhQYjfd7Uj4O9m_GFF0iwkL_lCk-jTETH9A9k25bZjJToVmajOh7Hy7JFYviygRPZJfp7TOUrLc-nbilRVsMzZFii",
-      "Server 4 (android only)": "niplayer://niplayer.com/shareintent?info=qhEwZhb4sx_FI-ABxk0XI1JNNri1yon-M-7cSEnOvo_e3UzlrD5PJJMNLLDZfXZcvSRj95a0TZCN0f2DvylcFDsVOtATTOJcDzk4-_tiasknSTh8u1FLyAYz9cUtVgUgBMkR4qJ8VIrDFdG3qYEW8Otx3kFh3TYRB8HBxbav2ZGh7dvBKEo5p9Wgt2lqQ0TCwfEiYn6hXgkpkw==",
-      "Server 5 (android only)": "niplayer://niplayer.com/shareintent?info=vNI72GGoTPjgilvkIAqV_0xqnADmVjrELguUX8s0BxPlgPgBdnJIFW6PxApp_Ni6Ebd-lmjdRwqnhLQT3UJ4ESFP0fyV_WJnvZiT_uLMtIHiw-raaLIqNFRn56plKa-uXIH713BSu38gNXHbh4dLyPHHISaXpoPnex0sNpf4mJFpEAtUV3b3LR93PRs-VK6B6rtkrB-Tflgt",
-      "Server 6 (android only)": "niplayer://niplayer.com/shareintent?info=ccjZiwWkhUcaPGi2cZpCQIUm-YVLvgMXQ5QwpXQtlyv9yBY_Cv9wm5ZykWp2tpDUgD0Cy7yHI8ODnbu9Ce1huYDoZJnlRgTBRerCXBU_eVuyouZcX4WxWSPIIsrPiQe9p8-zh_uiUd-xsa1xU7jM6VT9az9oPH3Zi7R6Nrq50pYosy-YM8cgfWjVittBIs_NONqwRZQ6YMA="
     }
   }
 }
