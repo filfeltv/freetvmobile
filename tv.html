@@ -5,150 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Streaming App</title>
-    <style>
-        body {
-            background-color: #101010;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        *,
-        *:hover {
-            cursor: none !important;
-        }
-
-        .search-container {
-            width: 80%;
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            text-align: center;
-            background: #222;
-            color: white;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .channel {
-            width: 320px;
-            min-height: 200px;
-            position: relative;
-            border-radius: 15px;
-            cursor: pointer;
-            outline: none;
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .channel-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .channel::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(2px);
-            z-index: 1;
-        }
-
-        .channel-name {
-            position: relative;
-            z-index: 2;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            margin: 0 auto;
-            padding: 15px;
-        }
-
-        .channel:focus,
-        .channel:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-            border: 2px solid #00bcd4;
-        }
-
-        .server-list {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-            z-index: 9999;
-            min-width: 300px;
-        }
-
-        .server {
-            padding: 15px;
-            margin: 10px;
-            background: linear-gradient(135deg, #444, #666);
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-
-        .server:focus,
-        .server:hover {
-            background: #00bcd4;
-            color: #000;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 5px;
-            right: 15px;
-            background: none;
-            color: red;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-        }
-
-        .close-btn:hover {
-            color: #ff4444;
-        }
-    </style>
+    <link rel="stylesheet" href="csstv.css">
 </head>
 
 <body>
     <h1>📺 TV Streaming</h1>
+
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
     </div>
+
     <div class="container" id="channels"></div>
+
     <div class="server-list" id="serverList">
-        <button class="close-btn" onclick="closeServers()">✕</button>
         <div id="serverContent"></div>
     </div>
 
@@ -156,6 +25,7 @@
         let channels = [];
         let currentIndex = -1;
         let isServerMode = false;
+        let lastChannelIndex = 0; // Mémorise la position avant ouverture d'un serveur
 
         function loadChannels() {
             fetch('channels.json')
@@ -209,33 +79,45 @@
             const serverList = document.getElementById("serverList");
             const serverContent = document.getElementById("serverContent");
 
-            serverContent.innerHTML = `<h2>Choisissez un serveur pour \"${channel.name}\"</h2>`;
+            serverContent.innerHTML = `<h2>Choisissez un serveur pour "${channel.name}"</h2>`;
+
             Object.entries(channel.servers).forEach(([serverName, serverLink]) => {
                 let div = document.createElement("div");
                 div.classList.add("server");
                 div.tabIndex = 0;
                 div.textContent = serverName;
                 div.addEventListener("click", () => {
-                    window.open(serverLink, '_blank');
+                    window.open(serverLink, '_blank', 'noopener,noreferrer');
                 });
                 serverContent.appendChild(div);
             });
 
+            // Bouton Quitter en bas
+            let quitBtn = document.createElement("div");
+            quitBtn.classList.add("server", "quit-btn");
+            quitBtn.textContent = "Quitter";
+            quitBtn.tabIndex = 0;
+            quitBtn.addEventListener("click", closeServers);
+            serverContent.appendChild(quitBtn);
+
             serverList.style.display = "block";
 
-            // focus sur le premier serveur
             const firstServer = serverContent.querySelector('.server');
             if (firstServer) {
                 firstServer.focus();
                 currentIndex = 0;
-            } else {
-                currentIndex = -1;
             }
         }
 
         function closeServers() {
             isServerMode = false;
             document.getElementById("serverList").style.display = "none";
+            // Revenir sur la chaîne précédente
+            const channelsList = document.querySelectorAll('.channel');
+            if (channelsList[lastChannelIndex]) {
+                channelsList[lastChannelIndex].focus();
+                currentIndex = lastChannelIndex;
+            }
         }
 
         const searchBar = document.getElementById('searchBar');
@@ -243,39 +125,103 @@
             if (event.key === 'Enter') {
                 const val = searchBar.value.trim();
                 renderChannels(val);
-                searchBar.blur();
+            }
+            if (event.key === 'ArrowDown') {
+                const firstChannel = document.querySelector('.channel');
+                if (firstChannel) {
+                    firstChannel.focus();
+                    currentIndex = 0;
+                }
             }
         });
 
         document.addEventListener("keydown", event => {
-            if (document.activeElement === searchBar) {
-                return;
+            // MODE SERVEUR (popup)
+            if (isServerMode) {
+                const serverElements = document.querySelectorAll('.server');
+                if (!serverElements.length) return;
+
+                if (event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    currentIndex = (currentIndex + 1) % serverElements.length;
+                    serverElements[currentIndex].focus();
+                } 
+                else if (event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    currentIndex = (currentIndex - 1 + serverElements.length) % serverElements.length;
+                    serverElements[currentIndex].focus();
+                } 
+                else if (event.key === 'Enter') {
+                    event.preventDefault();
+                    serverElements[currentIndex].click();
+                } 
+                else if ((event.key === 'Backspace' || event.key === 'Escape')) {
+                    event.preventDefault();
+                    closeServers();
+                }
+                return; // Bloque navigation arrière-plan
             }
 
-            const elements = document.querySelectorAll(isServerMode ? '.server' : '.channel');
-            if (!elements.length) return;
+            // MODE GRILLE
+            const elements = document.querySelectorAll('.channel');
+            if (!elements.length && document.activeElement !== searchBar) return;
 
-            if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+            if (!isServerMode && document.activeElement.classList.contains('channel') && event.key === 'ArrowUp') {
+                const cols = getCols();
+                if (currentIndex < cols) {
+                    searchBar.focus();
+                    currentIndex = -1;
+                    return;
+                }
+            }
+
+            const cols = getCols();
+
+            if (event.key === 'ArrowRight') {
                 event.preventDefault();
                 currentIndex = (currentIndex + 1) % elements.length;
                 elements[currentIndex].focus();
-            } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+            } 
+            else if (event.key === 'ArrowLeft') {
                 event.preventDefault();
                 currentIndex = (currentIndex - 1 + elements.length) % elements.length;
                 elements[currentIndex].focus();
-            } else if (event.key === 'Enter') {
+            } 
+            else if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                if (currentIndex + cols < elements.length) {
+                    currentIndex += cols;
+                } else {
+                    currentIndex = elements.length - 1;
+                }
+                elements[currentIndex].focus();
+            } 
+            else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                if (currentIndex - cols >= 0) {
+                    currentIndex -= cols;
+                    elements[currentIndex].focus();
+                } else {
+                    searchBar.focus();
+                    currentIndex = -1;
+                }
+            } 
+            else if (event.key === 'Enter') {
                 event.preventDefault();
                 if (currentIndex >= 0) {
+                    lastChannelIndex = currentIndex; // Sauvegarde avant popup
                     elements[currentIndex].click();
                 }
-            } else if (event.key === 'Backspace' && isServerMode) {
-                event.preventDefault();
-                closeServers();
             }
         });
+
+        function getCols() {
+            const containerWidth = document.querySelector(".container").offsetWidth;
+            const itemWidth = document.querySelector(".channel")?.offsetWidth || 1;
+            return Math.floor(containerWidth / itemWidth);
+        }
 
         loadChannels();
     </script>
 </body>
-
 </html>
