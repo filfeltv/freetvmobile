@@ -158,7 +158,7 @@
         let isServerMode = false;
 
         function loadChannels() {
-            fetch('events.json')
+            fetch('channels.json')
                 .then(response => response.json())
                 .then(data => {
                     channels = Object.entries(data).map(([name, details]) => ({
