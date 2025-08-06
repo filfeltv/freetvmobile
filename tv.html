@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=2560, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>TV Streaming App</title>
     <link rel="stylesheet" href="csstv.css">
 </head>
-
 <body>
-    <h1>📺 TV Streaming (v1)</h1>
+    <h1>📺 TV Streaming 3</h1>
 
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
@@ -40,11 +38,7 @@
                     channels = Object.entries(data).map(([name, details]) => {
                         const logo = details.image || 'https://via.placeholder.com/80';
                         preloadImage(logo);
-                        return {
-                            name: name,
-                            logo: logo,
-                            servers: details.servers
-                        };
+                        return { name, logo, servers: details.servers };
                     });
                     renderChannels();
                 })
@@ -59,8 +53,7 @@
                 channel => channel.name.toLowerCase().includes(filter.toLowerCase())
             );
 
-            // Ajout avec animation fluide
-            filteredChannels.forEach((channel, i) => {
+            filteredChannels.forEach(channel => {
                 const channelDiv = document.createElement("div");
                 channelDiv.classList.add("channel");
                 channelDiv.tabIndex = 0;
@@ -75,13 +68,10 @@
                 nameSpan.textContent = channel.name;
                 channelDiv.appendChild(nameSpan);
 
-                channelDiv.addEventListener("click", () => {
-                    showServers(channel);
-                });
+                channelDiv.addEventListener("click", () => showServers(channel));
 
                 container.appendChild(channelDiv);
 
-                // Animation apparente
                 requestAnimationFrame(() => {
                     channelDiv.classList.add("visible");
                 });
@@ -140,14 +130,13 @@
             el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
         }
 
-        // Recherche instantanée optimisée
         const searchBar = document.getElementById('searchBar');
         searchBar.addEventListener('input', () => {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
                 const val = searchBar.value.trim();
                 renderChannels(val);
-            }, 120); // réduit à 120ms pour meilleure réactivité
+            }, 120);
         });
 
         searchBar.addEventListener('keydown', event => {
@@ -161,7 +150,6 @@
         });
 
         document.addEventListener("keydown", event => {
-            // MODE SERVEUR
             if (isServerMode) {
                 const serverElements = document.querySelectorAll('.server');
                 if (!serverElements.length) return;
@@ -187,20 +175,10 @@
                 return;
             }
 
-            // MODE GRILLE
             const elements = document.querySelectorAll('.channel');
             if (!elements.length && document.activeElement !== searchBar) return;
 
-            if (!isServerMode && document.activeElement.classList.contains('channel') && event.key === 'ArrowUp') {
-                const cols = getCols();
-                if (currentIndex < cols) {
-                    searchBar.focus();
-                    currentIndex = -1;
-                    return;
-                }
-            }
-
-            const cols = getCols();
+            const cols = 5; // toujours 5 colonnes
 
             if (event.key === 'ArrowRight') {
                 event.preventDefault();
@@ -240,19 +218,7 @@
             }
         });
 
-        function getCols() {
-            const containerWidth = document.querySelector(".container").offsetWidth;
-            const itemWidth = document.querySelector(".channel")?.offsetWidth || 1;
-            let cols = Math.floor(containerWidth / itemWidth);
-            if (cols < 5) cols = 5;
-            if (cols > 7) cols = 7;
-            return cols;
-        }
-
-
-
         loadChannels();
     </script>
 </body>
-
 </html>
