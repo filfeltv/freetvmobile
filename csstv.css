@@ -3,6 +3,8 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 *,
