@@ -25,17 +25,27 @@
         let channels = [];
         let currentIndex = -1;
         let isServerMode = false;
-        let lastChannelIndex = 0; // Mémorise la position avant ouverture d'un serveur
+        let lastChannelIndex = 0;
+        let searchTimeout;
+
+        function preloadImage(src) {
+            const img = new Image();
+            img.src = src;
+        }
 
         function loadChannels() {
             fetch('channels.json')
                 .then(response => response.json())
                 .then(data => {
-                    channels = Object.entries(data).map(([name, details]) => ({
-                        name: name,
-                        logo: details.image || 'https://via.placeholder.com/80',
-                        servers: details.servers
-                    }));
+                    channels = Object.entries(data).map(([name, details]) => {
+                        const logo = details.image || 'https://via.placeholder.com/80';
+                        preloadImage(logo);
+                        return {
+                            name: name,
+                            logo: logo,
+                            servers: details.servers
+                        };
+                    });
                     renderChannels();
                 })
                 .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
@@ -49,17 +59,18 @@
                 channel => channel.name.toLowerCase().includes(filter.toLowerCase())
             );
 
-            filteredChannels.forEach((channel) => {
-                let channelDiv = document.createElement("div");
+            // Ajout avec animation fluide
+            filteredChannels.forEach((channel, i) => {
+                const channelDiv = document.createElement("div");
                 channelDiv.classList.add("channel");
                 channelDiv.tabIndex = 0;
 
-                let bgDiv = document.createElement("div");
+                const bgDiv = document.createElement("div");
                 bgDiv.classList.add("channel-bg");
                 bgDiv.style.backgroundImage = `url(${channel.logo})`;
                 channelDiv.appendChild(bgDiv);
 
-                let nameSpan = document.createElement("div");
+                const nameSpan = document.createElement("div");
                 nameSpan.classList.add("channel-name");
                 nameSpan.textContent = channel.name;
                 channelDiv.appendChild(nameSpan);
@@ -69,6 +80,11 @@
                 });
 
                 container.appendChild(channelDiv);
+
+                // Animation apparente
+                requestAnimationFrame(() => {
+                    channelDiv.classList.add("visible");
+                });
             });
 
             currentIndex = -1;
@@ -92,7 +108,6 @@
                 serverContent.appendChild(div);
             });
 
-            // Bouton Quitter en bas
             let quitBtn = document.createElement("div");
             quitBtn.classList.add("server", "quit-btn");
             quitBtn.textContent = "Quitter";
@@ -104,7 +119,7 @@
 
             const firstServer = serverContent.querySelector('.server');
             if (firstServer) {
-                firstServer.focus();
+                focusElement(firstServer);
                 currentIndex = 0;
             }
         }
@@ -112,31 +127,41 @@
         function closeServers() {
             isServerMode = false;
             document.getElementById("serverList").style.display = "none";
-            // Revenir sur la chaîne précédente
             const channelsList = document.querySelectorAll('.channel');
             if (channelsList[lastChannelIndex]) {
-                channelsList[lastChannelIndex].focus();
+                focusElement(channelsList[lastChannelIndex]);
                 currentIndex = lastChannelIndex;
             }
         }
 
+        function focusElement(el) {
+            if (!el) return;
+            el.focus({ preventScroll: true });
+            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        }
+
+        // Recherche instantanée optimisée
         const searchBar = document.getElementById('searchBar');
-        searchBar.addEventListener('keydown', event => {
-            if (event.key === 'Enter') {
+        searchBar.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
                 const val = searchBar.value.trim();
                 renderChannels(val);
-            }
+            }, 120); // réduit à 120ms pour meilleure réactivité
+        });
+
+        searchBar.addEventListener('keydown', event => {
             if (event.key === 'ArrowDown') {
                 const firstChannel = document.querySelector('.channel');
                 if (firstChannel) {
-                    firstChannel.focus();
+                    focusElement(firstChannel);
                     currentIndex = 0;
                 }
             }
         });
 
         document.addEventListener("keydown", event => {
-            // MODE SERVEUR (popup)
+            // MODE SERVEUR
             if (isServerMode) {
                 const serverElements = document.querySelectorAll('.server');
                 if (!serverElements.length) return;
@@ -144,12 +169,12 @@
                 if (event.key === 'ArrowDown') {
                     event.preventDefault();
                     currentIndex = (currentIndex + 1) % serverElements.length;
-                    serverElements[currentIndex].focus();
+                    focusElement(serverElements[currentIndex]);
                 } 
                 else if (event.key === 'ArrowUp') {
                     event.preventDefault();
                     currentIndex = (currentIndex - 1 + serverElements.length) % serverElements.length;
-                    serverElements[currentIndex].focus();
+                    focusElement(serverElements[currentIndex]);
                 } 
                 else if (event.key === 'Enter') {
                     event.preventDefault();
@@ -159,7 +184,7 @@
                     event.preventDefault();
                     closeServers();
                 }
-                return; // Bloque navigation arrière-plan
+                return;
             }
 
             // MODE GRILLE
@@ -180,12 +205,12 @@
             if (event.key === 'ArrowRight') {
                 event.preventDefault();
                 currentIndex = (currentIndex + 1) % elements.length;
-                elements[currentIndex].focus();
+                focusElement(elements[currentIndex]);
             } 
             else if (event.key === 'ArrowLeft') {
                 event.preventDefault();
                 currentIndex = (currentIndex - 1 + elements.length) % elements.length;
-                elements[currentIndex].focus();
+                focusElement(elements[currentIndex]);
             } 
             else if (event.key === 'ArrowDown') {
                 event.preventDefault();
@@ -194,13 +219,13 @@
                 } else {
                     currentIndex = elements.length - 1;
                 }
-                elements[currentIndex].focus();
+                focusElement(elements[currentIndex]);
             } 
             else if (event.key === 'ArrowUp') {
                 event.preventDefault();
                 if (currentIndex - cols >= 0) {
                     currentIndex -= cols;
-                    elements[currentIndex].focus();
+                    focusElement(elements[currentIndex]);
                 } else {
                     searchBar.focus();
                     currentIndex = -1;
@@ -209,7 +234,7 @@
             else if (event.key === 'Enter') {
                 event.preventDefault();
                 if (currentIndex >= 0) {
-                    lastChannelIndex = currentIndex; // Sauvegarde avant popup
+                    lastChannelIndex = currentIndex;
                     elements[currentIndex].click();
                 }
             }
