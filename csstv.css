@@ -3,6 +3,8 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -37,16 +39,18 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 .channel {
-    width: 320px;       /* largeur fixe */
-    height: 200px;      /* hauteur fixe */
+    width: 280px;
+    height: 180px;
     position: relative;
     border-radius: 15px;
     outline: none;
@@ -92,7 +96,7 @@ body {
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     padding: 8px;
