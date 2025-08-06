@@ -40,12 +40,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 20px; /* même espacement que ta première version */
+    padding: 20px 80px; 
 }
 
 .channel {
-    width: 320px;
+    flex: 1 0 calc(100% / 5 - 20px); /* base 4 colonnes */
+    max-width: calc(100% / 5 - 20px);
+    min-width: calc(100% / 7 - 20px); /* peut aller jusqu'à 6 colonnes max */
     min-height: 200px;
     position: relative;
     border-radius: 15px;
@@ -56,6 +58,7 @@ body {
     transition: transform 0.25s ease-out, opacity 0.25s ease-out, border 0.1s ease-out;
     will-change: transform, opacity;
 }
+
 
 .channel.visible {
     transform: scale(1);
