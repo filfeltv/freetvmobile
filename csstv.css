@@ -47,8 +47,8 @@ body {
 }
 
 .channel {
-    width: 320px;
-    min-height: 200px;
+    width: 320px;       /* largeur fixe */
+    height: 200px;      /* hauteur fixe */
     position: relative;
     border-radius: 15px;
     outline: none;
