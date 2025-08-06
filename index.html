@@ -1,237 +1,278 @@
 <!DOCTYPE html>
-<html lang="fr">
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TV Streaming App</title>
-    <link rel="stylesheet" href="csstv.css">
-</head>
-
-<body>
-    <h1>📺 TV Streaming</h1>
-
-    <div class="search-container">
-        <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.icon" href="logo.jpg">
+    <title>FreeTvMobile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #202029;
+        color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+      }
+      html {
+        scroll-behavior: smooth;
+        background-color: #202029;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .banner {
+        background-color: #363640;
+        padding: 20px;
+        text-align: center;
+      }
+      .banner h1 {
+        margin: 0;
+        color: white;
+      }
+      .event-list {
+        padding: 10px;
+      }
+      .info-banner {
+        background-color: #ffcc00;
+        color: black;
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .info-banner a {
+        color: blue;
+        text-decoration: underline;
+      }
+      .search {
+        height: 100%;
+        width: 100%;
+        display: block;
+        background: #363640;
+      }
+      .search-bar {
+        display: grid;
+        place-items: center;
+        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+        background: #363640;
+        font-family: Roboto;
+        height: 60px;
+        margin: 10px 30px;
+      }
+      input {
+        border: none;
+        color: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 15px;
+        font-weight: 800;
+      }
+      input:focus {
+        outline: none;
+      }
+      ::placeholder {
+        color: #D3D3D3;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .list {
+        padding: 10px;
+      }
+      .blog-card {
+        background-color: #363640;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: transform 0.2s;
+        will-change: transform;
+        max-width: 100%;
+        /* Ensure it does not exceed screen width */
+        box-sizing: border-box;
+        /* Include padding and borders in width */
+      }
+      .blog-card:hover {
+        transform: scale(1.01);
+      }
+      .blog-card .photo {
+        width: 80px;
+        height: 80px;
+        background-size: 100% 100%; /* Remplit complètement le cadre sans espace vide */
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+      }
+      .blog-card .description {
+        margin-left: 10px;
+        padding: 10px;
+        flex-grow: 1;
+      }
+      .blog-card .title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .drawer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #2d2d3a;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 20px;
+        color: white;
+        z-index: 1000;
+        box-sizing: border-box;
+      }
+      .drawer.active {
+        transform: translateY(0);
+      }
+      .drawer h2 {
+        margin-top: 0;
+      }
+      .server-link {
+        color: #1e90ff;
+        text-decoration: none;
+        margin: 5px 0;
+        display: block;
+        padding: 10px;
+        background-color: #3a3a4a;
+        border-radius: 5px;
+        text-align: center;
+        overflow-wrap: break-word;
+      }
+      .server-link:hover {
+        background-color: #505060;
+      }
+      .drawer-close {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #ff4444;
+        cursor: pointer;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        background: #202029 url(https://findicons.com/files/icons/2315/default_icon/256/arrow_up_inv.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info-banner">
+      To watch the channels, download the NI Player application <strong>NIPlayer</strong>. <a href="https://niplayer.top/" target="_blank">Download it here</a>.
     </div>
-
-    <div class="container" id="channels"></div>
-
-    <div class="server-list" id="serverList">
-        <div id="serverContent"></div>
+    <div class="search-bar">
+      <input id="search" class="search" onkeyup="filter()" placeholder="Rechercher" name="search" type="text">
     </div>
-
+   <div class="event-list">
+     <a href="events.html" class="blog-card">
+       <div class="photo" style="background-image: url('https://i.ibb.co/0RZjrkxf/depositphotos-620692822-stock-illustration-soccer-match-day-game-day.webp');"></div>
+       <div class="description">
+         <p class="title">⚽ Matchs du Jour</p>
+       </div>
+     </a>
+   </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div class="list" id="channel-list">
+      <!-- Les chaînes et leurs serveurs seront injectés ici -->
+    </div>
+    <div class="drawer" id="drawer">
+      <h2 id="drawer-title">Serveurs</h2>
+      <div id="server-links"></div>
+      <div class="drawer-close" id="drawer-close">Fermer</div>
+    </div>
     <script>
-        let channels = [];
-        let currentIndex = -1;
-        let isServerMode = false;
-        let lastChannelIndex = 0;
-        let searchTimeout;
+      const channelList = document.getElementById('channel-list');
+      const drawer = document.getElementById('drawer');
+      const drawerTitle = document.getElementById('drawer-title');
+      const serverLinks = document.getElementById('server-links');
+      const drawerClose = document.getElementById('drawer-close');
+      const searchInput = document.getElementById('search');
+      // Charger les données depuis le fichier JSON
+      fetch('channels.json').then(response => response.json()).then(data => {
+        // Conversion de l'objet JSON en tableau
+        const channels = Object.entries(data).map(([name, details]) => ({
+          name: name,
+          logo: details.image || 'https://via.placeholder.com/80', // Image par défaut si vide
+          servers: details.servers
+        }));
 
-        function loadChannels() {
-            fetch('channels.json')
-                .then(response => response.json())
-                .then(data => {
-                    channels = Object.entries(data).map(([name, details]) => ({
-                        name: name,
-                        logo: details.image || 'https://via.placeholder.com/80',
-                        servers: details.servers
-                    }));
-                    renderChannels();
-                })
-                .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
-        }
-
-        function renderChannels(filter = "") {
-            const container = document.getElementById("channels");
-            container.innerHTML = "";
-
-            const filteredChannels = channels.filter(
-                channel => channel.name.toLowerCase().includes(filter.toLowerCase())
-            );
-
-            filteredChannels.forEach((channel) => {
-                let channelDiv = document.createElement("div");
-                channelDiv.classList.add("channel");
-                channelDiv.tabIndex = 0;
-
-                let bgDiv = document.createElement("div");
-                bgDiv.classList.add("channel-bg");
-                bgDiv.style.backgroundImage = `url(${channel.logo})`;
-                channelDiv.appendChild(bgDiv);
-
-                let nameSpan = document.createElement("div");
-                nameSpan.classList.add("channel-name");
-                nameSpan.textContent = channel.name;
-                channelDiv.appendChild(nameSpan);
-
-                channelDiv.addEventListener("click", () => {
-                    showServers(channel);
-                });
-
-                container.appendChild(channelDiv);
+        function renderChannels(filteredChannels) {
+          channelList.innerHTML = '';
+          filteredChannels.forEach(channel => {
+            const card = document.createElement('div');
+            card.classList.add('blog-card');
+            const photo = document.createElement('div');
+            photo.classList.add('photo');
+            photo.style.backgroundImage = `url(${channel.logo})`;
+            const description = document.createElement('div');
+            description.classList.add('description');
+            const title = document.createElement('p');
+            title.classList.add('title');
+            title.textContent = channel.name;
+            description.appendChild(title);
+            card.appendChild(photo);
+            card.appendChild(description);
+            channelList.appendChild(card);
+            card.addEventListener('click', () => {
+              drawerTitle.textContent = `Serveurs pour ${channel.name}`;
+              serverLinks.innerHTML = '';
+              for (const [serverName, serverLink] of Object.entries(channel.servers)) {
+                const link = document.createElement('a');
+                link.classList.add('server-link');
+                link.href = serverLink;
+                link.textContent = serverName;
+                link.target = '_blank';
+                serverLinks.appendChild(link);
+              }
+              drawer.classList.add('active');
             });
-
-            currentIndex = -1;
+          });
         }
-
-        function showServers(channel) {
-            isServerMode = true;
-            const serverList = document.getElementById("serverList");
-            const serverContent = document.getElementById("serverContent");
-
-            serverContent.innerHTML = `<h2>Choisissez un serveur pour "${channel.name}"</h2>`;
-
-            Object.entries(channel.servers).forEach(([serverName, serverLink]) => {
-                let div = document.createElement("div");
-                div.classList.add("server");
-                div.tabIndex = 0;
-                div.textContent = serverName;
-                div.addEventListener("click", () => {
-                    window.open(serverLink, '_blank', 'noopener,noreferrer');
-                });
-                serverContent.appendChild(div);
-            });
-
-            let quitBtn = document.createElement("div");
-            quitBtn.classList.add("server", "quit-btn");
-            quitBtn.textContent = "Quitter";
-            quitBtn.tabIndex = 0;
-            quitBtn.addEventListener("click", closeServers);
-            serverContent.appendChild(quitBtn);
-
-            serverList.style.display = "block";
-
-            const firstServer = serverContent.querySelector('.server');
-            if (firstServer) {
-                focusElement(firstServer);
-                currentIndex = 0;
-            }
-        }
-
-        function closeServers() {
-            isServerMode = false;
-            document.getElementById("serverList").style.display = "none";
-            const channelsList = document.querySelectorAll('.channel');
-            if (channelsList[lastChannelIndex]) {
-                focusElement(channelsList[lastChannelIndex]);
-                currentIndex = lastChannelIndex;
-            }
-        }
-
-        function focusElement(el) {
-            if (!el) return;
-            el.focus();
-            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-        }
-
-        // Recherche instantanée
-        const searchBar = document.getElementById('searchBar');
-        searchBar.addEventListener('input', () => {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                const val = searchBar.value.trim();
-                renderChannels(val);
-            }, 150);
+        renderChannels(channels);
+        searchInput.addEventListener('input', () => {
+          const query = searchInput.value.toLowerCase();
+          const filteredChannels = channels.filter(channel => channel.name.toLowerCase().includes(query));
+          renderChannels(filteredChannels);
         });
+      }).catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+      drawerClose.addEventListener('click', () => {
+        drawer.classList.remove('active');
+      });
+      var mybutton = document.getElementById("myBtn");
 
-        searchBar.addEventListener('keydown', event => {
-            if (event.key === 'ArrowDown') {
-                const firstChannel = document.querySelector('.channel');
-                if (firstChannel) {
-                    focusElement(firstChannel);
-                    currentIndex = 0;
-                }
-            }
-        });
+      function scrollFunction() {
+        500 < document.body.scrollTop || 500 < document.documentElement.scrollTop ? mybutton.style.display = "block" : mybutton.style.display = "none"
+      }
 
-        document.addEventListener("keydown", event => {
-            // MODE SERVEUR
-            if (isServerMode) {
-                const serverElements = document.querySelectorAll('.server');
-                if (!serverElements.length) return;
-
-                if (event.key === 'ArrowDown') {
-                    event.preventDefault();
-                    currentIndex = (currentIndex + 1) % serverElements.length;
-                    focusElement(serverElements[currentIndex]);
-                } 
-                else if (event.key === 'ArrowUp') {
-                    event.preventDefault();
-                    currentIndex = (currentIndex - 1 + serverElements.length) % serverElements.length;
-                    focusElement(serverElements[currentIndex]);
-                } 
-                else if (event.key === 'Enter') {
-                    event.preventDefault();
-                    serverElements[currentIndex].click();
-                } 
-                else if ((event.key === 'Backspace' || event.key === 'Escape')) {
-                    event.preventDefault();
-                    closeServers();
-                }
-                return;
-            }
-
-            // MODE GRILLE
-            const elements = document.querySelectorAll('.channel');
-            if (!elements.length && document.activeElement !== searchBar) return;
-
-            if (!isServerMode && document.activeElement.classList.contains('channel') && event.key === 'ArrowUp') {
-                const cols = getCols();
-                if (currentIndex < cols) {
-                    searchBar.focus();
-                    currentIndex = -1;
-                    return;
-                }
-            }
-
-            const cols = getCols();
-
-            if (event.key === 'ArrowRight') {
-                event.preventDefault();
-                currentIndex = (currentIndex + 1) % elements.length;
-                focusElement(elements[currentIndex]);
-            } 
-            else if (event.key === 'ArrowLeft') {
-                event.preventDefault();
-                currentIndex = (currentIndex - 1 + elements.length) % elements.length;
-                focusElement(elements[currentIndex]);
-            } 
-            else if (event.key === 'ArrowDown') {
-                event.preventDefault();
-                if (currentIndex + cols < elements.length) {
-                    currentIndex += cols;
-                } else {
-                    currentIndex = elements.length - 1;
-                }
-                focusElement(elements[currentIndex]);
-            } 
-            else if (event.key === 'ArrowUp') {
-                event.preventDefault();
-                if (currentIndex - cols >= 0) {
-                    currentIndex -= cols;
-                    focusElement(elements[currentIndex]);
-                } else {
-                    searchBar.focus();
-                    currentIndex = -1;
-                }
-            } 
-            else if (event.key === 'Enter') {
-                event.preventDefault();
-                if (currentIndex >= 0) {
-                    lastChannelIndex = currentIndex;
-                    elements[currentIndex].click();
-                }
-            }
-        });
-
-        function getCols() {
-            const containerWidth = document.querySelector(".container").offsetWidth;
-            const itemWidth = document.querySelector(".channel")?.offsetWidth || 1;
-            return Math.floor(containerWidth / itemWidth);
-        }
-
-        loadChannels();
+      function topFunction() {
+        document.body.scrollTop = 0, document.documentElement.scrollTop = 0
+      }
+      window.onscroll = function() {
+        scrollFunction()
+      };
     </script>
-</body>
+  </body>
 </html>
