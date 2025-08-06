@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Streaming App</title>
     <link rel="stylesheet" href="csstv.css">
 </head>
 
 <body>
-    <h1>📺 TV Streaming 6</h1>
+    <h1>📺 TV Streaming 7</h1>
 
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
@@ -150,7 +150,20 @@
 
         // Navigation clavier/télécommande
         document.addEventListener("keydown", event => {
-            // Si on est dans la barre de recherche et qu'on appuie flèche bas → focus premier élément
+            // ✅ Si on est dans la barre de recherche et qu'on appuie sur Entrée → lancer recherche + focus 1ʳᵉ chaîne
+            if (document.activeElement === searchBar && event.key === 'Enter') {
+                event.preventDefault();
+                const val = searchBar.value.trim();
+                renderChannels(val);
+                const firstChannel = document.querySelector('.channel');
+                if (firstChannel) {
+                    currentIndex = 0;
+                    focusElement(firstChannel);
+                }
+                return;
+            }
+
+            // ✅ Si on est dans la barre de recherche et qu'on appuie flèche bas → focus premier élément
             if (document.activeElement === searchBar && event.key === 'ArrowDown') {
                 const firstChannel = document.querySelector('.channel');
                 if (firstChannel) {
@@ -205,7 +218,6 @@
             } 
             else if (event.key === 'ArrowDown') {
                 event.preventDefault();
-                // Si on vient de la recherche
                 if (currentIndex === -1) {
                     currentIndex = 0;
                 } else if (currentIndex + cols < elements.length) {
