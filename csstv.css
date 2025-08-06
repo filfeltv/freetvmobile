@@ -98,19 +98,28 @@ h1 {
 }
 
 .channel-name {
+    /* CHANGEMENT : On fixe la hauteur du bandeau à 25% de celle de la carte */
+    height: 25%;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    /* NOTE : Taille de police calculée pour être proportionnelle à la largeur de la carte (environ 5-6%) */
+
+    /* NOTE : La police s'adaptera, mais sera contenue DANS le bandeau */
     font-size: clamp(10px, 1.1vw, 16px);
     font-weight: bold;
-    text-align: center;
-    padding: 0.5em;
     box-sizing: border-box;
     z-index: 2;
+
+    /* AJOUT : On utilise Flexbox pour centrer le texte parfaitement */
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+
+    /* CHANGEMENT : On supprime le padding vertical, flex s'en charge */
+    padding: 0 0.5em; /* Uniquement un padding horizontal */
 }
 
 .channel:focus {
@@ -129,7 +138,16 @@ h1 {
     border-radius: clamp(10px, 1vw, 15px);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     z-index: 9999;
-    min-width: 300px;
+    
+    /* CHANGEMENT : Largeur adaptative pour la cohérence */
+    width: clamp(320px, 40vw, 450px);
+    box-sizing: border-box; /* Important avec le padding et la largeur */
+
+    /* AJOUT : Limite la hauteur à 80% de celle de l'écran */
+    max-height: 80vh;
+
+    /* AJOUT : Ajoute une barre de défilement verticale si la liste est trop longue */
+    overflow-y: auto;
 }
 
 .server {
@@ -137,10 +155,10 @@ h1 {
     margin: 10px;
     background: linear-gradient(135deg, #444, #666);
     border-radius: clamp(6px, 0.8vw, 8px);
-    font-size: 18px;
+    /* CHANGEMENT : Police adaptative pour la cohérence */
+    font-size: clamp(16px, 1.2vw, 18px);
     transition: background 0.1s ease-out;
 }
-
 .server:focus {
     background: #00bcd4;
     color: #000;
