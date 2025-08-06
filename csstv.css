@@ -1,3 +1,5 @@
+/* csstv.css - Version finale avec proportions corrigées */
+
 body {
     background-color: #101010;
     color: #fff;
@@ -7,6 +9,12 @@ body {
     padding: 0;
 }
 
+h1 {
+    /* NOTE : Croissance du titre adoucie pour éviter une taille excessive */
+    font-size: clamp(24px, 2.5vw, 36px);
+    margin: 0.5em 0;
+}
+
 *,
 *:hover {
     cursor: none !important;
@@ -14,15 +22,15 @@ body {
 
 .search-container {
     width: 80%;
-    max-width: 500px;
+    max-width: clamp(300px, 40vw, 500px);
     margin: 20px auto;
 }
 
 .search-bar {
     width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 10px;
+    padding: 0.8em;
+    font-size: clamp(14px, 1.2vw, 18px); /* Police légèrement adoucie */
+    border-radius: clamp(8px, 1vw, 12px); /* Arrondi légèrement adouci */
     border: none;
     outline: none;
     text-align: center;
@@ -40,19 +48,19 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 280px);
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    gap: 20px;
+    gap: clamp(10px, 1.5vw, 20px);
     padding: 20px;
     max-width: 1800px;
     margin: 0 auto;
 }
 
 .channel {
-    width: 280px;
-    height: 180px;
+    aspect-ratio: 280 / 180;
     position: relative;
-    border-radius: 15px;
+    /* NOTE : Arrondi calculé pour être proportionnel à la largeur de la carte (environ 5%) */
+    border-radius: clamp(8px, 0.9vw, 15px);
     outline: none;
     overflow: hidden;
     transform: scale(0.95);
@@ -96,17 +104,18 @@ body {
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 16px;
+    /* NOTE : Taille de police calculée pour être proportionnelle à la largeur de la carte (environ 5-6%) */
+    font-size: clamp(10px, 1.1vw, 16px);
     font-weight: bold;
     text-align: center;
-    padding: 8px;
+    padding: 0.5em;
     box-sizing: border-box;
     z-index: 2;
 }
 
 .channel:focus {
     transform: scale(1.02);
-    border: 3px solid #00bcd4;
+    border: clamp(2px, 0.3vw, 4px) solid #00bcd4;
 }
 
 .server-list {
@@ -117,7 +126,7 @@ body {
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.95);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: clamp(10px, 1vw, 15px);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     z-index: 9999;
     min-width: 300px;
@@ -127,7 +136,7 @@ body {
     padding: 15px;
     margin: 10px;
     background: linear-gradient(135deg, #444, #666);
-    border-radius: 8px;
+    border-radius: clamp(6px, 0.8vw, 8px);
     font-size: 18px;
     transition: background 0.1s ease-out;
 }
