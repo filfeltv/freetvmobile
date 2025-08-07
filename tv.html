@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>📺 TV Streaming</h1>
+    <h1>📺 TV Streaming 10</h1>
 
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
@@ -36,20 +36,16 @@
 
         function loadChannels() {
             fetch('channels.json')
-                .then(response => response.json())
+                .then(r => r.json())
                 .then(data => {
                     channels = Object.entries(data).map(([name, details]) => {
                         const logo = details.image || 'https://via.placeholder.com/80';
                         preloadImage(logo);
-                        return {
-                            name: name,
-                            logo: logo,
-                            servers: details.servers
-                        };
+                        return { name, logo, servers: details.servers };
                     });
                     renderChannels();
                 })
-                .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+                .catch(err => console.error('Erreur lors du chargement des chaînes:', err));
         }
 
         function renderChannels(filter = "") {
@@ -57,7 +53,7 @@
             container.innerHTML = "";
 
             const filteredChannels = channels.filter(
-                channel => channel.name.toLowerCase().includes(filter.toLowerCase())
+                ch => ch.name.toLowerCase().includes(filter.toLowerCase())
             );
 
             filteredChannels.forEach((channel) => {
@@ -75,39 +71,63 @@
                 nameSpan.textContent = channel.name;
                 channelDiv.appendChild(nameSpan);
 
-                channelDiv.addEventListener("click", () => {
-                    showServers(channel);
-                });
-
+                channelDiv.addEventListener("click", () => showServers(channel));
                 container.appendChild(channelDiv);
 
-                requestAnimationFrame(() => {
-                    channelDiv.classList.add("visible");
-                });
+                requestAnimationFrame(() => channelDiv.classList.add("visible"));
             });
 
+            // Reset sélection dans la grille
+            clearActive(document.querySelectorAll('.channel'));
             currentIndex = -1;
         }
 
+        /* ---------- Helpers sélection/visuel ---------- */
+        function focusElement(el) {
+            if (!el) return;
+            // focus sans faire scroller brutalement
+            try { el.focus({ preventScroll: true }); } catch (_) { el.focus(); }
+            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        }
+        function clearActive(nodeList) {
+            nodeList.forEach(n => n.classList.remove('is-active'));
+        }
+        function setActiveChannel(idx) {
+            const tiles = document.querySelectorAll('.channel');
+            if (!tiles.length) return;
+            idx = Math.max(0, Math.min(idx, tiles.length - 1));
+            clearActive(tiles);
+            tiles[idx].classList.add('is-active');
+            currentIndex = idx;
+            focusElement(tiles[idx]);
+        }
+        function setActiveServer(idx) {
+            const items = document.querySelectorAll('.server');
+            if (!items.length) return;
+            idx = Math.max(0, Math.min(idx, items.length - 1));
+            clearActive(items);
+            items[idx].classList.add('is-active');
+            currentIndex = idx;
+            focusElement(items[idx]);
+        }
+
+        /* ---------- Modal serveurs ---------- */
         function showServers(channel) {
             isServerMode = true;
             const serverList = document.getElementById("serverList");
             const serverContent = document.getElementById("serverContent");
-
             serverContent.innerHTML = `<h2>Choisissez un serveur pour "${channel.name}"</h2>`;
 
             Object.entries(channel.servers).forEach(([serverName, serverLink]) => {
-                let div = document.createElement("div");
+                const div = document.createElement("div");
                 div.classList.add("server");
                 div.tabIndex = 0;
                 div.textContent = serverName;
-                div.addEventListener("click", () => {
-                    window.open(serverLink, '_blank', 'noopener,noreferrer');
-                });
+                div.addEventListener("click", () => window.open(serverLink, '_blank', 'noopener,noreferrer'));
                 serverContent.appendChild(div);
             });
 
-            let quitBtn = document.createElement("div");
+            const quitBtn = document.createElement("div");
             quitBtn.classList.add("server", "quit-btn");
             quitBtn.textContent = "Quitter";
             quitBtn.tabIndex = 0;
@@ -115,12 +135,7 @@
             serverContent.appendChild(quitBtn);
 
             serverList.style.display = "block";
-
-            const firstServer = serverContent.querySelector('.server');
-            if (firstServer) {
-                focusElement(firstServer);
-                currentIndex = 0;
-            }
+            setActiveServer(0); // sélection visible tout de suite
         }
 
         function closeServers() {
@@ -128,18 +143,11 @@
             document.getElementById("serverList").style.display = "none";
             const channelsList = document.querySelectorAll('.channel');
             if (channelsList[lastChannelIndex]) {
-                focusElement(channelsList[lastChannelIndex]);
-                currentIndex = lastChannelIndex;
+                setActiveChannel(lastChannelIndex);
             }
         }
 
-        function focusElement(el) {
-            if (!el) return;
-            el.focus({ preventScroll: true });
-            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-        }
-
-        // Recherche instantanée optimisée
+        /* ---------- Recherche ---------- */
         const searchBar = document.getElementById('searchBar');
         searchBar.addEventListener('input', () => {
             clearTimeout(searchTimeout);
@@ -149,59 +157,56 @@
             }, 120);
         });
 
-        // Navigation clavier/télécommande
+        /* ---------- Navigation clavier/télécommande ---------- */
+        // Indiquer la "modalité clavier" pour le CSS (utile si tu veux des styles conditionnels)
+        function setKeyboardModality() {
+            document.documentElement.setAttribute('data-modality', 'keyboard');
+        }
+
         document.addEventListener("keydown", event => {
-            // ✅ Si on est dans la barre de recherche et qu'on appuie sur Entrée → lancer recherche + focus 1ʳᵉ chaîne
+            // marquer qu'on est en clavier
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' '].includes(event.key)) {
+                setKeyboardModality();
+            }
+
+            // Entrée dans la recherche -> nouvelle grille + sélection 1ère tuile
             if (document.activeElement === searchBar && event.key === 'Enter') {
                 event.preventDefault();
                 const val = searchBar.value.trim();
                 renderChannels(val);
-                const firstChannel = document.querySelector('.channel');
-                if (firstChannel) {
-                    currentIndex = 0;
-                    focusElement(firstChannel);
-                }
+                const first = document.querySelector('.channel');
+                if (first) setActiveChannel(0);
                 return;
             }
-
-            // ✅ Si on est dans la barre de recherche et qu'on appuie flèche bas → focus premier élément
+            // Flèche bas depuis recherche -> focus 1ère tuile
             if (document.activeElement === searchBar && event.key === 'ArrowDown') {
-                const firstChannel = document.querySelector('.channel');
-                if (firstChannel) {
-                    event.preventDefault();
-                    currentIndex = 0;
-                    focusElement(firstChannel);
-                }
+                const first = document.querySelector('.channel');
+                if (first) { event.preventDefault(); setActiveChannel(0); }
                 return;
             }
 
-            // MODE SERVEUR
+            // ----- MODE SERVEUR -----
             if (isServerMode) {
                 const serverElements = document.querySelectorAll('.server');
                 if (!serverElements.length) return;
 
                 if (event.key === 'ArrowDown') {
                     event.preventDefault();
-                    currentIndex = (currentIndex + 1) % serverElements.length;
-                    focusElement(serverElements[currentIndex]);
-                } 
-                else if (event.key === 'ArrowUp') {
+                    setActiveServer((currentIndex + 1) % serverElements.length);
+                } else if (event.key === 'ArrowUp') {
                     event.preventDefault();
-                    currentIndex = (currentIndex - 1 + serverElements.length) % serverElements.length;
-                    focusElement(serverElements[currentIndex]);
-                } 
-                else if (event.key === 'Enter') {
+                    setActiveServer((currentIndex - 1 + serverElements.length) % serverElements.length);
+                } else if (event.key === 'Enter') {
                     event.preventDefault();
                     serverElements[currentIndex].click();
-                } 
-                else if ((event.key === 'Backspace' || event.key === 'Escape')) {
+                } else if (event.key === 'Backspace' || event.key === 'Escape') {
                     event.preventDefault();
                     closeServers();
                 }
                 return;
             }
 
-            // MODE GRILLE
+            // ----- MODE GRILLE -----
             const elements = document.querySelectorAll('.channel');
             if (!elements.length && document.activeElement !== searchBar) return;
 
@@ -209,35 +214,23 @@
 
             if (event.key === 'ArrowRight') {
                 event.preventDefault();
-                currentIndex = (currentIndex + 1) % elements.length;
-                focusElement(elements[currentIndex]);
-            } 
+                setActiveChannel((currentIndex === -1 ? 0 : Math.min(currentIndex + 1, elements.length - 1)));
+            }
             else if (event.key === 'ArrowLeft') {
                 event.preventDefault();
-                currentIndex = (currentIndex - 1 + elements.length) % elements.length;
-                focusElement(elements[currentIndex]);
-            } 
+                setActiveChannel((currentIndex <= 0 ? 0 : currentIndex - 1));
+            }
             else if (event.key === 'ArrowDown') {
                 event.preventDefault();
-                if (currentIndex === -1) {
-                    currentIndex = 0;
-                } else if (currentIndex + cols < elements.length) {
-                    currentIndex += cols;
-                } else {
-                    currentIndex = elements.length - 1;
-                }
-                focusElement(elements[currentIndex]);
-            } 
+                if (currentIndex === -1) setActiveChannel(0);
+                else if (currentIndex + cols < elements.length) setActiveChannel(currentIndex + cols);
+                else setActiveChannel(elements.length - 1);
+            }
             else if (event.key === 'ArrowUp') {
                 event.preventDefault();
-                if (currentIndex - cols >= 0) {
-                    currentIndex -= cols;
-                    focusElement(elements[currentIndex]);
-                } else {
-                    searchBar.focus();
-                    currentIndex = -1; // reset pour éviter saut
-                }
-            } 
+                if (currentIndex - cols >= 0) setActiveChannel(currentIndex - cols);
+                else { searchBar.focus(); currentIndex = -1; }
+            }
             else if (event.key === 'Enter') {
                 event.preventDefault();
                 if (currentIndex >= 0) {
@@ -255,5 +248,7 @@
 
         loadChannels();
     </script>
+
 </body>
+
 </html>
