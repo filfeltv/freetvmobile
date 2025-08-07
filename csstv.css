@@ -1,4 +1,4 @@
-/* csstv.css - Version avec état .is-active pour TV */
+/* csstv.css - TV keyboard-first (cards + search) */
 
 body {
     background-color: #101010;
@@ -19,6 +19,7 @@ h1 {
     cursor: none !important;
 }
 
+/* --- Barre de recherche --- */
 .search-container {
     width: 80%;
     max-width: clamp(300px, 40vw, 500px);
@@ -36,10 +37,17 @@ h1 {
     background: #222;
     color: white;
 }
-
 .search-bar::placeholder { transition: color 0.2s ease; }
 .search-bar:focus::placeholder { color: transparent; }
 
+/* ➜ Sélection/halo comme les cards */
+.search-bar.is-active,
+.search-bar:focus {
+    outline: 3px solid #00E5FF;
+    box-shadow: 0 0 0 6px rgba(0, 229, 255, .25);
+}
+
+/* --- Grille --- */
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -61,11 +69,7 @@ h1 {
     transition: transform 0.25s ease-out, opacity 0.25s ease-out, border 0.1s ease-out;
     will-change: transform, opacity;
 }
-
-.channel.visible {
-    transform: scale(1);
-    opacity: 1;
-}
+.channel.visible { transform: scale(1); opacity: 1; }
 
 .channel-bg {
     position: absolute;
@@ -76,7 +80,6 @@ h1 {
     filter: brightness(0.9) saturate(0.95);
     z-index: 0;
 }
-
 .channel::after {
     content: "";
     position: absolute;
@@ -85,7 +88,6 @@ h1 {
     background: rgba(0, 0, 0, 0.05);
     z-index: 1;
 }
-
 .channel-name {
     height: 25%;
     position: absolute;
@@ -102,14 +104,14 @@ h1 {
     padding: 0 0.5em;
 }
 
-/* Effet sélection — basé sur classe ET sur :focus pour compat */
+/* Effet sélection — via classe ET :focus (compat) */
 .channel.is-active,
 .channel:focus {
     transform: scale(1.02);
     border: clamp(2px, 0.3vw, 4px) solid #00bcd4;
 }
 
-/* -------- Modal serveurs -------- */
+/* --- Modal serveurs --- */
 .server-list {
     display: none;
     position: fixed;
@@ -135,13 +137,12 @@ h1 {
     transition: background 0.1s ease-out, color 0.1s ease-out;
 }
 
-/* Effet sélection serveur — classe ET :focus */
+/* Sélection serveur */
 .server.is-active,
 .server:focus {
     background: #00bcd4;
     color: #000;
 }
-
 .quit-btn { background: #b71c1c !important; color: white; }
 .quit-btn.is-active,
 .quit-btn:focus { background: #ff4444 !important; color: #000; }
