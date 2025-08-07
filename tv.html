@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>📺 TV Streaming 10</h1>
+    <h1>📺 TV Streaming 11</h1>
 
     <div class="search-container">
         <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
@@ -24,13 +24,13 @@
 
     <script>
         let channels = [];
-        let currentIndex = -1;
+        let currentIndex = -1;       // -1 = barre de recherche "active"
         let isServerMode = false;
         let lastChannelIndex = 0;
         let searchTimeout;
 
+        // --- chargement des chaînes ---
         function preloadImage(src) { const img = new Image(); img.src = src; }
-
         function loadChannels() {
             fetch('channels.json')
                 .then(r => r.json())
@@ -41,92 +41,109 @@
                         return { name, logo, servers: details.servers };
                     });
                     renderChannels();
+                    // Au boot, la grille est prête mais on laisse l'utilisateur choisir
                 })
                 .catch(err => console.error('Erreur lors du chargement des chaînes:', err));
         }
 
+        // --- rendu grille ---
         function renderChannels(filter = "") {
             const container = document.getElementById("channels");
             container.innerHTML = "";
 
-            const filteredChannels = channels.filter(
-                ch => ch.name.toLowerCase().includes(filter.toLowerCase())
-            );
+            const filtered = channels.filter(ch => ch.name.toLowerCase().includes(filter.toLowerCase()));
 
-            filteredChannels.forEach((channel) => {
-                const channelDiv = document.createElement("div");
-                channelDiv.classList.add("channel");
-                channelDiv.tabIndex = 0;
+            filtered.forEach(channel => {
+                const tile = document.createElement("div");
+                tile.classList.add("channel");
+                tile.tabIndex = 0;
 
-                const bgDiv = document.createElement("div");
-                bgDiv.classList.add("channel-bg");
-                bgDiv.style.backgroundImage = `url(${channel.logo})`;
-                channelDiv.appendChild(bgDiv);
+                const bg = document.createElement("div");
+                bg.classList.add("channel-bg");
+                bg.style.backgroundImage = `url(${channel.logo})`;
+                tile.appendChild(bg);
 
-                const nameSpan = document.createElement("div");
-                nameSpan.classList.add("channel-name");
-                nameSpan.textContent = channel.name;
-                channelDiv.appendChild(nameSpan);
+                const name = document.createElement("div");
+                name.classList.add("channel-name");
+                name.textContent = channel.name;
+                tile.appendChild(name);
 
-                channelDiv.addEventListener("click", () => showServers(channel));
-                container.appendChild(channelDiv);
+                tile.addEventListener("click", () => showServers(channel));
+                container.appendChild(tile);
 
-                requestAnimationFrame(() => channelDiv.classList.add("visible"));
+                requestAnimationFrame(() => tile.classList.add("visible"));
             });
 
-            // Reset sélection dans la grille
+            // reset sélection visuelle des cartes ; si la recherche est focus, on laisse son halo
             clearActive(document.querySelectorAll('.channel'));
-            currentIndex = -1;
-
-            // Si la recherche est focus, on garde son halo
-            const sb = document.getElementById('searchBar');
-            if (document.activeElement === sb) sb.classList.add('is-active');
+            if (document.activeElement !== document.getElementById('searchBar')) currentIndex = -1;
         }
 
-        /* ---------- Helpers sélection/visuel ---------- */
+        // --- helpers sélection / focus ---
         function focusElement(el) {
             if (!el) return;
             try { el.focus({ preventScroll: true }); } catch (_) { el.focus(); }
             el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
         }
-        function clearActive(nodeList) { nodeList.forEach(n => n.classList.remove('is-active')); }
+        function clearActive(list) { list.forEach(n => n.classList.remove('is-active')); }
 
         function setActiveChannel(idx) {
             const tiles = document.querySelectorAll('.channel');
             if (!tiles.length) return;
             idx = Math.max(0, Math.min(idx, tiles.length - 1));
+
             clearActive(tiles);
             tiles[idx].classList.add('is-active');
-            // Quitter l’état visuel de la recherche
             document.getElementById('searchBar').classList.remove('is-active');
 
             currentIndex = idx;
             focusElement(tiles[idx]);
         }
 
-        function setActiveServer(idx) {
-            const items = document.querySelectorAll('.server');
-            if (!items.length) return;
-            idx = Math.max(0, Math.min(idx, items.length - 1));
-            clearActive(items);
-            items[idx].classList.add('is-active');
-            currentIndex = idx;
-            focusElement(items[idx]);
+        // --- recherche : états & édition ---
+        const searchBar = document.getElementById('searchBar');
+
+        function startEditingSearch() {
+            // Passe l’input en vraie édition (ouvre l’IME en WebView)
+            searchBar.classList.add('is-active');
+            focusElement(searchBar);
+            try { searchBar.click(); } catch (_) { }
         }
 
-        /* 👉 NOUVEAU : sélection “comme une card” pour la recherche */
         function setActiveSearch() {
-            const sb = document.getElementById('searchBar');
-            if (!sb) return;
+            // Sélectionne la barre ET la met immédiatement en édition
             clearActive(document.querySelectorAll('.channel'));
-            sb.classList.add('is-active');
             currentIndex = -1;
-            focusElement(sb);
-            // (Android WebView) Aide l’IME à s’ouvrir
-            try { sb.click(); } catch (_) { }
+            startEditingSearch();
         }
 
-        /* ---------- Modal serveurs ---------- */
+        // IME / comportements natifs pendant saisie
+        searchBar.addEventListener('focus', () => searchBar.classList.add('is-active'));
+        searchBar.addEventListener('blur', () => searchBar.classList.remove('is-active'));
+
+        // Filtrage à la frappe
+        let searchTimeout;
+        searchBar.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                renderChannels(searchBar.value.trim());
+            }, 120);
+        });
+
+        // Valider depuis la barre (uniquement quand elle est réellement focus)
+        searchBar.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const tiles = document.querySelectorAll('.channel');
+                if (tiles.length) setActiveChannel(0);
+            } else if (e.key === 'ArrowDown') {
+                const first = document.querySelector('.channel');
+                if (first) { e.preventDefault(); setActiveChannel(0); }
+            }
+        });
+
+        // --- modal serveurs ---
+        let isServerMode = false;
         function showServers(channel) {
             isServerMode = true;
             const serverList = document.getElementById("serverList");
@@ -150,106 +167,88 @@
             serverContent.appendChild(quitBtn);
 
             serverList.style.display = "block";
-            setActiveServer(0); // sélection visible tout de suite
+            setActiveServer(0);
         }
 
         function closeServers() {
             isServerMode = false;
             document.getElementById("serverList").style.display = "none";
-            const channelsList = document.querySelectorAll('.channel');
-            if (channelsList[lastChannelIndex]) setActiveChannel(lastChannelIndex);
+            const tiles = document.querySelectorAll('.channel');
+            if (tiles[lastChannelIndex]) setActiveChannel(lastChannelIndex);
         }
 
-        /* ---------- Recherche ---------- */
-        const searchBar = document.getElementById('searchBar');
-        searchBar.addEventListener('input', () => {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                const val = searchBar.value.trim();
-                renderChannels(val);
-            }, 120);
-        });
-        searchBar.addEventListener('focus', () => searchBar.classList.add('is-active'));
-        searchBar.addEventListener('blur', () => searchBar.classList.remove('is-active'));
+        function setActiveServer(idx) {
+            const items = document.querySelectorAll('.server');
+            if (!items.length) return;
+            idx = Math.max(0, Math.min(idx, items.length - 1));
 
-        /* ---------- Navigation clavier/télécommande ---------- */
-        function setKeyboardModality() {
-            document.documentElement.setAttribute('data-modality', 'keyboard');
+            clearActive(items);
+            items[idx].classList.add('is-active');
+            currentIndex = idx;
+            focusElement(items[idx]);
         }
 
-        document.addEventListener("keydown", event => {
-            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' '].includes(event.key)) setKeyboardModality();
-
-            // Entrée dans la recherche -> nouvelle grille + sélection 1ère tuile
-            if (document.activeElement === searchBar && event.key === 'Enter') {
-                event.preventDefault();
-                const val = searchBar.value.trim();
-                renderChannels(val);
-                const first = document.querySelector('.channel');
-                if (first) setActiveChannel(0);
-                return;
-            }
-            // Flèche bas depuis recherche -> focus 1ère tuile
-            if (document.activeElement === searchBar && event.key === 'ArrowDown') {
-                const first = document.querySelector('.channel');
-                if (first) { event.preventDefault(); searchBar.classList.remove('is-active'); setActiveChannel(0); }
-                return;
-            }
-
-            // ----- MODE SERVEUR -----
+        // --- navigation clavier / D-Pad ---
+        document.addEventListener('keydown', (event) => {
+            // Si le modal serveurs est ouvert -> ne gérer que lui
             if (isServerMode) {
-                const serverElements = document.querySelectorAll('.server');
-                if (!serverElements.length) return;
+                const items = document.querySelectorAll('.server');
+                if (!items.length) return;
 
-                if (event.key === 'ArrowDown') { event.preventDefault(); setActiveServer((currentIndex + 1) % serverElements.length); }
-                else if (event.key === 'ArrowUp') { event.preventDefault(); setActiveServer((currentIndex - 1 + serverElements.length) % serverElements.length); }
-                else if (event.key === 'Enter') { event.preventDefault(); serverElements[currentIndex].click(); }
+                if (event.key === 'ArrowDown') { event.preventDefault(); setActiveServer(Math.min(currentIndex + 1, items.length - 1)); }
+                else if (event.key === 'ArrowUp') { event.preventDefault(); setActiveServer(Math.max(currentIndex - 1, 0)); }
+                else if (event.key === 'Enter') { event.preventDefault(); items[currentIndex].click(); }
                 else if (event.key === 'Backspace' || event.key === 'Escape') { event.preventDefault(); closeServers(); }
                 return;
             }
 
-            // ----- MODE GRILLE -----
-            const elements = document.querySelectorAll('.channel');
-            if (!elements.length && document.activeElement !== searchBar) return;
-
+            const tiles = document.querySelectorAll('.channel');
             const cols = getCols();
 
+            // Si l’input est réellement focus → laisser ses handlers gérer (on sort tout de suite)
+            if (document.activeElement === searchBar) return;
+
+            // Cas “barre active mais pas encore en édition” (currentIndex = -1)
+            if (currentIndex === -1) {
+                if (event.key === 'Enter') { event.preventDefault(); startEditingSearch(); return; }
+                if (event.key === 'ArrowDown') { const first = document.querySelector('.channel'); if (first) { event.preventDefault(); setActiveChannel(0); } return; }
+                // autres touches: on ne fait rien
+            }
+
+            // Navigation dans la grille
             if (event.key === 'ArrowRight') {
                 event.preventDefault();
-                setActiveChannel((currentIndex === -1 ? 0 : Math.min(currentIndex + 1, elements.length - 1)));
-            }
-            else if (event.key === 'ArrowLeft') {
+                setActiveChannel(currentIndex === -1 ? 0 : Math.min(currentIndex + 1, tiles.length - 1));
+            } else if (event.key === 'ArrowLeft') {
                 event.preventDefault();
-                setActiveChannel((currentIndex <= 0 ? 0 : currentIndex - 1));
-            }
-            else if (event.key === 'ArrowDown') {
+                setActiveChannel(currentIndex <= 0 ? 0 : currentIndex - 1);
+            } else if (event.key === 'ArrowDown') {
                 event.preventDefault();
                 if (currentIndex === -1) setActiveChannel(0);
-                else if (currentIndex + cols < elements.length) setActiveChannel(currentIndex + cols);
-                else setActiveChannel(elements.length - 1);
-            }
-            else if (event.key === 'ArrowUp') {
+                else if (currentIndex + cols < tiles.length) setActiveChannel(currentIndex + cols);
+                else setActiveChannel(tiles.length - 1);
+            } else if (event.key === 'ArrowUp') {
                 event.preventDefault();
                 if (currentIndex - cols >= 0) setActiveChannel(currentIndex - cols);
-                else setActiveSearch(); // ⬅️ remonte vers la barre de recherche (visuel + focus + scroll)
-            }
-            else if (event.key === 'Enter') {
+                else setActiveSearch(); // remonter vers la barre (ET entrer en édition)
+            } else if (event.key === 'Enter') {
                 event.preventDefault();
-                if (currentIndex >= 0) {
-                    lastChannelIndex = currentIndex;
-                    elements[currentIndex].click();
-                }
+                if (currentIndex >= 0) { lastChannelIndex = currentIndex; tiles[currentIndex].click(); }
             }
         });
 
         function getCols() {
-            const containerWidth = document.querySelector(".container").offsetWidth;
-            const itemWidth = document.querySelector(".channel")?.offsetWidth || 1;
-            return Math.floor(containerWidth / itemWidth);
+            const container = document.querySelector('.container');
+            const item = document.querySelector('.channel');
+            if (!container || !item) return 5;
+            const cw = container.offsetWidth;
+            const iw = item.offsetWidth || 1;
+            return Math.max(1, Math.floor(cw / iw));
         }
 
         loadChannels();
     </script>
+
 
 
 </body>
