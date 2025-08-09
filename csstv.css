@@ -1,4 +1,4 @@
-/* csstv.css - Version finale avec proportions corrigées */
+/* csstv.css - TV keyboard-first (cards + search) */
 
 body {
     background-color: #101010;
@@ -10,7 +10,6 @@ body {
 }
 
 h1 {
-    /* NOTE : Croissance du titre adoucie pour éviter une taille excessive */
     font-size: clamp(24px, 2.5vw, 36px);
     margin: 0.5em 0;
 }
@@ -20,6 +19,7 @@ h1 {
     cursor: none !important;
 }
 
+/* --- Barre de recherche --- */
 .search-container {
     width: 80%;
     max-width: clamp(300px, 40vw, 500px);
@@ -29,23 +29,25 @@ h1 {
 .search-bar {
     width: 100%;
     padding: 0.8em;
-    font-size: clamp(14px, 1.2vw, 18px); /* Police légèrement adoucie */
-    border-radius: clamp(8px, 1vw, 12px); /* Arrondi légèrement adouci */
+    font-size: clamp(14px, 1.2vw, 18px);
+    border-radius: clamp(8px, 1vw, 12px);
     border: none;
     outline: none;
     text-align: center;
     background: #222;
     color: white;
 }
+.search-bar::placeholder { transition: color 0.2s ease; }
+.search-bar:focus::placeholder { color: transparent; }
 
-.search-bar::placeholder {
-    transition: color 0.2s ease;
+/* ➜ Sélection/halo comme les cards */
+.search-bar.is-active,
+.search-bar:focus {
+    outline: 3px solid #00E5FF;
+    box-shadow: 0 0 0 6px rgba(0, 229, 255, .25);
 }
 
-.search-bar:focus::placeholder {
-    color: transparent;
-}
-
+/* --- Grille --- */
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -59,7 +61,6 @@ h1 {
 .channel {
     aspect-ratio: 280 / 180;
     position: relative;
-    /* NOTE : Arrondi calculé pour être proportionnel à la largeur de la carte (environ 5%) */
     border-radius: clamp(8px, 0.9vw, 15px);
     outline: none;
     overflow: hidden;
@@ -68,85 +69,62 @@ h1 {
     transition: transform 0.25s ease-out, opacity 0.25s ease-out, border 0.1s ease-out;
     will-change: transform, opacity;
 }
-
-.channel.visible {
-    transform: scale(1);
-    opacity: 1;
-}
+.channel.visible { transform: scale(1); opacity: 1; }
 
 .channel-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-size: cover;
     background-position: center;
     filter: brightness(0.9) saturate(0.95);
     z-index: 0;
 }
-
 .channel::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.05);
     z-index: 1;
 }
-
 .channel-name {
-    /* CHANGEMENT : On fixe la hauteur du bandeau à 25% de celle de la carte */
     height: 25%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0; left: 0; width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-
-    /* NOTE : La police s'adaptera, mais sera contenue DANS le bandeau */
     font-size: clamp(10px, 1.1vw, 16px);
     font-weight: bold;
     box-sizing: border-box;
     z-index: 2;
-
-    /* AJOUT : On utilise Flexbox pour centrer le texte parfaitement */
     display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-
-    /* CHANGEMENT : On supprime le padding vertical, flex s'en charge */
-    padding: 0 0.5em; /* Uniquement un padding horizontal */
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5em;
 }
 
+/* Effet sélection — via classe ET :focus (compat) */
+.channel.is-active,
 .channel:focus {
     transform: scale(1.02);
     border: clamp(2px, 0.3vw, 4px) solid #00bcd4;
 }
 
+/* --- Modal serveurs --- */
 .server-list {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.95);
     padding: 20px;
     border-radius: clamp(10px, 1vw, 15px);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     z-index: 9999;
-    
-    /* CHANGEMENT : Largeur adaptative pour la cohérence */
     width: clamp(320px, 40vw, 450px);
-    box-sizing: border-box; /* Important avec le padding et la largeur */
-
-    /* AJOUT : Limite la hauteur à 80% de celle de l'écran */
+    box-sizing: border-box;
     max-height: 80vh;
-
-    /* AJOUT : Ajoute une barre de défilement verticale si la liste est trop longue */
     overflow-y: auto;
 }
 
@@ -155,20 +133,16 @@ h1 {
     margin: 10px;
     background: linear-gradient(135deg, #444, #666);
     border-radius: clamp(6px, 0.8vw, 8px);
-    /* CHANGEMENT : Police adaptative pour la cohérence */
     font-size: clamp(16px, 1.2vw, 18px);
-    transition: background 0.1s ease-out;
+    transition: background 0.1s ease-out, color 0.1s ease-out;
 }
+
+/* Sélection serveur */
+.server.is-active,
 .server:focus {
     background: #00bcd4;
     color: #000;
 }
-
-.quit-btn {
-    background: #b71c1c !important;
-    color: white;
-}
-
-.quit-btn:focus {
-    background: #ff4444 !important;
-}
+.quit-btn { background: #b71c1c !important; color: white; }
+.quit-btn.is-active,
+.quit-btn:focus { background: #ff4444 !important; color: #000; }

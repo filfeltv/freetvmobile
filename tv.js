@@ -11,6 +11,10 @@
         let lastChannelIndex = 0;
         let searchTimeoutId = null;
 
+        // Restauration focus
+        const STORAGE_KEY = 'tv_last_channel_index';
+        let wantedIndex = null; // on veut restaurer cet index après rendu
+
         /* ---- utilitaires ---- */
         function $(sel, root = document) { return root.querySelector(sel); }
         function $all(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
@@ -39,6 +43,11 @@
             try { el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window })); } catch (_) { try { el.click(); } catch (_) { } }
         }
 
+        /* ---- recherche (référence dès maintenant) ---- */
+        const searchBar = document.getElementById('searchBar');
+        // Empêcher tout auto-focus par le navigateur/webview
+        searchBar.setAttribute('tabindex', '-1');
+
         /* ---- données ---- */
         function loadChannels() {
             fetch('channels.json')
@@ -49,6 +58,14 @@
                         preloadImage(logo);
                         return { name, logo, servers: details.servers };
                     });
+
+                    // Tenter de restaurer l’index mémorisé
+                    const saved = parseInt(sessionStorage.getItem(STORAGE_KEY) ?? 'NaN', 10);
+                    if (!Number.isNaN(saved)) {
+                        wantedIndex = saved;
+                        currentIndex = saved; // pour que render sache qu’on vise une carte
+                    }
+
                     renderChannels();
                 })
                 .catch(err => console.error('Erreur lors du chargement des chaînes:', err));
@@ -83,12 +100,22 @@
 
             // reset sélection cartes (on garde éventuel halo de la recherche)
             clearActive($all('.channel'));
-            if (document.activeElement !== $('#searchBar')) currentIndex = -1;
 
-            // ✅ Nouvel ajout : au premier rendu (ou quand la recherche n'est pas focus),
-            // sélectionner automatiquement la première carte.
+            // Si on ne tape pas dans la recherche, on ne veut pas la considérer "active"
+            if (document.activeElement !== searchBar) currentIndex = (currentIndex < 0 ? -1 : currentIndex);
+
+            // Restauration prioritaire : si wantedIndex défini, on le prend (borné)
+            if (wantedIndex !== null && filtered.length > 0) {
+                setActiveChannel(Math.max(0, Math.min(wantedIndex, filtered.length - 1)));
+                wantedIndex = null; // consommé
+                return;
+            }
+
+            // Sinon, au tout premier rendu, prendre la première carte.
             if (currentIndex === -1 && filtered.length > 0) {
                 setActiveChannel(0);
+            } else if (currentIndex >= 0 && filtered.length > 0) {
+                setActiveChannel(Math.min(currentIndex, filtered.length - 1));
             }
         }
 
@@ -99,15 +126,27 @@
             idx = Math.max(0, Math.min(idx, tiles.length - 1));
             clearActive(tiles);
             tiles[idx].classList.add('is-active');
-            $('#searchBar').classList.remove('is-active');
+
+            // Empêcher la recherche d’être focusable par défaut
+            searchBar.classList.remove('is-active');
+            if (searchBar.getAttribute('tabindex') !== '-1') {
+                searchBar.setAttribute('tabindex', '-1');
+            }
+
             currentIndex = idx;
+            lastChannelIndex = idx;
+            // Sauvegarde pour retour / reload
+            try { sessionStorage.setItem(STORAGE_KEY, String(idx)); } catch (_) {}
+
             focusElement(tiles[idx]);
         }
 
         function startEditingSearch() {
-            const sb = $('#searchBar');
+            const sb = searchBar;
             if (!sb) return;
 
+            // Rendre la recherche focusable UNIQUEMENT quand on le demande
+            sb.setAttribute('tabindex', '0');
             sb.classList.add('is-active');
 
             // 1) focus + caret visible
@@ -136,7 +175,7 @@
             requestAnimationFrame(() => {
                 startEditingSearch();
                 setTimeout(() => {
-                    if (document.activeElement !== document.getElementById('searchBar')) {
+                    if (document.activeElement !== searchBar) {
                         startEditingSearch();
                     }
                 }, 30);
@@ -145,6 +184,10 @@
 
         /* ---- modal serveurs ---- */
         function showServers(channel) {
+            // Mémoriser la carte courante avant d’ouvrir le modal (utile si on part puis revient)
+            lastChannelIndex = currentIndex;
+            try { sessionStorage.setItem(STORAGE_KEY, String(lastChannelIndex)); } catch (_) {}
+
             isServerMode = true;
             const serverList = $("#serverList");
             const serverContent = $("#serverContent");
@@ -155,7 +198,13 @@
                 div.className = "server";
                 div.tabIndex = 0;
                 div.textContent = serverName;
-                div.addEventListener("click", () => window.open(serverLink, '_blank', 'noopener,noreferrer'));
+                div.addEventListener("click", () => {
+                    // Sauvegarder l’index avant tentative d’ouverture (deep link OK ou KO)
+                    try { sessionStorage.setItem(STORAGE_KEY, String(lastChannelIndex)); } catch (_) {}
+                    // Ouvrir (deep link, nouvelle fenêtre, etc.)
+                    window.open(serverLink, '_blank', 'noopener,noreferrer');
+                    // Le reste (retour/bfcache) sera géré par pageshow/focus + restauration
+                });
                 serverContent.appendChild(div);
             });
 
@@ -188,8 +237,6 @@
         }
 
         /* ---- recherche ---- */
-        const searchBar = document.getElementById('searchBar');
-
         searchBar.addEventListener('input', () => {
             if (searchTimeoutId) clearTimeout(searchTimeoutId);
             searchTimeoutId = setTimeout(() => {
@@ -289,6 +336,29 @@
             const iw = item.offsetWidth || 1;
             return Math.max(1, Math.floor(cw / iw));
         }
+
+        /* ---- restauration au retour / bfcache ---- */
+        window.addEventListener('pageshow', () => {
+            const saved = parseInt(sessionStorage.getItem(STORAGE_KEY) ?? 'NaN', 10);
+            if (!Number.isNaN(saved)) {
+                wantedIndex = saved;
+                // Si les cartes existent déjà, applique tout de suite
+                const tiles = $all('.channel');
+                if (tiles.length) setActiveChannel(Math.min(saved, tiles.length - 1));
+            }
+            // S’assurer que la recherche n’est pas tabbable par défaut
+            searchBar.setAttribute('tabindex', '-1');
+        });
+
+        // Quand l’onglet reprend le focus, réappliquer la sélection
+        window.addEventListener('focus', () => {
+            const saved = parseInt(sessionStorage.getItem(STORAGE_KEY) ?? 'NaN', 10);
+            if (!Number.isNaN(saved) && !isServerMode) {
+                const tiles = $all('.channel');
+                if (tiles.length) setActiveChannel(Math.min(saved, tiles.length - 1));
+            }
+            searchBar.setAttribute('tabindex', '-1');
+        });
 
         /* ---- boot ---- */
         loadChannels();
