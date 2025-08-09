@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Streaming App</title>
     <link rel="stylesheet" href="csstv.css">
-    <link rel="icon" type="image/vnd.icon" href="logo.jpg">
 </head>
 
 <body>
-    <h1>📺 TV Streaming 13</h1>
+    <h1>📺 TV Streaming 12</h1>
 
     <div class="search-container">
-        <input type="text" id="searchBar" class="search-bar" inputmode="text" enterkeyhint="search" autocomplete="off"
-            autocorrect="off" spellcheck="false" placeholder="Rechercher une chaîne...">
-
+        <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une chaîne...">
     </div>
 
     <div class="container" id="channels"></div>
@@ -24,8 +21,238 @@
         <div id="serverContent"></div>
     </div>
 
+    <script>
+        let channels = [];
+        let currentIndex = -1;
+        let isServerMode = false;
+        let lastChannelIndex = 0;
+        let searchTimeout;
 
-    <script src="tv.js" defer></script>
+        function preloadImage(src) {
+            const img = new Image();
+            img.src = src;
+        }
+
+        function loadChannels() {
+            fetch('channels.json')
+                .then(response => response.json())
+                .then(data => {
+                    channels = Object.entries(data).map(([name, details]) => {
+                        const logo = details.image || 'https://via.placeholder.com/80';
+                        preloadImage(logo);
+                        return {
+                            name: name,
+                            logo: logo,
+                            servers: details.servers
+                        };
+                    });
+                    renderChannels();
+                })
+                .catch(error => console.error('Erreur lors du chargement des chaînes:', error));
+        }
+
+        function renderChannels(filter = "") {
+            const container = document.getElementById("channels");
+            container.innerHTML = "";
+
+            const filteredChannels = channels.filter(
+                channel => channel.name.toLowerCase().includes(filter.toLowerCase())
+            );
+
+            filteredChannels.forEach((channel) => {
+                const channelDiv = document.createElement("div");
+                channelDiv.classList.add("channel");
+                channelDiv.tabIndex = 0;
+
+                const bgDiv = document.createElement("div");
+                bgDiv.classList.add("channel-bg");
+                bgDiv.style.backgroundImage = `url(${channel.logo})`;
+                channelDiv.appendChild(bgDiv);
+
+                const nameSpan = document.createElement("div");
+                nameSpan.classList.add("channel-name");
+                nameSpan.textContent = channel.name;
+                channelDiv.appendChild(nameSpan);
+
+                channelDiv.addEventListener("click", () => {
+                    showServers(channel);
+                });
+
+                container.appendChild(channelDiv);
+
+                requestAnimationFrame(() => {
+                    channelDiv.classList.add("visible");
+                });
+            });
+
+            currentIndex = -1;
+        }
+
+        function showServers(channel) {
+            isServerMode = true;
+            const serverList = document.getElementById("serverList");
+            const serverContent = document.getElementById("serverContent");
+
+            serverContent.innerHTML = `<h2>Choisissez un serveur pour "${channel.name}"</h2>`;
+
+            Object.entries(channel.servers).forEach(([serverName, serverLink]) => {
+                let div = document.createElement("div");
+                div.classList.add("server");
+                div.tabIndex = 0;
+                div.textContent = serverName;
+                div.addEventListener("click", () => {
+                    window.open(serverLink, '_blank', 'noopener,noreferrer');
+                });
+                serverContent.appendChild(div);
+            });
+
+            let quitBtn = document.createElement("div");
+            quitBtn.classList.add("server", "quit-btn");
+            quitBtn.textContent = "Quitter";
+            quitBtn.tabIndex = 0;
+            quitBtn.addEventListener("click", closeServers);
+            serverContent.appendChild(quitBtn);
+
+            serverList.style.display = "block";
+
+            const firstServer = serverContent.querySelector('.server');
+            if (firstServer) {
+                focusElement(firstServer);
+                currentIndex = 0;
+            }
+        }
+
+        function closeServers() {
+            isServerMode = false;
+            document.getElementById("serverList").style.display = "none";
+            const channelsList = document.querySelectorAll('.channel');
+            if (channelsList[lastChannelIndex]) {
+                focusElement(channelsList[lastChannelIndex]);
+                currentIndex = lastChannelIndex;
+            }
+        }
+
+        function focusElement(el) {
+            if (!el) return;
+            el.focus({ preventScroll: true });
+            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        }
+
+        // Recherche instantanée optimisée
+        const searchBar = document.getElementById('searchBar');
+        searchBar.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const val = searchBar.value.trim();
+                renderChannels(val);
+            }, 120);
+        });
+
+        // Navigation clavier/télécommande
+        document.addEventListener("keydown", event => {
+            // ✅ Si on est dans la barre de recherche et qu'on appuie sur Entrée → lancer recherche + focus 1ʳᵉ chaîne
+            if (document.activeElement === searchBar && event.key === 'Enter') {
+                event.preventDefault();
+                const val = searchBar.value.trim();
+                renderChannels(val);
+                const firstChannel = document.querySelector('.channel');
+                if (firstChannel) {
+                    currentIndex = 0;
+                    focusElement(firstChannel);
+                }
+                return;
+            }
+
+            // ✅ Si on est dans la barre de recherche et qu'on appuie flèche bas → focus premier élément
+            if (document.activeElement === searchBar && event.key === 'ArrowDown') {
+                const firstChannel = document.querySelector('.channel');
+                if (firstChannel) {
+                    event.preventDefault();
+                    currentIndex = 0;
+                    focusElement(firstChannel);
+                }
+                return;
+            }
+
+            // MODE SERVEUR
+            if (isServerMode) {
+                const serverElements = document.querySelectorAll('.server');
+                if (!serverElements.length) return;
+
+                if (event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    currentIndex = (currentIndex + 1) % serverElements.length;
+                    focusElement(serverElements[currentIndex]);
+                } 
+                else if (event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    currentIndex = (currentIndex - 1 + serverElements.length) % serverElements.length;
+                    focusElement(serverElements[currentIndex]);
+                } 
+                else if (event.key === 'Enter') {
+                    event.preventDefault();
+                    serverElements[currentIndex].click();
+                } 
+                else if ((event.key === 'Backspace' || event.key === 'Escape')) {
+                    event.preventDefault();
+                    closeServers();
+                }
+                return;
+            }
+
+            // MODE GRILLE
+            const elements = document.querySelectorAll('.channel');
+            if (!elements.length && document.activeElement !== searchBar) return;
+
+            const cols = getCols();
+
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                currentIndex = (currentIndex + 1) % elements.length;
+                focusElement(elements[currentIndex]);
+            } 
+            else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                currentIndex = (currentIndex - 1 + elements.length) % elements.length;
+                focusElement(elements[currentIndex]);
+            } 
+            else if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                if (currentIndex === -1) {
+                    currentIndex = 0;
+                } else if (currentIndex + cols < elements.length) {
+                    currentIndex += cols;
+                } else {
+                    currentIndex = elements.length - 1;
+                }
+                focusElement(elements[currentIndex]);
+            } 
+            else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                if (currentIndex - cols >= 0) {
+                    currentIndex -= cols;
+                    focusElement(elements[currentIndex]);
+                } else {
+                    searchBar.focus();
+                    currentIndex = -1; // reset pour éviter saut
+                }
+            } 
+            else if (event.key === 'Enter') {
+                event.preventDefault();
+                if (currentIndex >= 0) {
+                    lastChannelIndex = currentIndex;
+                    elements[currentIndex].click();
+                }
+            }
+        });
+
+        function getCols() {
+            const containerWidth = document.querySelector(".container").offsetWidth;
+            const itemWidth = document.querySelector(".channel")?.offsetWidth || 1;
+            return Math.floor(containerWidth / itemWidth);
+        }
+
+        loadChannels();
+    </script>
 </body>
-
 </html>
