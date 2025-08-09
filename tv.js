@@ -84,6 +84,12 @@
             // reset sélection cartes (on garde éventuel halo de la recherche)
             clearActive($all('.channel'));
             if (document.activeElement !== $('#searchBar')) currentIndex = -1;
+
+            // ✅ Nouvel ajout : au premier rendu (ou quand la recherche n'est pas focus),
+            // sélectionner automatiquement la première carte.
+            if (currentIndex === -1 && filtered.length > 0) {
+                setActiveChannel(0);
+            }
         }
 
         /* ---- sélection cartes / recherche ---- */
