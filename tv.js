@@ -6,7 +6,7 @@
 
         /* ---- état global ---- */
         let channels = [];
-        let currentIndex = -1;         // -1 = recherche active
+        let currentIndex = -1;         // -1 = "état neutre / recherche quand on la demande"
         let isServerMode = false;
         let lastChannelIndex = 0;
         let searchTimeoutId = null;
@@ -25,12 +25,12 @@
 
         function clearActive(list) { list.forEach(n => n.classList.remove('is-active')); }
 
-        // ---- Bridge vers l’app (optionnel, inoffensif sur desktop)
+        // ---- Bridge vers l’app (optionnel)
         function notify(type) {
             try { if (window.Tv && Tv.postMessage) Tv.postMessage(type); } catch (_) { }
         }
 
-        // ---- Simuler un “vrai” tap (certaines WebView exigent un pointer/mouse)
+        // ---- Simuler un “vrai” tap (pour WebView strictes)
         function simulateUserTap(el) {
             try { el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, cancelable: true })); } catch (_) { }
             try { el.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true, view: window })); } catch (_) { }
@@ -38,6 +38,31 @@
             try { el.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, cancelable: true, view: window })); } catch (_) { }
             try { el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window })); } catch (_) { try { el.click(); } catch (_) { } }
         }
+
+        /* ---- barre de recherche ---- */
+        const searchBar = document.getElementById('searchBar');
+
+        // 1) Empêcher tout focus auto au démarrage (aucun clavier qui pop)
+        if (searchBar) {
+            searchBar.setAttribute('tabindex', '-1'); // hors tab order par défaut
+            // Si jamais l’UA la focus quand même, on la blur immédiatement
+            if (document.activeElement === searchBar) {
+                try { searchBar.blur(); } catch (_) {}
+            }
+        }
+
+        // 2) Re-blinder au retour/bfcache/prise de focus fenêtre
+        window.addEventListener('pageshow', () => {
+            if (!searchBar) return;
+            searchBar.setAttribute('tabindex', '-1');
+            if (document.activeElement === searchBar) {
+                try { searchBar.blur(); } catch (_) {}
+            }
+        });
+        window.addEventListener('focus', () => {
+            if (!searchBar) return;
+            searchBar.setAttribute('tabindex', '-1');
+        });
 
         /* ---- données ---- */
         function loadChannels() {
@@ -81,9 +106,11 @@
                 requestAnimationFrame(() => tile.classList.add("visible"));
             });
 
-            // reset sélection cartes (on garde éventuel halo de la recherche)
+            // Réinitialiser la sélection visuelle (aucune carte active au chargement)
             clearActive($all('.channel'));
-            if (document.activeElement !== $('#searchBar')) currentIndex = -1;
+
+            // ⚠️ Ne PAS appeler setActiveChannel(0) ici : pas de sélection par défaut.
+            // On attend une action utilisateur (flèches / clic).
         }
 
         /* ---- sélection cartes / recherche ---- */
@@ -93,28 +120,27 @@
             idx = Math.max(0, Math.min(idx, tiles.length - 1));
             clearActive(tiles);
             tiles[idx].classList.add('is-active');
-            $('#searchBar').classList.remove('is-active');
+            if (searchBar) {
+                searchBar.classList.remove('is-active');
+                // On laisse la recherche hors tab-order tant que l’utilisateur ne la demande pas
+                searchBar.setAttribute('tabindex', '-1');
+            }
             currentIndex = idx;
             focusElement(tiles[idx]);
         }
 
         function startEditingSearch() {
-            const sb = $('#searchBar');
-            if (!sb) return;
+            if (!searchBar) return;
+            // La recherche devient focusable UNIQUEMENT quand l’utilisateur la demande
+            searchBar.setAttribute('tabindex', '0');
+            searchBar.classList.add('is-active');
 
-            sb.classList.add('is-active');
+            try { searchBar.focus({ preventScroll: true }); } catch (_) { searchBar.focus(); }
+            try { searchBar.setSelectionRange(searchBar.value.length, searchBar.value.length); } catch (_) { }
 
-            // 1) focus + caret visible
-            try { sb.focus({ preventScroll: true }); } catch (_) { sb.focus(); }
-            try { sb.setSelectionRange(sb.value.length, sb.value.length); } catch (_) { }
+            simulateUserTap(searchBar);
 
-            // 2) “user gesture” synthétique pour WebView strictes
-            simulateUserTap(sb);
-
-            // 3) API Virtual Keyboard si dispo (certaines WebView récentes)
             try { if (navigator.virtualKeyboard && navigator.virtualKeyboard.show) navigator.virtualKeyboard.show(); } catch (_) { }
-
-            // 4) Notifier l’app (si présente) pour ouvrir l’IME nativement
             notify('input_focus');
         }
 
@@ -126,19 +152,19 @@
             clearActive($all('.channel'));
             currentIndex = -1;
 
-            // Double passe pour fiabiliser le focus sur certaines WebView
             requestAnimationFrame(() => {
                 startEditingSearch();
                 setTimeout(() => {
-                    if (document.activeElement !== document.getElementById('searchBar')) {
-                        startEditingSearch();
-                    }
+                    if (document.activeElement !== searchBar) startEditingSearch();
                 }, 30);
             });
         }
 
         /* ---- modal serveurs ---- */
         function showServers(channel) {
+            // ✅ Fix n°2 : mémoriser la carte courante même si on ouvre via CLIC
+            lastChannelIndex = currentIndex;
+
             isServerMode = true;
             const serverList = $("#serverList");
             const serverContent = $("#serverContent");
@@ -149,7 +175,11 @@
                 div.className = "server";
                 div.tabIndex = 0;
                 div.textContent = serverName;
-                div.addEventListener("click", () => window.open(serverLink, '_blank', 'noopener,noreferrer'));
+                div.addEventListener("click", () => {
+                    // On garde en mémoire où on était pour bien revenir ensuite
+                    lastChannelIndex = currentIndex;
+                    window.open(serverLink, '_blank', 'noopener,noreferrer');
+                });
                 serverContent.appendChild(div);
             });
 
@@ -182,8 +212,6 @@
         }
 
         /* ---- recherche ---- */
-        const searchBar = document.getElementById('searchBar');
-
         searchBar.addEventListener('input', () => {
             if (searchTimeoutId) clearTimeout(searchTimeoutId);
             searchTimeoutId = setTimeout(() => {
@@ -192,25 +220,30 @@
         });
 
         searchBar.addEventListener('focus', () => {
+            // Si, pour une raison externe, la WebView focus la barre alors qu'on ne l'a pas demandée,
+            // on la retire immédiatement du focus (tabindex=-1 ⇒ hors tab-order).
+            if (searchBar.getAttribute('tabindex') === '-1') {
+                try { searchBar.blur(); } catch (_) {}
+                return;
+            }
             searchBar.classList.add('is-active');
-            notify('input_focus'); // l’app peut ouvrir l’IME
+            notify('input_focus');
         });
 
         searchBar.addEventListener('blur', () => {
             searchBar.classList.remove('is-active');
-            notify('input_blur'); // l’app peut fermer l’IME
+            notify('input_blur');
+            // Re-blinder : pas focusable tant qu'on ne la demande pas
+            searchBar.setAttribute('tabindex', '-1');
         });
 
-        // Empêche la double action Enter/Bas (propagation) et pilote la nav
+        // Empêche la double action Enter/Bas et pilote la nav
         searchBar.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 if (e.stopImmediatePropagation) e.stopImmediatePropagation(); else e.stopPropagation();
-                notify('input_submit'); // l’app peut fermer l’IME si besoin
-                setTimeout(() => {
-                    const tiles = $all('.channel');
-                    if (tiles.length) setActiveChannel(0);
-                }, 0);
+                notify('input_submit');
+                // Pas de sélection auto ici non plus : on laisse l’utilisateur choisir
             } else if (e.key === 'ArrowDown') {
                 const first = $('.channel');
                 if (first) {
@@ -223,7 +256,7 @@
 
         /* ---- navigation globale D-Pad ---- */
         document.addEventListener('keydown', (event) => {
-            // Garde : si l'event vient de la barre de recherche, on sort
+            // Si l'event vient de la barre de recherche, on la laisse gérer
             if (event.target === searchBar) return;
 
             // Si le modal serveurs est ouvert, le gérer exclusivement
@@ -240,35 +273,32 @@
             const tiles = $all('.channel');
             const cols = getCols();
 
-            // Si l'input est réellement focus, on laisse ses handlers agir
-            if (document.activeElement === searchBar) return;
-
-            // Cas "recherche active mais pas encore en édition"
+            // État "neutre" : aucune carte sélectionnée au départ
             if (currentIndex === -1) {
                 if (event.key === 'Enter') { event.preventDefault(); setActiveSearch(event); return; }
-                if (event.key === 'ArrowDown') {
-                    const first = $('.channel');
-                    if (first) { event.preventDefault(); setActiveChannel(0); }
+                if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                    if (tiles.length) { event.preventDefault(); setActiveChannel(0); }
                     return;
                 }
+                // ArrowUp depuis l'état neutre ⇒ aller vers la barre (volontaire)
+                if (event.key === 'ArrowUp') { event.preventDefault(); setActiveSearch(event); return; }
             }
 
-            // Navigation dans la grille
+            // Navigation dans la grille une fois qu'une carte est active
             if (event.key === 'ArrowRight') {
                 event.preventDefault();
-                setActiveChannel(currentIndex === -1 ? 0 : Math.min(currentIndex + 1, tiles.length - 1));
+                setActiveChannel(Math.min(currentIndex + 1, tiles.length - 1));
             } else if (event.key === 'ArrowLeft') {
                 event.preventDefault();
                 setActiveChannel(currentIndex <= 0 ? 0 : currentIndex - 1);
             } else if (event.key === 'ArrowDown') {
                 event.preventDefault();
-                if (currentIndex === -1) setActiveChannel(0);
-                else if (currentIndex + cols < tiles.length) setActiveChannel(currentIndex + cols);
+                if (currentIndex + cols < tiles.length) setActiveChannel(currentIndex + cols);
                 else setActiveChannel(tiles.length - 1);
             } else if (event.key === 'ArrowUp') {
                 event.preventDefault();
                 if (currentIndex - cols >= 0) setActiveChannel(currentIndex - cols);
-                else setActiveSearch(event); // remonte vers la barre (et ENTRE en édition)
+                else setActiveSearch(event); // remonte vers la barre (volontaire)
             } else if (event.key === 'Enter') {
                 event.preventDefault();
                 if (currentIndex >= 0) { lastChannelIndex = currentIndex; tiles[currentIndex].click(); }
