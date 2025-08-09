@@ -47,7 +47,7 @@
 
         /* ---- données ---- */
         function loadChannels() {
-            fetch('channels.json')
+            fetch('data/channels.json')
                 .then(r => r.json())
                 .then(data => {
                     channels = Object.entries(data).map(([name, details]) => {
